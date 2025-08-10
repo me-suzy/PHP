@@ -1,0 +1,15 @@
+ALTER TABLE categories ADD children VARCHAR(255) default NULL;
+ALTER TABLE categories ADD lastpost INT(11) UNSIGNED;
+ALTER TABLE categories ADD lastphoto INT(11) UNSIGNED;
+ALTER TABLE categories ADD photos INT(11) UNSIGNED default '0';
+ALTER TABLE categories ADD posts INT(11) UNSIGNED default '0';
+ALTER TABLE useralbums ADD photos INT(11) UNSIGNED default '0';
+ALTER TABLE useralbums ADD posts INT(11) UNSIGNED default '0';
+ALTER TABLE photos CHANGE filesize filesize int(10) default '0';
+CREATE TABLE exif (photoid INT(11) DEFAULT '0' NOT NULL, exifinfo TEXT);
+REPLACE INTO settings VALUES (102,'Display and extract EXIF information from images?','showexif','','no',58,2);
+REPLACE INTO settings VALUES (103,'Do you want to show the Members Gallery in List format?','memblist','','no',58,2);
+REPLACE INTO settings VALUES (104,'Do you want to prompt for optional info during registration?','getoptional','','yes',355,5);
+REPLACE INTO settings VALUES (105,'Do you want to be notified of all new comments?','notifyadmin','','no',94,4);
+REPLACE INTO settings VALUES (106,'Do you want to enable the calendar printing service?','enablecal','','no',59,1);
+REPLACE INTO settings VALUES (107,'For calendar printing service, enter your <a target="_blank" href="http://www.photopost.com/members/members.pl">Tracking Code</a>','calid','','',60,1);
