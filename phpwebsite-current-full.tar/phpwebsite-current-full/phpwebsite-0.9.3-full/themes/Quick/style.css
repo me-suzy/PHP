@@ -1,0 +1,168 @@
+BODY {
+	BACKGROUND: url(images/bg.gif) #FFFFFF;
+	COLOR: #000000;
+	FONT: 80% Verdana, Helvetica, Arial, sans-serif;
+	MARGIN: 0px;
+	PADDING-BOTTOM: 4em;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px;
+	scrollbar-base-color: #eaeaea;
+	scrollbar-face-color: #eaeaea;
+	scrollbar-highlight-color: #eaeaea;
+	scrollbar-track-color: #F7F9FA;
+	scrollbar-darkshadow-color: #F7F9FA;
+	scrollbar-3dlight-color: #aeb4b7;
+	scrollbar-shadow-color: #aeb4b7;
+	scrollbar-arrow-color: #436976;}
+
+FONT            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+TD              {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+BODY            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+P               {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+DIV             {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+INPUT           {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+TEXTAREA        {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+FORM            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;}
+		
+A:link          {BACKGROUND: none;
+		 COLOR: #757575;
+		 FONT-SIZE: 11px;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+A:active        {BACKGROUND: none;
+		 COLOR: #757575;
+		 FONT-SIZE: 11px;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+A:visited       {BACKGROUND: none;
+		 COLOR: #757575;
+		 FONT-SIZE: 11px;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+A:hover         {BACKGROUND: none;
+		 COLOR: #333333;
+		 FONT-SIZE: 11px;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.title          {BACKGROUND: none;
+		 COLOR: #000000;
+		 FONT-SIZE: 13px;
+		 FONT-WEIGHT: bold;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+.content        {BACKGROUND: none;
+		 COLOR: #000000;
+		 FONT-SIZE: 11px;
+		 FONT-FAMILY: Verdana, Helvetica;}
+		
+.storytitle     {BACKGROUND: none;
+		 COLOR: #363636;
+		 FONT-SIZE: 14px;
+		 FONT-WEIGHT: bold;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.storycat       {BACKGROUND: none;
+		 COLOR: #000000;
+		 FONT-SIZE: 13px;
+		 FONT-WEIGHT: bold;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: underline;}
+		
+.boxtitle       {BACKGROUND: none;
+		 COLOR: #363636;
+		 FONT-SIZE: 11px;
+		 FONT-WEIGHT: bold;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.boxcontent     {BACKGROUND: none;
+		 COLOR: #000000;
+		 FONT-SIZE: 12px;
+		 FONT-FAMILY: Verdana, Helvetica;}
+		
+.option         {BACKGROUND: none;
+		 COLOR: #000000;
+		 FONT-SIZE: 13px;
+		 FONT-WEIGHT: bold;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.tiny           {BACKGROUND: none;
+		 COLOR: #000000;
+		 FONT-SIZE: 10px;
+		 FONT-WEIGHT: normal;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.footmsg        {BACKGROUND: none;
+		 COLOR: #999999;
+		 FONT-SIZE: 9px;
+		 FONT-WEIGHT: normal;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.footmsg_l      {BACKGROUND: none;
+		 COLOR: #999999;
+		 FONT-SIZE: 9px;
+		 FONT-WEIGHT: normal;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: underline;}
+		
+.box            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 border: 1px solid #000000;
+		 background-color: #ffffff;}
+		
+.toplink        {BACKGROUND: none;
+		 COLOR: #9A9A9A;
+		 FONT-SIZE: 11px;
+		 FONT-FAMILY: Verdana, Helvetica;
+		 TEXT-DECORATION: none;}
+		
+.bg_medium	{background-color : #bbbbbb;}
+
+.bg_light 	{background-color : #e2e2e2;}
+
+.bg_dark 	{background-color : #999999;}
+
+.white 		{background-color : white;}
+
+.black 		{background-color : black;}
+
+.errortext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-size : .9em;
+                 color : red;
+                font-weight : bold;}
+		
+.smalltext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-style : normal;
+		 font-variant : normal;
+		 font-weight : normal;
+		 font-size : .8em;}
+		
+.largetext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-style : normal;
+                 font-variant : normal;
+		 font-weight : normal;
+		 font-size : 1.2em;}
