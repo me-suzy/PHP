@@ -1,0 +1,58 @@
+/* full body style */
+body  {
+        scrollbar-face-color:#F2F2F2;
+        scrollbar-highlight-color:#FFFFFF;
+        scrollbar-3dlight-color:#C0C0C0;
+        scrollbar-shadow-color:#E1E1E1;
+        scrollbar-darkshadow-color:#C0C0C0;
+        scrollbar-track-color:#F2F2F2;
+        scrollbar-arrow-color:#FF941C;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+		background-color:#F2F2F2;
+	}
+/* general table style */
+td{font-family: Verdana, Arial, Serif; font-size: xx-small; font-weight: 100; font-style: normal; text-decoration: none; text-transform: none; font-variant: normal; border-left: 1px solid #808080; border-right: 1px solid #808080; border-top: 1px solid #808080; border-bottom: 0px solid #808080;}
+/* last shout table style */
+#tdl{border-left: 1px solid #808080; border-right: 1px solid #808080; border-top: 1px solid #808080; border-bottom: 1px solid #808080; background: #E1E1E1;}
+/* counter chars table style */
+#tdc{border-left: 1px solid #DEDEDE; border-right: 1px solid #DEDEDE; border-top: 1px solid #DEDEDE; border-bottom: 1px solid #DEDEDE; background: #FFFFFF;}
+/* table 1 bg */
+#tdbg1{background: #E1E1E1;}
+/* table 2 bg */
+#tdbg2{background: #D2D2D2;}
+/* view all table 1 style */
+#tdbg3{border: 1px none #808080; background: #E1E1E1;}
+/* view all table 2 style */
+#tdbg4{border: 1px none #808080; background: #D2D2D2;}
+#tdhelp{border-bottom: 1px solid #C0C0C0;}
+/* input items style */
+input {
+border-left: 1px solid #DEDEDE; border-right: 1px solid #DEDEDE; border-top: 1px solid #DEDEDE; border-bottom: 1px solid #DEDEDE;
+font-family: Verdana, Serif; font-size: 10; font-weight: 100; font-style: normal; text-decoration: none; text-transform: none;
+color: #000000; background: #FFFFFF;
+}
+/* font tag style */
+font{font-family: Verdana, Arial, Serif; font-size: xx-small; font-weight: 100; font-style: normal; text-decoration: none; text-transform: none; font-variant: normal;}
+/* links style */
+a:link  {
+	color : #ff9900;
+	text-decoration : none;
+}
+
+a:visited  {
+	color : #ff9900;
+	text-decoration : none;
+}
+
+a:active  {
+	color : #ff9900;
+	text-decoration : none;
+}
+
+a:hover  {
+	color : #ffA619;
+	text-decoration : none;
+}
