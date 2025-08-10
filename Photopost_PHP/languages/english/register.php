@@ -1,0 +1,116 @@
+<?
+$Globals['pp_lang']['closed'] = "We're sorry, but our Photo Boards are currently down for maintainence. Please try again later.";
+$Globals['pp_lang']['ureset'] = "User's password was reset and emailed.";
+$Globals['pp_lang']['preset'] = "Your password has been reset and emailed to you.";
+$Globals['pp_lang']['nomatch'] = "No match. Check the URL and try again.";
+$Globals['pp_lang']['memprofile'] = "Member Profile";
+$Globals['pp_lang']['profilefor'] = "Profile for";
+$Globals['pp_lang']['datereg'] = "Date Registered";
+$Globals['pp_lang']['posts'] = "Posts";
+$Globals['pp_lang']['status'] = "Status";
+$Globals['pp_lang']['lastphotoup'] = "Last Photo Uploaded";
+$Globals['pp_lang']['lastcommentpo'] = "Last Comment Posted";
+$Globals['pp_lang']['bday'] = "Birthday";
+$Globals['pp_lang']['seebday'] = "If you select your birthday then other forum members will be able to see your birthday in your profile.";
+$Globals['pp_lang']['homepage'] = "Homepage";
+$Globals['pp_lang']['icq'] = "ICQ Number";
+$Globals['pp_lang']['aim'] = "AIM";
+$Globals['pp_lang']['yahoo'] = "Yahoo";
+$Globals['pp_lang']['location'] = "Location";
+$Globals['pp_lang']['interests'] = "Interests";
+$Globals['pp_lang']['occupation'] = "Occupation";
+$Globals['pp_lang']['aboutme'] = "About Me";
+$Globals['pp_lang']['checke'] = "Please check your email for instructions.";
+$Globals['pp_lang']['noaddr'] = "That address was not found in our records.";
+$Globals['pp_lang']['memberpassadmin'] = "Member Password Admin";
+$Globals['pp_lang']['forgot'] = "Forgot Password";
+$Globals['pp_lang']['resetform'] = "Reset Password Form";
+$Globals['pp_lang']['youremail'] = "Your Email Address";
+$Globals['pp_lang']['submit'] = "Submit";
+$Globals['pp_lang']['blankpass'] = "The old password is blank.";
+$Globals['pp_lang']['blankpass2'] = "The new password is blank.";
+$Globals['pp_lang']['confirmblank'] = "The confirm new password field is blank.";
+$Globals['pp_lang']['nomatch'] = "The new password field does not match the confirmation password field.";
+$Globals['pp_lang']['fourchars'] = "Your password must be at least 4 characters long.";
+$Globals['pp_lang']['oldwrong'] = "Your old password is not correct.";
+$Globals['pp_lang']['passchanged'] = "Password changed";
+$Globals['pp_lang']['changeform'] = "Password Change Form";
+$Globals['pp_lang']['oldpass'] = "Old Password";
+$Globals['pp_lang']['newpass'] = "New Password";
+$Globals['pp_lang']['confirmpass'] = "Confirm New Password";
+$Globals['pp_lang']['changepass'] = "Change Password";
+$Globals['pp_lang']['memberprofile'] = "Member Profile ";
+$Globals['pp_lang']['editprofile'] = "Edit Profile for";
+$Globals['pp_lang']['password'] = "Password";
+$Globals['pp_lang']['passagain'] = "Enter Password Again";
+$Globals['pp_lang']['email'] = "Email Address";
+$Globals['pp_lang']['emailagain'] = "Enter Email Again";
+$Globals['pp_lang']['month'] = "Month";
+$Globals['pp_lang']['emailconf'] = "Email Confirmation";
+$Globals['pp_lang']['timezone'] = "Time Zone offset<br />Current adjusted time:";
+$Globals['pp_lang']['savechanges'] = "Save Changes";
+$Globals['pp_lang']['noeditperm'] = "You don't have permission to edit this profile.";
+$Globals['pp_lang']['noemailmatch'] = "The email field must match the email confirmation field.";
+$Globals['pp_lang']['profileupdated'] = "Profile updated.";
+$Globals['pp_lang']['nonew'] = "New user registrations not allowed.";
+$Globals['pp_lang']['intonly'] = "This script is only used for PhotoPost's internal registration system.";
+$Globals['pp_lang']['loggedin'] = "You're already registered and logged in!";
+$Globals['pp_lang']['regfor'] = "Register for ";
+$Globals['pp_lang']['coppainfo'] = "COPPA Information";
+$Globals['pp_lang']['over13'] = "Over 13 years of age";
+$Globals['pp_lang']['under13'] = "Under 13 years of age";
+$Globals['pp_lang']['forinfo'] = "For information about how this site uses personal information, please read the";
+$Globals['pp_lang']['privacy'] = "Privacy Statement";
+$Globals['pp_lang']['permform'] = "Permission Form";
+$Globals['pp_lang']['parentreq'] = "A parent or guardian must mail or fax a signed";
+$Globals['pp_lang']['permformlower'] = "permission form";
+$Globals['pp_lang']['toadmin'] = "to the administrator of";
+$Globals['pp_lang']['beforeany'] = "before anyone under the age of 13 can complete the registration.";
+$Globals['pp_lang']['forfurther'] = "For further information contact";
+$Globals['pp_lang']['registerfor'] = "Register for";
+$Globals['pp_lang']['rulespol'] = "Rules & Policies";
+$Globals['pp_lang']['forumrules'] = "Forums Rules";
+$Globals['pp_lang']['coppaform'] = "All users under the age of 13 must seek permission from their parent or guardian in order to gain membership to this site.
+                    While we welcome participation from members under 13, we require that a parent or guardian fax or mail back a signed permission
+                    form before we grant membership.<p>
+
+                    You can begin the registration process even before we receive a permission form by pressing the Agree button.  Or you
+                    can cancel registration by pressing the Cancel button.<p>
+
+                    You can download the permission form here:";
+                    
+$Globals['pp_lang']['formore'] = "For more information about the registration process, or this website in general, please send email to";
+$Globals['pp_lang']['agree'] = "Agree";
+$Globals['pp_lang']['cancel'] = "Cancel";
+$Globals['pp_lang']['plznote'] = "Please Note: Until we receive a signed";
+$Globals['pp_lang']['plznote2'] = "from your parent or guardian you will be unable to upload photos or post comments.";
+$Globals['pp_lang']['reqinfo'] = "Required Info";
+$Globals['pp_lang']['secreq'] = "(The info in this section is required. Please note that passwords are case sensitive.)";
+$Globals['pp_lang']['validemail'] = "Please enter a valid email address. It will not be visible to the public.";
+$Globals['pp_lang']['visible'] = "The info below will be visible to all website visitors.";
+$Globals['pp_lang']['day'] = "Day";
+$Globals['pp_lang']['username'] = "Username";
+$Globals['pp_lang']['optional'] = "Optional Info";
+$Globals['pp_lang']['year'] = "Year";
+$Globals['pp_lang']['bio'] = "Biography";
+$Globals['pp_lang']['submitreg'] = "Submit Registration Form";
+$Globals['pp_lang']['userblank'] = "The username is blank.";
+$Globals['pp_lang']['userexists'] = "The username you chose already exists in our database.  Please choose another.";
+$Globals['pp_lang']['emailexists'] = "The email address you entered already exists in our database.";
+$Globals['pp_lang']['emailat'] = "The email address you entered is not valid. It must contain an \"@\" symbol.";
+$Globals['pp_lang']['emailperiod'] = "The email address you entered is not valid. It must contain a period.";
+$Globals['pp_lang']['passblank'] = "The password is blank.";
+$Globals['pp_lang']['user2char'] = "Your username must be at least 2 characters long.";
+$Globals['pp_lang']['passverblank'] = "The password verification field is blank.";
+$Globals['pp_lang']['passnomatch'] = "The password does not match the password verification field.";
+$Globals['pp_lang']['emailblank'] = "The email field is blank.";
+$Globals['pp_lang']['parentprint'] = "Please have a parent/guardian print out this page, fill in the blanks below, and mail this permissions form to us at the following address";
+$Globals['pp_lang']['verblank'] = "The email verification field is blank.";
+$Globals['pp_lang']['novermatch'] = "The email field does not match the email verification field.";
+$Globals['pp_lang']['erroradd'] = "We experienced a problem adding your account. Please contact the System Administrator!";
+$Globals['pp_lang']['thanks'] = "Thanks for confirming your account.  It is now active!";
+$Globals['pp_lang']['thanksreg'] = "Thanks for registering. Please check your email for instructions on activating your new account.";
+$Globals['pp_lang']['retfront'] = "Return to the front page of";
+$Globals['pp_lang']['noverify'] = "Sorry, but we are unable to verify this account.";
+$Globals['pp_lang']['nonum'] = "User number not found in our database.";
+?>
