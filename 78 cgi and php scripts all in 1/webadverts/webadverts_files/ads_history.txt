@@ -1,0 +1,290 @@
+############################################
+##                                        ##
+##               WebAdverts               ##
+##           by Darryl Burgdorf           ##
+##       (e-mail burgdorf@awsd.com)       ##
+##                                        ##
+##             version: 2.14              ##
+##         last modified: 1/19/00         ##
+##           copyright (c) 2000           ##
+##                                        ##
+##    latest version is available from    ##
+##        http://awsd.com/scripts/        ##
+##                                        ##
+############################################
+
+# COPYRIGHT NOTICE:
+#
+# Copyright 2000 Darryl C. Burgdorf.  All Rights Reserved.
+#
+# This program is being distributed as shareware.  It may be used and
+# modified by anyone, so long as this copyright notice and the header
+# above remain intact, but any usage should be registered.  (See the
+# program documentation for registration information.)  Selling the
+# code for this program without prior written consent is expressly
+# forbidden.  Obtain permission before redistributing this program
+# over the Internet or in any other medium.  In all cases copyright
+# and header must remain intact.
+#
+# This program is distributed "as is" and without warranty of any
+# kind, either express or implied.  (Some states do not allow the
+# limitation or exclusion of liability for incidental or consequential
+# damages, so this notice may not apply to you.)  In no event shall
+# the liability of Darryl C. Burgdorf and/or Affordable Web Space
+# Design for any damages, losses and/or causes of action exceed the
+# total amount paid by the user for this software.
+
+# VERSION HISTORY:
+#
+# 2.14  01/19/00  Corrected exit from setting "test cookie"
+#                 Allowed "exec cmd" $ARGV[0] in lieu of QUERY_STRING
+#                 Added $MetaFile config option to admin script
+#                 Allowed for SSI includes in header & footer
+#                 Added $DefaultBorder spec (ignored with IFRAMES)
+#                 Fixed default weight usage for non-exchange accounts
+#                 Trapped for "1" in $ExchangeLogoPosition
+#                 Trapped for invalid resolved domain names
+# 2.13  01/04/00  Added $GraphicTimestamp option
+#                 Added JavaScript "page=" randomizer to IMG tags
+#                 Fixed glitch in monthly list when Jan is first month
+#                 Fixed glitch in IP lists with "one-digit" months
+#                 Eliminated calls in SendMail to WebBBS error subs
+# 2.12  12/24/99  Added deletion of uploaded banners to account delete
+#                 Squashed bug preventing mail of "reject" letters
+# 2.11  12/08/99  Added $CheckForCookie option
+#                 Added notice of "bonus" exposures to admin display
+#                 Fixed stats display so lack of banner doesn't block 
+#                 Applied $DefaultLinkAttribute to exchange HTML
+#                 Got rid of stray "empty" entries in admin access log
+# 2.10  12/02/99  Added cookies as optional non-SSI log replacement
+#                   (Code derived from Matt Wright's "cookie.lib" file)
+#                 Added referring page to non-SSI log file
+#                 Revised IP logging for improved efficiency
+#                 Added "summary" information to IP log displays
+#                 Eliminated auto-rejection of single IP multiple views
+#                 Added ability to "ignore" hits from certain IPs
+#                 Added ability to log admin accesses
+#                 Added ability to ban certain IPs from admin functions
+#                 Added ability to block banner displays to non-members
+#                 Added "by month" activity report
+#                 Added bar graphs to daily and monthly reports
+#                 Added "clicks from your site" to reporting
+#                 Added optional banner upload capability
+#                 Added adlist.txt "auto-randomizer"
+#                 Restored "real" banner view to admin stats page
+#                 Restored "expires:" headers to non-SSI banners
+#                 Changed "status:" headers from 302 to 301
+#                 Allowed for IFRAME rather than IMG tags in exchanges
+#                 Added TARGET="_blank" to default exchange HTML code
+#                 Changed default banner border width from 2 to 0
+#                 Set exchange logo to use same border size as banner
+#                 Allowed for variable positioning of exchange logo
+#                 Exchange "link text" now only used if no logo
+#                 Removed ISMAP attributes due to Mac Navigator bug
+#                 Trapped for clicks with bogus account names
+#                 Disallowed "raw" mode banners to NonSSI calls
+#                 Added $fontspec configuration variable
+#                 Added <P> tags to "ShowAll" zone displays
+#                 Adapted Kevin Dearing's revisions to SendMail sub
+#                 Added "account rejected" e-mail option
+#                 Added password e-mailer
+#                 Added admin name & e-mail address to footers
+#                 Squashed "user gets error changing password" bug
+#                 Squashed "reset of weight & ratio on user edit" bug
+# 2.02  06/25/99  "Trimmed" the IPs appearing in the non-ssi log file
+#                 Added $DupViewTime variable
+#                 Added ISMAP attribute to all banner IMG tags
+#                 Added NOWRAP attribute where needed in data displays
+#                 Fixed bug in exp/day calculations during first week
+#                 Fixed bug in "non-expiring" exchange members
+# 2.01  03/31/99  Replaced blocking flock() calls with non-blocking
+#                 Added "new account awaiting approval" e-mails
+#                 Moved buttons on admin display to *follow* input
+#                 Made admin display configuration optional
+#                 Added $DefaultLinkAttribute config variable
+#                 Revised QUERY_STRING handling to avoid CGI conflicts
+#                 Reversed banner height & width fields on edit screen
+#                 Allowed $SetDest to override $NonSSI log read errors
+#                 Fixed "admin falls to user" bug with dup passwords
+#                 Fixed bug in end date calc for 0 click-thrus
+#                 Fixed bug causing weight & border to revert from 0
+# 2.00  02/23/99  (ERRONEOUSLY RELEASED AS 1.60)
+#                 Made admin display configurable
+#                 Added default weight setting
+#                 Removed file locking from read-only files
+#                 Rewrote file locking routines
+#                 Replaced multiple semaphore locks with master lock
+#                 Removed "(Any Zone)" $displayzone option
+#                 Allowed definition of zone in QUERY_STRING
+#                 Allowed definition of set account in QUERY_STRING
+#                 Alphabetized group listing
+#                 Mandated that account & group names be lower-case
+#                 Added char & case checks on all names when input
+#                 Added "calculated" end dates
+#                 Added years to all date displays
+#                 Added "random number" option to "raw" mode
+#                 Allowed line breaks in "raw mode" entries
+#                 Allowed pass-thru URLs for click counts in "raw" mode
+#                 Disallowed semicolons and commas in e-mail addresses
+#                 Allowed semicolons in destination URLs
+#                 Allowed for semicolons to replace ampersands in URLs
+#                 Replaced ampersands with semicolons in generated HTML
+#                 Clarified use of "page" designations in exchange HTML
+#                 Removed "<P>" tags from SSI (script-generated) HTML
+#                 Added support for non-expiring accounts
+#                 Disallowed combo of display ratio and C/D expiration
+#                 Revised IP logging to reject multiple banner views
+#                 Removed "raw" time from IP log display
+#                 Extended nonssi.log maintenance time back to 60 min
+#                 Improved handling of nonssi.log file
+#                 Consolidated repetitive calls to adcount.txt file
+#                 "Hotlinked" addresses in admin e-mail list
+#                 Revised e-mail list format for easier "cc:" usage
+#                 Moved <FORM> tags outside of table cells
+#                 Made other minor display modifications
+#                 Added trap for null-value new admin password
+#                 Improved admin password security
+#                 Removed "expires" header from non-SSI banners
+#                 Added option to e-mail "welcome" to new members
+#                   (SendMail subroutine adapted from Matt Wright)
+#                 Fixed "no password" bug after setting admin password
+#                 Fixed "extras on first day" daily stats bug
+#                 Fixed minor bug in display of daily stats
+#                 Fixed bug with one-character advert & zone names
+# 1.52  02/13/98  Fixed handling of "raw mode" entries
+#                 Fixed "daily stats from group display" problem
+#                 Fixed minor new glitch in "show all" code
+#                 Fixed data truncation in "CreditID" subroutine
+#                 Fixed failure of default banner to increment counter
+# 1.51  02/09/98  Fixed miscalc in display of exchange credits
+# 1.50  02/08/98  Added "expires" header to non-SSI banners
+#                 Eliminated need for separate SSI/non-SSI config files
+#                 Removed referer & agent info from non-SSI log file
+#                 Added "page" designation to non-SSI log file
+#                 Made *all* user updates subject to admin approval
+#                 Made necessity of *any* admin approval optional
+#                 Made banners optional for "display only" exchanges
+#                 Added exchange buttons to SSI-generated output
+#                 Allowed "show all" to display members w/o exposures
+#                 Made groups on admin page, like advert names, links
+#                 Corrected group function password handling
+#                 Fixed occasional "div by zero" bug in daily averages
+#                 Cleaned up ("mod_perlized") code
+#                 Various "appearance" modifications
+# 1.44  01/15/98  OK, finally, the last bit of the bug is squashed...
+#                 Fixed bug that zeroed credits upon admin approval
+#                 And fixed bug in multiple group "split" code
+#                 Set intro screens so that "Enter" key works
+#                 Corrected year refs from 19XX to 1900+XX
+#                 Removed first day from daily average calculation
+# 1.43  01/02/98  *Really* finished the bug fix
+# 1.42  01/02/98  Finished fixing the create/edit bug
+#                 Added "name already in use" error message
+# 1.41  01/02/98  Fixed new bug which prevented editing
+# 1.40  01/01/98  Closed glaring access security hole
+#                 Separated admin and user intro screens
+#                 Added $header_file to complement $footer_file
+#                 Fixed minor typo in generated non-SSI HTML
+# 1.34  12/15/97  *Really* fixed "admin approval" buttons
+# 1.33  12/13/97  Added parentheses around new "sort" commands
+#                 Added "status" print before "location" prints
+# 1.32  12/10/97  Allowed listing of zones in exchange edit form
+#                 Added ability to generate master e-mail list
+#                 Allowed "zone" settings to override advert settings
+#                 Stripped QUERY_STRING info from nonssi.log file
+#                 Reduced nonssi.log maintenance to fifteen minutes
+#                 Corrected remaining file access-related typo
+#                 Fixed bug that disabled "admin approval" buttons
+# 1.31  11/16/97  Improved "page" designations
+#                 Put exchange name in page titles and headers
+#                 Revised main entry screen (yet again)
+#                 Corrected a few typos
+# 1.30  11/14/97  Removed backup system completely
+#                 Split adcount.txt into adcount.txt and adlist.txt
+#                 Added ability for exchange members to self-update
+#                 Eliminated "drop down" advert list
+#                 Added "default" banner designation
+#                 Allowed for "mailto" banner URLs
+#                 Made start date configurable rather than automatic
+#                 Added dummy "page" designation to non-SSI URLs
+#                 Added advertiser name and e-mail to data file
+#                 Added optional IP address logging
+#                 Added $bodyspec and $footer_file variables
+#                 Added "direct" edit links to main admin page
+#                 Revised page-to-page linkages
+#                 Sorted advert list on main admin page
+#                 Allowed for "LE"-style exchange buttons
+#                 Shortened default daily stats list to one month
+#                 Altered "exps per day" to reflect only past week
+# 1.21  09/07/97  Fixed "fall-thru after click-thru" problem
+#                 Fixed problem with displays not giving exposures
+#                 Improved handling of "bad" click-thrus
+#                 Reorganized main advert edit screen
+#                 Removed SSI elements from admin banner displays
+#                 Added zone to info maintained in non-SSI log file
+#                 Squashed "text reverts to bottom" bug
+#                 "Dealt with" extra (blank) adcount.txt lines
+#                 Various minor tweaks
+# 1.20  08/31/97  Added non-SSI (banner exchange) option
+#                 Added basing of exposures on banner exchange "ratio"
+#                 Further simplified config files
+#                 Made backups optional
+#                 Added optional flock() control of semaphore files
+#                 Fixed minor typo in banner display
+#                 Fixed lock-related typos in "gotoad" subroutine
+# 1.14  08/25/97  Rewrote file locking & backup "from the ground up"
+#                 Abbreviated some table headings
+#                 Closed minor security hole
+# 1.13  08/17/97  Fixed bug in initialization of group list
+#                 Revised backup system
+# 1.12  08/16/97  Added logging of daily stats
+#                 Allowed for each zone to cycle distinctly
+#                 Added ability to "group" adverts
+#                 Removed link texts from "show all" display
+#                 Changed TARGET def to general link attribute def
+#                 Added auto backups as supplement to file locking
+#                 "Cleaned up" initial password entry
+#                 Revised "look" of admin pages
+#                 Improved parsing of URLs
+#                 Really fixed "BORDER=0" & "WEIGHT=0" bugs
+# 1.11  07/26/97  Fixed "exclusive access/read only" lock bug
+#                 Fixed bug causing display script to "lose" extra URLs
+#                 Fixed "BORDER=0" bug
+#                 Fixed minor time display-related bugs
+#                 Changed URL checking to allow commas
+# 1.10  07/19/97  FIRST SHAREWARE RELEASE
+#                 Consolidated various display scripts into one
+#                 Added ability to "zone" adverts via separate configs
+#                 Revamped "weighting" system from scratch
+#                 Allowed definition of individual expiration criteria
+#                 Allowed for multiple banners in a single advert
+#                 Made URL, link text, height and width optional
+#                 Added ability to put text above *or* below banner
+#                 Allowed designation of TARGET and BORDER attributes
+#                 Added "raw" HTML banner code option
+#                 Fixed minor bugs in total exposure count
+#                 Trapped for bad characters in new advert names
+#                 Trapped for previously-problematical commas
+#                 Moved "delete" from main page to advert edit page
+#                 Improved handling of administrative password
+#                 Lots of other miscellaneous small improvements
+# 1.04  05/27/97  Added new script to display all active banners
+#                 Put variable assignments in configuration script
+#                 Added option to define max click-thrus
+#                 Added ability to "weight" banners
+#                 Added start date to log info for each advert
+#                 Added "exposures per day" to advert info display
+#                 Improved error handling
+#                 Added basic URL format validation
+#                 Numerous "tweaks" and format adjustments
+# 1.03  05/22/97  Added configurable link text
+#                 Added new script to put banners in CGI pages
+#                 Fixed bugs introduced by previous file locking "fix"
+#                 Corrected style of main password input box
+#                 Minor bug fixes in display code
+# 1.02  04/20/97  Fixed file locking!
+#                 Added actual click-thru ratios to display
+#                 Revised display of percentages
+# 1.01  04/03/97  Allowed automatic creation of necessary text files
+#                 Closed hole that allowed spaces in file names
+# 1.00  04/01/97  Initial "public" release
