@@ -1,0 +1,65 @@
+This is a list of files needed by PhotoPost for normal operation:
+
+data/*
+help/*
+images/*
+languages/*
+uploads/*
+
+addfav.php
+adm-cats.php
+adm-cinc.php
+adm-db.php
+adm-inc.php
+adm-index.php
+adm-move.php
+adm-options.php
+adm-pa.php
+adm-photo.php
+adm-userg.php
+adm-users.php
+bulkupload.php
+comments.php
+config-inc.php
+ecard.php
+editphoto.php
+footer.htm
+header.htm
+header-inc.php
+image-inc.php
+index.php
+login.php
+login-inc.php
+logout.php
+member.php
+pp-inc.php
+register.php
+reportphoto.php
+showgallery.php
+showphoto.php
+slideshow.php 
+uploadphoto.php
+useralbums.php
+usergroups.sql
+watermark.php
+
+The following files are only needed during the install or upgrade process and should be removed when you have finished:
+
+email-inc.php - obsolete, used to overright old files, can be removed entirely
+fixmedium.php - used to upgrade pre-3.0 PhotoPost
+install.php
+photopost.sql
+upgrade252.php 
+upgrade252.sql 
+upgrade306.php 
+upgrade306.sql 
+upgrade310.php 
+upgrade310.sql 
+upgrade311.php 
+upgrade311.sql 
+usergroups-phpbb.sql
+usergroups-phpbb2.sql
+usergroups-vb.sql
+upgradecats.php - used to upgrade pre-3.0 PhotoPost
+
+and, of course, this file filelist.txt does not need to be uploaded.
