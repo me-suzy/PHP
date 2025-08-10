@@ -1,0 +1,83 @@
+<html>
+<!-- début de sujet.html -->
+
+<body background='../images/fond.jpg' link="#000000" vlink="#000000" alink="#000000" topmargin="0" leftmargin="0" >
+
+<!-- TITRE DU SITE AVEC LOGO + BANNIERE (très cher la PLACE) -->
+
+<center>
+<table border='0' cellspacing='0' cellpadding='0' width='702'>
+  <tr>
+    <td valign='bottom' width='221'><a href="../index{EXT_PHP}"><img src='../images/hitweb.gif' border='0' width='221' height='50'></a></td>
+    <td background='../images/fondtitre.gif' valign=bottom>&nbsp;</td>
+    <td valign='bottom' width='468' ><a href="http://www.chez.com/"><img src='../images/ban/ban{NBANPUB}.gif' border='0' width='468' height='60'></a><br><img src='../images/banbas.jpg'></td>
+    <td valign='bottom' align='right' width='13'><img src='../images/cote.jpg' border='0' width='13' height='28'></td>
+  </tr>
+</table>
+
+<!-- MENU + PARTIES -->
+<map name="menu">
+  <area href="../appreciation{EXT_PHP}" shape="polygon" coords="0, 51, 81, 50, 90, 58, 81, 69, 0, 68">
+  <area href="../proposite{EXT_PHP}" shape="polygon" coords="1, 91, 81, 91, 91, 100, 83, 109, 2, 109">
+  <area href="../lienavalider{EXT_PHP}" shape="polygon" coords="1, 132, 82, 132, 92, 140, 82, 149, 2, 148">
+  <area href="../projet{EXT_PHP}" shape="polygon" coords="1, 172, 83, 171, 90, 179, 82, 189, 0, 189">
+  <area href="../rechercher{EXT_PHP}" shape="polygon" coords="0, 212, 82, 211, 90, 221, 81, 229, 2, 230">
+  <area href="../top50{EXT_PHP}" shape="polygon" coords="0, 252, 81, 252, 90, 259, 84, 268, 1, 269">
+  <area href="../phorum/" shape="polygon" coords="0, 291, 82, 291, 92, 299, 82, 310, 0, 309">
+  <area href="../partenaria{EXT_PHP}" shape="polygon" coords="0, 331, 82, 331, 92, 340, 80, 350, 1, 349">
+  <area href="../webalizer/" shape="polygon" coords="1, 370, 84, 370, 90, 379, 81, 390, 2, 390">
+</map>
+
+  <table border='0' cellspacing='0' cellpadding='0' width='705'>
+    <tr>
+      <td bgcolor='#E0C695' colspan='3' height='5'>&nbsp;</td>
+    </tr>
+    <tr>
+      <td background='../images/fondmenu.gif' valign='top' width='139'><img src='../images/menu1.gif' border='0' width='40' height='466'><img border="0" src="../images/menu2.gif" usemap="#menu" width='99' height='466'></td>
+      <td bgcolor='#F7F0E4' valign='top' width='550'>&nbsp;<p>
+		<center>Gestion des sujets du theme <b>{THEMESNOM}</b>.</center><p>
+       
+          <center>
+	        <form action='sujet{EXT_PHP}' method='post'>
+			  <table border='0' cellspacing='0' cellpadding='3'>
+                <tr>
+                  <td>Nouveau sujet :</td><td><input type='text' name='sujet' value=''></td>
+                </tr>
+                <tr>
+                  <td colspan='2'>
+		    <input type="hidden" name="themes_id" value="{THEMESID}">
+		    <input type="hidden" name="themes_nom" value="{THEMESNOM}">
+		    <input type="hidden" name="action" value="ajouter">
+		    <input type="submit" value='ajouter'></td>
+	        </tr>
+              </table>
+            </form>
+
+			
+			<table border='0' width='100%'>
+		    <!-- BEGIN DYNAMIC BLOCK: top -->
+              <tr>
+		        <td>{SUJETSID}</td>
+		        <td>{SUJETSNOM}</td>
+	            <td><a href='sujet{EXT_PHP}?themes_id={THEMESID}&themes_nom={THEMESNOM}&sujets_id={SUJETSID}&sujets_nom={SUJETSNOM_URL}&action=modif'>Modifier</a></td>
+			    <td><a href='sujet{EXT_PHP}?themes_id={THEMESID}&themes_nom={THEMESNOM}&sujets_id={SUJETSID}&action=supp'>Supprimer</a></td>
+				<td><a href='lien{EXT_PHP}?sujets_id={SUJETSID}&sujets_nom={SUJETSNOM_URL}'>Liens</a></td>
+			  </tr>
+		    <!-- END DYNAMIC BLOCK: top -->
+            </table>
+          </center>
+
+      </td>
+      <td bgcolor='#E0C695' width='16'>&nbsp;</td>
+    </tr>
+    <tr>
+      <td bgcolor='#E0C695' colspan='3' height='5'>&nbsp;</td>
+    </tr>
+  </table>
+</center>
+</body>
+</html>
+
+<!-- fin de sujet.html -->
+
+
