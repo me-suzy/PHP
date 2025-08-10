@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<!-- Begin Scrollbar Styles -->
+<style>  
+<!-- BODY{ scrollbar-face-color:#666666; scrollbar-arrow-color:#444444; scrollbar-track-color:#333333; scrollbar-shadow-color:'#333333'; scrollbar-highlight-color:''; scrollbar-3dlight-color:'#333333'; scrollbar-darkshadow-Color:'#333333'; } -->   
+</style>    
+<!-- End Scrollbar Styles -->
+
+<!-- Begin Link Styles -->
+<style type="text/css">
+ a:link{color:#999999;text-decoration:none;font-weight: bold;} a:visited{color:#999999;text-decoration:none;font-weight: bold;} a:active{color:#999999;text-decoration:none;font-weight: bold;} a:hover{color:#999999;text-decoration:underline;font-weight: bold;}   
+</style>
+<!-- End Link Styles -->
+
+<title>ShoutPro&#8482; 1.0 BETA 1 - Installation Instructions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body text="DDDDCC" bgcolor="#333333">
+<font face="Tahoma">
+<div style="font-size:20pt">ShoutPro&#8482; 1.0 BETA 1 - Installation Instructions</div><br>
+<div style="font-size:10pt">
+<b>Installation Instructions:</b>
+
+<ol>
+<li>Open up the file "config.php" in a text-editing program and configure all of the settings to your liking.  Each setting has a description of how it should be set and what it is.</li>
+<li>Open up your FTP client and create a folder on your web server for the shoutbox.</li>
+<li>Upload all of the files and folders found in the "upload" directory in this zip to the folder you just created.</li>
+<li>CHMOD the file "shouts.php" 666 (make it readable and writable by all).  If problems arise CHMOD it 777 instead.</li>
+<li>Open the file "shoutbox.php" in your browser.  Try posting a few messages and see if it works.  If it doesn't repeat the past few steps.</li>
+<li>To put your new shoutbox on your site, just create an IFRAME with it.  Here is a sample IFRAME code:<p> &lt;IFRAME frameborder="0" width="150" height="300" src="shoutpro/shoutbox.php"&gt;&lt;/IFRAME&gt;<p>Make sure the "src" attribute is pointing to the correct file and the width is what you specified in the configuration file.</li>
+<li>That's it!  ShoutPro&#8482; should now be working correctly.  If you have any questions just send an e-mail to <a href="mailto:duffman@activegaming.net">duffman@activegaming.net</a>.</li>
+</ol>
+
+<p>
+
+<b>How to Do Some Simple Tasks with ShoutPro&#8482;:</b>
+<ul>
+<li><b>Clear the Shoutbox:</b>  In your web browser, open the file "admin.php" in your ShoutPro&#8482; folder.  Enter the password you typed into "config.php" and hit submit.  A message should appear saying the shoutbox has been cleared.  The other features of admin.php are not complete in this beta version.</li>
+<li><b>Add More Smilies:</b>  Begin by uploading the smilie image file into the "smilies" folder.  Then open up "smilies.php" in the "lists" folder in a text-editing program.  You can add or remove smilies here.  Make sure you follow this format: "SMILIECODE|^|IMAGEFILE|^|".  Each unit like that should be on a separate line.</li>
+<li><b>Add/Edit ShoutCode and Profanity Filter:</b>  Open the file "lists/shoutcode.php" or "lists/profanities.php" in a text-editing program.  These files are in the same format as the smiles.php file.  In shoutcode.php, the first item is the ShoutCode tag and the second is the corresponding HTML tag.  In profanities.php, the first item is the profanity and the second item is the filtered word.</li>
+</ul>
+<p>
+
+<b>Known Issues:</b>
+<ul>
+<li>If a ShoutCode tag is left open in a shout, some problems may arise.  This will be fixed in BETA 2.</li>
+<li>If you have and comments, problems, or suggestions, please send an e-mail to <a href="mailto:duffman@activegaming.net">duffman@activegaming.net</a>.</li>
+</ul>
+</div>
+
+</font>
+
+</body>
+</html>
