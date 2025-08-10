@@ -1,0 +1,10 @@
+CREATE TABLE useralbums (id smallint(4) NOT NULL auto_increment,albumname varchar(255) NOT NULL default '',parent int(5) NOT NULL default '0',description varchar(255) default NULL,isprivate varchar(4) NOT NULL default 'no',PRIMARY KEY (id),KEY parent(parent)) TYPE=MyISAM;
+ALTER TABLE photos ADD rating int(2) NOT NULL default '0';
+ALTER TABLE photos CHANGE medsize medsize mediumint(9) default '0';
+REPLACE INTO sort VALUES (4,'Most Popular (by rating)','ORDER BY rating DESC, views DESC');
+REPLACE INTO settings VALUES (91,'Allow users to move/delete their own images?','userdel','','no',58,5);
+REPLACE INTO settings VALUES (92,'Display Members Gallery on the main index page?','showmem','','yes',55,2);
+REPLACE INTO settings VALUES (93,'Require users to be registered to view images?','reqregister','','no',56,2);
+DELETE FROM settings WHERE id='48';
+UPDATE admingroups SET name="Index Display Values" WHERE id='2';
+UPDATE settings SET title="URL to your forum directory (blank if Internal)" where id='7';
