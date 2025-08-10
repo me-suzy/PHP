@@ -1,0 +1,5 @@
+<?php
+require("config.php");
+require("tagcount.txt");
+?>
+<small><b>Viewing:</b> <? echo $NUM_COMMENTS?><b>/</b><? echo $tagcount?></small><br>
