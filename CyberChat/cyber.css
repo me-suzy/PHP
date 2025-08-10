@@ -1,0 +1,40 @@
+a:link {
+   font-family: Verdana; color:black ;font-size: 10px; font-style: normal; text-decoration: none
+}
+a:active {
+   font-family: Verdana; color:black; font-size: 10px; font-style: normal; text-decoration: none
+}
+a:visited {
+   font-family: Verdana; color:black; font-size: 10px; font-style: normal; text-decoration: none
+}
+a:hover {
+   font-family: Verdana; color:#0080C0; font-size: 10px; font-style: normal;  BORDER-BOTTOM: #0080C0 1px dotted
+}
+
+body {
+	font-family: Verdana; font-size: 10px; color: #707070; scrollbar-shadow-color: white; scrollbar-arrow-color: black; scrollbar-track-color: #797D86; scrollbar-base-color: #AEB0B5
+}
+
+.alert {
+	font-family: Verdana; font-size: 10px; color: #0080C0
+}
+
+input {
+	font-family: Verdana; font-size: 10px; color: black; background-color: #D2F0FF; border: solid 1px; border-color: #3399FF
+}
+
+select {
+	font-family: Verdana; font-size: 10px; color: black; background-color: #D2F0FF;
+}
+
+textarea {
+	font-family: Verdana; font-size: 10px; color: black; background-color: #D2F0FF; border: solid 1px; border-color: #3399FF
+}
+
+table {
+	font-family: Verdana; font-size: 10px; color: #707070; border-collapse: collapse; border-bottom: gray 1px dotted; border-top: gray 1px dotted; border-left: gray 1px dotted; border-right: gray 1px dotted;
+}
+
+select {
+	font-family: Verdana; font-size: 10px; color: black
+}
