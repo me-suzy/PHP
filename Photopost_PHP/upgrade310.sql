@@ -1,0 +1,2 @@
+REPLACE INTO settings VALUES (101,'Display new comments/photos indicator on index?','displaynew','','no',58,2);
+REPLACE INTO settings VALUES (17,'Default maximum file upload size in kB','uploadsize','','250',87,3);
