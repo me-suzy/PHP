@@ -1,0 +1,14 @@
+<center>{TITLE_ADD_CAT}<p>
+
+<form method='POST' action='categories{EXT_PHP}'>
+  <input type="text" name="categories_new_nom" value=""><br>
+
+  <input type="hidden" name="categories_parents_id" value="{CATEGORIES_PARENTS_ID}">
+  <input type="hidden" name="categories_nom" value="{CATEGORIES_NOM}">
+  <input type="hidden" name="action" value="ajouter"><br>
+  <input type="submit" value="{BT_ENRE}">
+  <input type="reset" value="{BT_RESET}" onClick="history.back()">
+  <br>
+</form>
+</center>
+
