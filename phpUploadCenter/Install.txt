@@ -1,0 +1,46 @@
+English
+~~~~~~~
+
+1. Create folder for php script on the server.
+2. Customize, values of variables in file include/conf.php
+   See comments in file.
+3. Customize files nn.php (where nn - is language code).
+4. Write in your text in all html-files.
+5. Copy all files and subfolders to server.
+6. Register your own administrator account.
+7. Activate your new account (needed, if request activation is "on")
+8. Log in as user "Admin", password "test".
+9. Go to the administrator console and set to the new account an administrator rights.
+10. Log in using new account, go to the administrator console and delete "Admin" account.
+    DO NOT FORGET DO THIS!!!  If forget - this is serious security hole!
+11. Be sure, that user accounts is not visible, when you typing in browser the address www.myserver.com/upload/users/username.
+   (where www.myserver.com - is the server name where you installed your script, username - the name of any registered user)
+   If visible, you have to configure server!
+
+
+Russian
+~~~~~~~
+
+1. Ñîçäàéòå êàòàëîã íà ñåðâåðå, êóäà âû õîòèòå ïîìåñòèòü ñêðèïò.
+2. Íàñòðîéòå çíà÷åíèÿ ïåðåìåííûõ â ôàéëå include/conf.php
+   Ñìîòðèòå êîììåíòàðèè â ôàéëå.
+3. Îòêîððåêòèðóéòå ôàéëû nn.php (ãäå nn - êîä ÿçûêà).
+4. Âïèøèòå ñâîé òåêñò â html ôàéëû.
+5. Ñêîïèðóéòå âñå ôàéëû è ïîäêàòàëîãè íà ñåðâåð.
+6. Çàðåãèñòðèðóéòå ñâîé íîâûé àêêàóíò àäìèíèñòðàòîðà.
+7. Àêòèâèçèðóéòå âàø íîâûé àêêàóíò (ýòî íóæíî, åñëè îïöèÿ "òðåáîâàòü àêòèâàöèþ" âêëþ÷åíà)
+8. Âîéäèòå ïîä þçåðîì "Admin", ïàðîëü "test".
+9. Âîéäèòå â êîíñîëü àäìèíèñòðàòîðà è óñòàíîâèòå òîëüêî ÷òî ñîçäàííîìó àêêàóíòó ïðàâà àäìèíèñòðàòîðà.
+10. Âîéäèòå ïîä âàøèì íîâûì àêêàóíòîì è óäàëèòå àêêàóíò ñ èìåíåì "Admin".
+   ÍÅ ÇÀÁÓÄÜÒÅ ÑÄÅËÀÒÜ ÝÒÎ!!!  Åñëè çàáóäåòå - áóäåò ñåðüåçíàÿ äûðà â ñèñòåìå áåçîïàñíîñòè!
+11. Óáåäèòåñü, ÷òî àêêàóíòû ïîëüçîâàòåëåé íå âèäíû, êîãäà âû ââîäèòå â áðîóçåðå àäðåñ www.myserver.com/upload/users/username.
+  (ãäå www.myserver.com - ñåðâåð, êóäà âû óñòàíîâèëè ñêðèïò, username - èìÿ ëþáîãî çàðåãèñòðèðîâàííîãî ïîëüçîâàòåëÿ).
+  Åñëè àêêàóíòû âèäíû, âû äîëæíû ñêîíôèãóðèðîâàòü ñåðâåð!
+
+ÇÀÌÅÒÊÀ ÄËß ÐÓÑÑÊÎÃÎ APACHE:
+
+Åñëè áèíàðíûå ôàéëû, êîòîðûå âû ïûòàåòåñü çàãðóçèòü íà ñåðâåð îêàçûâàþòñÿ "áèòûìè", à òåêñòîâûå ôàéëû íå ïîâðåæäàþòñÿ, òîãäà âàì íóæíî áóäåò íàñòðîèòü ñåðâåð. Äåëî â òîì, ÷òî Ðóññêèé Apache ïåðåêîäèðóåò âñå ïîäðÿä. Íàïðèìåð, ñèìâîë ñ êîäîì 0õ00 îí çàìåíÿåò íà ïðîáåë (ñèìâîë ñ êîäîì 0õ20). ×òîáû âûêëþ÷èòü ýòó íåíóæíóþ ïåðåêîäèðîâêó, äîïèøèòå â ôàéë httpd.conf èç êàòàëîãà Apache (/usr/local/apache) ñëåäóþùèå ñòðîêè. Åñëè ó âàñ íåò äîñòóïà ê ýòîìó ôàéëó è àäìèí ñåðâåðà íå ìîæåò ñäåëàòü ýòî çà âàñ, òêíèòå åãî â ýòè ñòðîêè:
+
+<Location />
+    CharsetRecodeMultipartForms Off
+</Location>
