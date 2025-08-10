@@ -1,0 +1,147 @@
+<?php
+  //******************************************************************************************
+  //**                                                                                      **
+  //** phpNewsManager v1.40                                                                 **
+  //** contact: rafalmod@ram.net.pl                                                         **
+  //** Last edited: 21st March,2003                                                         **
+  //**                                                                                      **
+  //** Language module: Polish                                                              **
+  //******************************************************************************************
+
+define("_CHARSET","ISO-8859-2");
+define("_STATISTICS","Statystyki");
+define("_ACTUAL","Obecnie");
+define("_LASTVISIT","Ostatnia wizyta");
+define("_NEW","Nowe");
+define("_ONLINENEWS","Newsy online");
+define("_WEEKLYPOLLQ","Ankieta");
+define("_WEEKLYPOLLA","Wyniki");
+define("_PUBLICNEWS","Publiczne newsy");
+define("_REGISTEREDUSERS","Zarejestrowani u¿ytkownicy");
+define("_NEWSCOMMENTS","Komentarze");
+define("_ADDNEWS","Dodaj newsa");
+define("_SUBMITEDNEWS","Newsy");
+define("_OPTIONS","Opcje");
+define("_NEWSHEADLINE","Nag³ówek");
+define("_AUTHOR","Autor");
+define("_DATE","Data");
+define("_SECTION","Dzia³");
+define("_PREVIEW","Skrót");
+define("_MESSAGE","Wiadomo¶æ");
+define("_SUBMIT","OK");
+define("_HOME","Start");
+define("_NEWSMANAGER","Menu newsów");
+define("_MODIFYNEWS","Modyfikuj newsa");
+define("_ADDNEWS","Dodaj newsa");
+define("_ADDPARTNERS","Dodaj partnera");
+define("_UPLOADLOGO","Za³aduj logo");
+define("_IMAGE","Obrazek");
+define("_NAME","Nazwa");
+define("_NUMBER","Ilo¶æ");define("_","#");
+define("_CATEGORYNAME","Nazwa kategorii");
+define("_MAINMENU","Menu g³ówne");
+define("_KEEPIT","Zachowaj to!");
+define("_DELETEIT","Usuñ to!");
+define("_EDITCATEGORY","Edytuj kategoriê");
+define("_UPLOADPICTURE","Za³aduj obrazek");
+define("_ADDCATEGORY","Dodaj kategoriê");
+define("_OURPARTNERS","Partnerzy");
+define("_SELECTPAGE","Wybierz stronê");
+define("_LINK","Link");
+define("_IN","Wej¶æ");
+define("_OUT","Wyj¶æ");
+define("_AFFILIATES","Przynale¿no¶æ");
+define("_GFX","Gfx");
+define("_PREVIOUS","Poprzednia");
+define("_NEXT","Nastêpna");
+define("_DESCRIPTION","Opis");
+define("_MODIFYPARTNERS","Modyfikuj partnera");
+define("_RSSSETTINGS","Ustawienia RSS");
+define("_NAMEOFRSSFILE","Nazwa pliku RSS");
+define("_NUMBEROFNEWS","Ilo¶æ newsów");
+define("_RSSTITLE","Tytu³ RSS");
+define("_RSSLINK","Odno¶nik RSS");
+define("_RSSDESCRIPTION","Opis RSS");
+define("_AUTOCREATERSS","Twórz automatycznie plik RSS, po ka¿dej modyfikacji newsów");
+define("_OPTIMIZED","Zoptymalizowano");
+define("_OPTIMIZEDATABASE","Optymalizuj bazê danych");
+define("_ADDSMILEY","Dodaj bu¼kê");
+define("_UPLOADSMILEY","Za³aduj bu¼kê");
+define("_SMILEYEMOTION","Rodzaj emocji");
+define("_SMILEYEDITOR","Edytor");
+define("_SMILEYCODE","Kod");
+define("_EDITSMILEY","Edytuj");
+define("_DELETESMILEY","Usuñ");
+define("_NEWS","Newsy");
+define("_CATEGORY","Kategoria");
+define("_PARTNERS","Partnerzy");
+define("_WEEKLYPOLL","Tygodniowa ankieta");
+define("_SMILEYS","Bu¼ki");
+define("_BROWSENEWS","Przegl±daj newsy");
+define("_GROUPS","Grupy");
+define("_ADMINS","Administratorzy");
+define("_USERS","U¿ytkownicy");
+define("_USERINFO","U¿ytkownik info");
+define("_ADMINISTRATION","Administracja");
+define("_YOULOGOUT","Wylogowano.");
+define("_LOGIN","Login");
+define("_PASSWORD","Has³o");
+define("_USERNAME","Nazwa u¿ytkownika");
+define("_WEBCONTROLPANEL","PANEL KONTROLNY");
+define("_ADDUSER","Dodaj u¿ytkownika");
+define("_EMAIL","E-mail");
+define("_PRIVILEGES","Prawa");
+define("_EMAIL","E-mail");
+define("_EDITUSER","Edytuj");
+define("_DELETEUSER","Usuñ");
+define("_INFO","Informacja");
+define("_ADDGROUP","Dodaj grupê");
+define("_ADMIN","Administrator");
+define("_RSS","RSS");
+define("_MODIFY","Modyfikuj");
+define("_ADD","Dodaj");
+define("_EDIT","Edytuj");
+define("_DELETE","Usuñ");
+define("_UPLOAD","Za³aduj");
+define("_GROUPNAME","Nazwa grupy");
+define("_SELECT","Wybierz");
+define("_ADDWEEKLYPOLL","Dodaj ankietê");
+define("_SUBMITEDPOLLS","Ankiety");
+define("_QUESTION","Pytanie");
+define("_ANSWERS","Odpowied¼");
+define("_SEPERATEANSWERSWITH","Oddziel odpowiedzi znakiem");
+define("_EDITWEEKLYPOLL","Edytuj ankietê");
+define("_SUCCESS","Prawid³owo");
+define("_DELETENEWS","Usuñ newsa");
+define("_NOTENOUGHPRIV","Nie masz wystarczaj±cych praw!");
+define("_LANGUAGE","Jêzyk");
+define("_CONTENT","Zawarto¶æ");
+// NOWE OD WERSJI 1.36
+define("_FILEALREADYEXIST","Taki plik ju¿ istnieje! Wybierz inn± nazwê.");
+define("_ERROR","B³±d!");
+define("_WRONGDATATYPE","B³êdny format daty!");
+define("_CATEGORIES","Kategorie");
+define("_DELWEEKLYPOLL","Wykasuj tygodniow± ankietê");
+define("_SUBMITEDGROUPS","Istniej±cych grup");
+define("_SUBMITEDCATEGORY","Istniej±cych kategorii");
+define("_DELGROUP","Skasuj grupê");
+define("_EDITGROUP","Edytuj grupê");
+define("_ADDGROUP","Dodaj grupê");
+define("_ADDADMIN","Dodaj administratora");
+define("_EDITADMIN","Edytuj administratora");
+define("_DELADMIN","Skasuj administratora");
+define("_REGISTEREDADMINS","Zarejestrowanych administratorów");
+define("_SUBMITEDSMILEYS","Istniej±cych bu¼ek");
+define("_EDITPARTNER","Edytuj partnera");
+define("_DELETEPARTNER","Skasuj partnera");
+define("_SUBMITEDPARTNERS","Istniej±cych partnerów");
+define("_EDITNEWS","Edytuj wiadomo¶æ");
+define("_MODIFYPNEWS","Edytuj publiczn± wiadomo¶æ");
+define("_EMAIL_ERROR","B³±d we wprowadzonym adresie e-mail");
+define("_ID","Numer identyfikacyjny");
+define("_PREVIEW_NEWS","Poprzednia wiadomo¶æ");
+define("_OPEN_NEW_WINDOW","Otwórz nowe okno");
+define("_PNEWS_SUBMITED","Publiczna wiadomo¶æ zosta³a dodana");
+define("_UPDATED","Aktualizacja");
+?>
+)
