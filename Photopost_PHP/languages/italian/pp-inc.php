@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Le nostre immagini più viste";
+$Globals['pp_lang']['allcats'] = "Tutte le categorie";
+$Globals['pp_lang']['recent'] = "Le immagini più recenti";
+$Globals['pp_lang']['random'] = "Immagini Casuali";
+$Globals['pp_lang']['by'] = "Autore";
+$Globals['pp_lang']['category'] = "Categoria";
+$Globals['pp_lang']['photos'] = "Immagini";
+$Globals['pp_lang']['comments'] = "Commenti";
+$Globals['pp_lang']['lastcomment'] = "Ultimo commento";
+$Globals['pp_lang']['lastphoto'] = "Ultima immagine caricata";
+$Globals['pp_lang']['favorites'] = "Le mie favorite";
+$Globals['pp_lang']['createcal'] = "Stampa Calendario";
+$Globals['pp_lang']['printable'] = "formato stampa";
+$Globals['pp_lang']['lastdays'] = "Ultimi caricamenti";
+$Globals['pp_lang']['last7days'] = "Ultima settimana";
+$Globals['pp_lang']['last14days'] = "Ultime 2 settimane";
+$Globals['pp_lang']['custom'] = "Personalizza vista";
+$Globals['pp_lang']['searchr'] = "Risultati ricerca";
+$Globals['pp_lang']['member'] = "Utente";
+$Globals['pp_lang']['admin'] = "Admin";
+$Globals['pp_lang']['home'] = "Home";
+$Globals['pp_lang']['logout'] = "Esci";
+$Globals['pp_lang']['mygallery'] = "Mia&nbsp;Galleria";
+$Globals['pp_lang']['albumadmin'] = "Album&nbsp;Admin";
+$Globals['pp_lang']['myfavorites'] = "Mie&nbsp;Favorite";
+$Globals['pp_lang']['login'] = "Entra";
+$Globals['pp_lang']['register'] = "Registrati";
+$Globals['pp_lang']['profile'] = "Profilo";
+$Globals['pp_lang']['upload'] = "Carica&nbsp;Immagini";
+$Globals['pp_lang']['forward'] = "Ti stiamo inviando a";
+$Globals['pp_lang']['clickhere'] = "Clicca qui se non vuoi attendere oltre <br />(o se il tuo browser non aggiorna questa pagina)";
+$Globals['pp_lang']['erroruser'] = "Lo Username da te scelto non è valido. Lo Username deve essere composto solo da lettere e numeri.";
+$Globals['pp_lang']['errorcopy'] = "Copia del file fallita. Operazione annullata.";
+$Globals['pp_lang']['moved'] = "Immagine spostata";
+$Globals['pp_lang']['errorperm'] = "Non sei autorizzato ad eseguire questo!";
+?>
