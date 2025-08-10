@@ -1,0 +1,65 @@
+</center>
+{MESSAGE}
+
+<center>
+<form method="post" action="liens{EXT_PHP}">
+  <table border="0" width="100%">
+    <tr>
+      <td><b>{LIB_NAME}</b></td> 
+      <td><input name="WEBMASTER_NOM" type="text" value="{WEBMASTER_NOM}" size="40"></td>
+    </tr>
+    <tr>
+      <td><b>{LIB_LASTNAME}</b></td> 
+      <td><input name="WEBMASTER_PRENOM" type="text" value="{WEBMASTER_PRENOM}" size="40"></td>
+    </tr>
+    <tr>
+      <td><b>{LIB_MAIL}</b></td> 
+      <td><input name="WEBMASTER_EMAIL" type="text" value="{WEBMASTER_EMAIL}" size="40"></td>
+    </tr>
+    <tr>
+      <td><b>{LIB_ADDRESS}</b></td> 
+      <td>
+        <select name="LIENS_PROTOCOL_ID">
+	  <!-- BEGIN DYNAMIC BLOCK: protocol -->
+	  <option value="{PROTOCOL_ID}" {SELECTED}>{PROTOCOL_NOM}
+	  <!-- END DYNAMIC BLOCK: protocol -->
+	</select>
+	<input name="LIENS_ADRESSE" type="text" value="{LIENS_ADRESSE}" size="32">
+      </td>
+    </tr>
+    <tr>
+      <td><b>{LIB_KEYWORD}</b></td> 
+      <td><input name="LIENS_RECHERCHE" type="text" value="{LIENS_RECHERCHE}" size="40"></td>
+    </tr>
+    <tr>
+      <td><b>{LIB_SUBJECT}</b></td>
+      <td>
+        <select name="LIENS_CATEGORIES_ID_SELECT" >
+          <option value="{LIENS_CATEGORIES_ID}">{LISTE_CATEGORIE}
+	</select>
+	<b>{LIB_ID}</b> <input name="LIENS_CATEGORIES_ID" type="text" value="{LIENS_CATEGORIES_ID}" size="5">
+      </td>	  
+    </tr>
+    <tr>
+      <td><b>Commentaire :</b></td>
+      <td><select name="LIENS_COMMENTAIRES_ID" >
+      <!-- BEGIN DYNAMIC BLOCK: commentaire -->
+        <option value="{COMMENTAIRES_ID}" {CHOIXCOM}>{COMMENTAIRES_TEXTE}
+      <!-- END DYNAMIC BLOCK: commentaire -->
+      </select>
+      </td>	  
+    </tr>
+    <tr>
+      <td colspan="2"><textarea name="LIENS_DESCRIPTION" cols="55" rows="5" wrap="virtual">{LIENS_DESCRIPTION}</textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="right">
+        <input type="hidden" name="action" value="modif">
+	<input type="hidden" name="LIENS_ID" value="{LIENS_ID}">
+        <input type="submit" value="{BT_ENRE}">
+	<input type="reset" value="{BT_RESET}" onClick="history.back()">	
+      </td>
+    </tr>
+  </table>
+</form>
+
