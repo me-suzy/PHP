@@ -1,0 +1,116 @@
+<?
+$Globals['pp_lang']['closed'] = "Olemme pahoillamme, mutta Photo Boards on tällä hetkellä huollettavana eikä kuvia ole saatavilla. Yrittäkää myöhemmin uudelleen.";
+$Globals['pp_lang']['ureset'] = "Käyttäjän salasana on nollattu ja ilmoitettu sähköpostilla.";
+$Globals['pp_lang']['preset'] = "Salasanasi on nollattu ja postitettu sinulle.";
+$Globals['pp_lang']['nomatch'] = "Ei löydy. Tarkista URL ja yritä uudelleen.";
+$Globals['pp_lang']['memprofile'] = "Käyttäjän profiili";
+$Globals['pp_lang']['profilefor'] = "Profiili käyttäjälle";
+$Globals['pp_lang']['datereg'] = "Rekisteröitymispäivämäärä";
+$Globals['pp_lang']['posts'] = "Tallennukset";
+$Globals['pp_lang']['status'] = "Tila";
+$Globals['pp_lang']['lastphotoup'] = "Viimeisin kuva";
+$Globals['pp_lang']['lastcommentpo'] = "Viimeisin mielipide";
+$Globals['pp_lang']['bday'] = "Syntymäpäivä";
+$Globals['pp_lang']['seebday'] = "Jos valitset syntymäpäiväsi, toiset käyttäjät voivat nähdä päivän profiilistasi.";
+$Globals['pp_lang']['homepage'] = "Kotisivu";
+$Globals['pp_lang']['icq'] = "ICQ Number";
+$Globals['pp_lang']['aim'] = "AIM";
+$Globals['pp_lang']['yahoo'] = "Yahoo";
+$Globals['pp_lang']['location'] = "Sijainti";
+$Globals['pp_lang']['interests'] = "Kiinnostukset";
+$Globals['pp_lang']['occupation'] = "Asema";
+$Globals['pp_lang']['aboutme'] = "Jotain minusta";
+$Globals['pp_lang']['checke'] = "Lue sähköpostistasi ohjeet.";
+$Globals['pp_lang']['noaddr'] = "Osoitetta ei löytynyt rekisteristämme";
+$Globals['pp_lang']['memberpassadmin'] = "Käyttäjän salasanan pääkäyttäjä";
+$Globals['pp_lang']['forgot'] = "Salasana unohtui";
+$Globals['pp_lang']['resetform'] = "Nollaa salasanalomake";
+$Globals['pp_lang']['youremail'] = "Sähköpostiosoitteesi";
+$Globals['pp_lang']['submit'] = "Tallenna";
+$Globals['pp_lang']['blankpass'] = "Vanha salasana on tyhjä.";
+$Globals['pp_lang']['blankpass2'] = "Uusi salasana on tyhjä.";
+$Globals['pp_lang']['confirmblank'] = "Toista salasana- kenttä on tyhjä";
+$Globals['pp_lang']['nomatch'] = "Salasana ja toista salasana- kentät eivät täsmää.";
+$Globals['pp_lang']['fourchars'] = "Salasanasi tulee olla vähintää 4 merkkiä pitkä.";
+$Globals['pp_lang']['oldwrong'] = "Vanha salasanasi ei ole oikein.";
+$Globals['pp_lang']['passchanged'] = "Salasana muutettu";
+$Globals['pp_lang']['changeform'] = "Salasanan muutoslomake";
+$Globals['pp_lang']['oldpass'] = "Vanha salasana";
+$Globals['pp_lang']['newpass'] = "Uusi salasana";
+$Globals['pp_lang']['confirmpass'] = "Toista uusi salasana";
+$Globals['pp_lang']['changepass'] = "Muuta salasana";
+$Globals['pp_lang']['memberprofile'] = "Käyttäjän profiili ";
+$Globals['pp_lang']['editprofile'] = "Muuta käyttäjäprofiilia";
+$Globals['pp_lang']['password'] = "Salasana";
+$Globals['pp_lang']['passagain'] = "Anna salasanasi uudelleen";
+$Globals['pp_lang']['email'] = "Sähköpostiosoitteesi";
+$Globals['pp_lang']['emailagain'] = "Anna sähköpostiosoitteesi uudeelleen";
+$Globals['pp_lang']['month'] = "Kuukausi";
+$Globals['pp_lang']['emailconf'] = "Sähköpostivahvistus";
+$Globals['pp_lang']['timezone'] = "Aikavyöhyke<br />Aika tällä hetkellä:";
+$Globals['pp_lang']['savechanges'] = "Tallenna muutokset";
+$Globals['pp_lang']['noeditperm'] = "Sinulla ei ole oikeutta muuttaa tätä profiilia.";
+$Globals['pp_lang']['noemailmatch'] = "Sähköpostikentän tulee täsmätä sähköpostikuittauskentän arvoon.";
+$Globals['pp_lang']['profileupdated'] = "Profiili päivitetty.";
+$Globals['pp_lang']['nonew'] = "Uusien käyttäjien rekisteröinti ei ole sallittu.";
+$Globals['pp_lang']['intonly'] = "Tätä scriptiä käytetään ainoastaan PhotoPostin sisäiseen rekisteröintijärjestelmään.";
+$Globals['pp_lang']['loggedin'] = "Olet jo rekisteröitynyt ja kirjautunut sisään!";
+$Globals['pp_lang']['regfor'] = "Rekisteröi ";
+$Globals['pp_lang']['coppainfo'] = "COPPA tietoa";
+$Globals['pp_lang']['over13'] = "Yli 13 vuotta vanha";
+$Globals['pp_lang']['under13'] = "Alle 13 vuotta vanha";
+$Globals['pp_lang']['forinfo'] = "Voit lukea miten käsittelemme henkilörekisteritietoja ";
+$Globals['pp_lang']['privacy'] = "Yksityisyyden suoja";
+$Globals['pp_lang']['permform'] = "Lupalomake";
+$Globals['pp_lang']['parentreq'] = "Vanhempien tai huoltajan tulee postittaa tai faxata allekirjoitettu";
+$Globals['pp_lang']['permformlower'] = "lupalomake";
+$Globals['pp_lang']['toadmin'] = "pääkäyttäjälle";
+$Globals['pp_lang']['beforeany'] = "ennenkuin kukaan alle 13 vuotias voi rekisteröityä käyttäjäksi.";
+$Globals['pp_lang']['forfurther'] = "Lisätietoja saat";
+$Globals['pp_lang']['registerfor'] = "Rekisteröityminen";
+$Globals['pp_lang']['rulespol'] = "säännöt & määräykset";
+$Globals['pp_lang']['forumrules'] = "Säännöt";
+$Globals['pp_lang']['coppaform'] = "Kaikkien alle 13 vuotiaiden käyttäjien pitää pyytää lupa vanhemmiltaan tai huoltajiltaan ennen rekisteröitymistä.
+                    Toivotamme kaikki alle 13 vuotiaat tervetulleiksi mutta vaadimme heiltä vanhempien tai huoltajan allekirjoittaman suostumuksen
+                    ennen myönnämme käyttäjätunnusta.<p>
+
+                    Voit kuitenkin rekisteröityä ennen kuin saamme luvan vanhemmiltasi painamalla hyväksyn näppäintä tai voit 
+                    peruuttaa tämän rekisteröitymisprosessin.<p>
+
+                    Voit ladata lupakaavakkeen täältä:";
+                    
+$Globals['pp_lang']['formore'] = "Rekisteröitymisprosessista tai tästä web sivustosta yleensä saat lisää tietoa lähettämällä viestin";
+$Globals['pp_lang']['agree'] = "Suostun";
+$Globals['pp_lang']['cancel'] = "Peruuta";
+$Globals['pp_lang']['plznote'] = "Huomaa: niin pitkään kunnes saamme allekirjoitetun lomakkeen";
+$Globals['pp_lang']['plznote2'] = "vanhemmiltasi tai huoltajaltasi, et voi ladata kuvia.";
+$Globals['pp_lang']['reqinfo'] = "Tarvittavat tiedot";
+$Globals['pp_lang']['secreq'] = "(Tämän kohdan tiedot ovat välttämättömiä. Huomaa että salasanasi isot ja pienet kirjaimet ovat eri asia.)";
+$Globals['pp_lang']['validemail'] = "Anna toimiva sähköpostiosoitteesi. Sitä ei julkaista toisille näkyväksi.";
+$Globals['pp_lang']['visible'] = "Seuraavat tiedot näkyvät kaikille web sivuston käyttäjille.";
+$Globals['pp_lang']['day'] = "Päivä";
+$Globals['pp_lang']['username'] = "Käyttäjätunnus";
+$Globals['pp_lang']['optional'] = "Lisätiedot";
+$Globals['pp_lang']['year'] = "Vuosi";
+$Globals['pp_lang']['bio'] = "Sukupuoli";
+$Globals['pp_lang']['submitreg'] = "Tallenna rekisteröitymislomake";
+$Globals['pp_lang']['userblank'] = "Käyttäjätunnus on tyhjä.";
+$Globals['pp_lang']['userexists'] = "Käyttäjätunnus on jo olemassa. Valitse jokin toinen käyttäjätunnus.";
+$Globals['pp_lang']['emailexists'] = "Sähköpostiosoite on jo olemassa tietokannassamme.";
+$Globals['pp_lang']['emailat'] = "Antamasi sähköpostiosoite ei ole oikein. Sen pitää sisältää \"@\" merkki.";
+$Globals['pp_lang']['emailperiod'] = "Antamasi sähköpostiosoite ei ole oikein. Sen pitää sisältää piste.";
+$Globals['pp_lang']['passblank'] = "Salasanasi on tyhjä.";
+$Globals['pp_lang']['user2char'] = "Käyttäjätunnuksesi pitää olla vähintään 2 merkkiä pitkä.";
+$Globals['pp_lang']['passverblank'] = "Salasanan tarkistuskenttä on tyhjä.";
+$Globals['pp_lang']['passnomatch'] = "Salasana ei täsmää salasanan tarkistuskentän kanssa.";
+$Globals['pp_lang']['emailblank'] = "Sähköpostikenttä on tyhjä.";
+$Globals['pp_lang']['parentprint'] = "Pyydä vanhempiasi/huoltajasi tulostamaan tämä lomake ja lähettämään se täytettynä meille";
+$Globals['pp_lang']['verblank'] = "Sähköpostin tarkistuskenttä on tyhjä.";
+$Globals['pp_lang']['novermatch'] = "Sähköpostin tarkistuskenttä ei täsmää sähköpostikentän kanssa.";
+$Globals['pp_lang']['erroradd'] = "Tekinen ongelma havaittu rekisteröitymisessä. Ota yhteyttä järjestelmän ylläpitoon!";
+$Globals['pp_lang']['thanks'] = "Kiitoksia käyttäjätunnuksen vahvistamisesta. Se on nyt aktiivinen!";
+$Globals['pp_lang']['thanksreg'] = "Kiitoksia rekisteröitymisestä. Lue sähköpostistasi miten voit vahvistaa rekisteröitymisen.";
+$Globals['pp_lang']['retfront'] = "Palaa pääsivulle";
+$Globals['pp_lang']['noverify'] = "Olemme pahoillamme, mutta emme voi vahvistaa tätä osoitetta.";
+$Globals['pp_lang']['nonum'] = "Käyttäjänumeroa ei löytynyt tietokannastamme.";
+?>
