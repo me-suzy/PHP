@@ -1,0 +1,116 @@
+<?
+$Globals['pp_lang']['closed'] = "Nagyon sajnáljuk, de a Képtár technikai okok miatt átmenetileg zárva tart. Kérjük, próbálkozzon késõbb!";
+$Globals['pp_lang']['ureset'] = "A felhasználó új jelszót kapott, amit elküldtünk e-mailben.";
+$Globals['pp_lang']['preset'] = "Új jelszót kapott, amit elküldtünk e-mailben.";
+$Globals['pp_lang']['nomatch'] = "Nincs találat. Ellenõrizze a címet, és próbálja újra!";
+$Globals['pp_lang']['memprofile'] = "Felhasználó beállításai";
+$Globals['pp_lang']['profilefor'] = "A következõ beállításai";
+$Globals['pp_lang']['datereg'] = "Adatok rögzítve";
+$Globals['pp_lang']['posts'] = "Vélemények";
+$Globals['pp_lang']['status'] = "Státusz";
+$Globals['pp_lang']['lastphotoup'] = "egutóbb feltöltött fotó";
+$Globals['pp_lang']['lastcommentpo'] = "Legújabb vélemény";
+$Globals['pp_lang']['bday'] = "Születésnap";
+$Globals['pp_lang']['seebday'] = "Ha kiválasztja születésnapját, akkor ez a többi tag számára láthatóvá válik a személyes adatainál.";
+$Globals['pp_lang']['homepage'] = "Fõoldal";
+$Globals['pp_lang']['icq'] = "ICQ";
+$Globals['pp_lang']['aim'] = "AIM";
+$Globals['pp_lang']['yahoo'] = "Yahoo";
+$Globals['pp_lang']['location'] = "Lakhely";
+$Globals['pp_lang']['interests'] = "Érdeklõdési kör";
+$Globals['pp_lang']['occupation'] = "Foglalkozás";
+$Globals['pp_lang']['aboutme'] = "Rólam";
+$Globals['pp_lang']['checke'] = "Kérjük, ellenõrizze e-mail postafiókját!";
+$Globals['pp_lang']['noaddr'] = "Ezt a címet nem találtuk adatbázisunkban.";
+$Globals['pp_lang']['memberpassadmin'] = "Tag Jelszó Adminisztrátor";
+$Globals['pp_lang']['forgot'] = "Elfelejtett jelszó";
+$Globals['pp_lang']['resetform'] = "Jelszó ûrlap törlése";
+$Globals['pp_lang']['youremail'] = "Az Ön e-mail címe";
+$Globals['pp_lang']['submit'] = "Küldés";
+$Globals['pp_lang']['blankpass'] = "A régi jelszó hiányzik.";
+$Globals['pp_lang']['blankpass2'] = "Az új jelszó hiányzik.";
+$Globals['pp_lang']['confirmblank'] = "Az új jelszó megerõsítése mezõ üres.";
+$Globals['pp_lang']['nomatch'] = "Az új jelszó nem egyezik az új jelszó megerõsítése jelszóval.";
+$Globals['pp_lang']['fourchars'] = "A jelszónak legalább 4 karakter hosszúnak kell lennie.";
+$Globals['pp_lang']['oldwrong'] = "Régi jelszó hibás.";
+$Globals['pp_lang']['passchanged'] = "Jelszó megváltoztatva";
+$Globals['pp_lang']['changeform'] = "Jelszó megváltoztatása ûrlap";
+$Globals['pp_lang']['oldpass'] = "Régi jelszó";
+$Globals['pp_lang']['newpass'] = "Új jelszó";
+$Globals['pp_lang']['confirmpass'] = "Új jelszó megerõsítése";
+$Globals['pp_lang']['changepass'] = "Jelszó megváltoztatása";
+$Globals['pp_lang']['memberprofile'] = "Felhasználó adatai ";
+$Globals['pp_lang']['editprofile'] = "A következõ beállításainak szerkesztése";
+$Globals['pp_lang']['password'] = "Jelszó";
+$Globals['pp_lang']['passagain'] = "Adja meg a jelszót ismét!";
+$Globals['pp_lang']['email'] = "E-mail";
+$Globals['pp_lang']['emailagain'] = "Adja meg e-mail címét ismét";
+$Globals['pp_lang']['month'] = "Hónap";
+$Globals['pp_lang']['emailconf'] = "E-mail megerõsítése";
+$Globals['pp_lang']['timezone'] = "Idõzóna eltolódás<br />Beállított idõ:";
+$Globals['pp_lang']['savechanges'] = "Változtatások mentése";
+$Globals['pp_lang']['noeditperm'] = "Nincs jogosultása ezeket a beállításokat megváltoztatni.";
+$Globals['pp_lang']['noemailmatch'] = "Az e-mail mezõnek egyeznie kell az e-mail megerõsítése mezõvel.";
+$Globals['pp_lang']['profileupdated'] = "Beállítások frissítve.";
+$Globals['pp_lang']['nonew'] = "Új felhasználó regisztráció tiltva.";
+$Globals['pp_lang']['intonly'] = "A szkriptet csak a Képtár belsõ regisztrációs rendszeréhez használjuk.";
+$Globals['pp_lang']['loggedin'] = "Ön már regisztrált és be is jelentkezett.";
+$Globals['pp_lang']['regfor'] = "Regisztrála mint ";
+$Globals['pp_lang']['coppainfo'] = "COPPA Információk";
+$Globals['pp_lang']['over13'] = "13 évesnél idõsebb";
+$Globals['pp_lang']['under13'] = "13 évesnél fiatalabb";
+$Globals['pp_lang']['forinfo'] = "Információk arról, hogyan kezeljük személyes adatait";
+$Globals['pp_lang']['privacy'] = "Adatkezelési nyilatkozat";
+$Globals['pp_lang']['permform'] = "Engedélyezési ûrlap";
+$Globals['pp_lang']['parentreq'] = "Egy szülõ vagy gondviselõnek kell aláírva visszaküldeni";
+$Globals['pp_lang']['permformlower'] = "engedélyezési ûrlap";
+$Globals['pp_lang']['toadmin'] = "az oldal adminisztrétorának";
+$Globals['pp_lang']['beforeany'] = "mielõtt bárki, aki 13 évesnél fiatalabb befejezheti a regisztrációt.";
+$Globals['pp_lang']['forfurther'] = "További információért lépjen kapcsolatba";
+$Globals['pp_lang']['registerfor'] = "Regisztrálva mint";
+$Globals['pp_lang']['rulespol'] = "Szabályok és politika";
+$Globals['pp_lang']['forumrules'] = "Fórum szabályai";
+$Globals['pp_lang']['coppaform'] = "Minden 13 vesnél fiatalabb felhasználó nyilatkozatot kell szerezzen szülõjétõl vagy gondviselõjétõl, hogy az oldal felhasználójává válhasson.
+                    Örömmel vesszük minden 13 évesnél fiatalabb felhasználó regisztrációját, azonban tõlük szükségünk van egy aláírva visszaküldött nyilatkozatra szülõjüktõl vagy gondviselõjüktõl
+                    mielõtt megadjuk a jogot a taggá váláshoz.<p>
+
+                    A regisztrációs folyamatot elkezdheti mielõtt megkapnánk a nyilatkozatot az Elfogadom gombra kattintva.  Vagy Ön
+                    félbehagyhatja regisztrációs folyamatot a Mégse gombra kattintva.<p>
+
+                    Innen letöltheti az nyilatkozatot:";
+                    
+$Globals['pp_lang']['formore'] = "Ha több információra van szüksége a regisztrációs folyamatról, vagy az oldalról általában, kérem, küldjön e-mailt";
+$Globals['pp_lang']['agree'] = "Elfogadom";
+$Globals['pp_lang']['cancel'] = "Mégsem";
+$Globals['pp_lang']['plznote'] = "Figyelem: Ameddig nem érkezik meg egy aláírt";
+$Globals['pp_lang']['plznote2'] = "szülõjétõl vagy gondviselõjétõl nem tud fotókat feltölteni vagy véleményeket írni.";
+$Globals['pp_lang']['reqinfo'] = "Szükséges információ";
+$Globals['pp_lang']['secreq'] = "(Ebben a részben az információ megadása szükséges. Figyelem, a jelszó kis/nagybetû érzékeny.)";
+$Globals['pp_lang']['validemail'] = "Kérem, adjon meg egy valós e-mail címet. Ez nem lesz látható a többi látogató számára.";
+$Globals['pp_lang']['visible'] = "Az alábbi információk minden látogató számára láthatóak lesznek.";
+$Globals['pp_lang']['day'] = "Nap";
+$Globals['pp_lang']['username'] = "Felhasználónév";
+$Globals['pp_lang']['optional'] = "Információ (nem kötelezõ megadni)";
+$Globals['pp_lang']['year'] = "Év";
+$Globals['pp_lang']['bio'] = "Életrajz";
+$Globals['pp_lang']['submitreg'] = "Regisztrációs lap küldése";
+$Globals['pp_lang']['userblank'] = "Nem adott meg felhasználónevet.";
+$Globals['pp_lang']['userexists'] = "Az Ön által megadott felhasználónév már szerepel az adatbázisban.  Kérjük, válasszon másikat!";
+$Globals['pp_lang']['emailexists'] = "Az Ön által megadott e-mail cím már szerepel az adatbázisban.";
+$Globals['pp_lang']['emailat'] = "Az Ön által megadott e-mail cím hibás. Tartalmaznia kell a \"@\" jelet.";
+$Globals['pp_lang']['emailperiod'] = "Az Ön által megadott e-mail cím hibás. Tartalmaznia kell egy pontot";
+$Globals['pp_lang']['passblank'] = "Nem adott meg jelszót";
+$Globals['pp_lang']['user2char'] = "Felhasználónevének legalább 2 karakter hosszúnak kell lennie.";
+$Globals['pp_lang']['passverblank'] = "A jelszó megerõsítése mezõ üres.";
+$Globals['pp_lang']['passnomatch'] = "A jelszó nem egyezik a jelszõ megerõsítése mezõben megadottal.";
+$Globals['pp_lang']['emailblank'] = "Nem adott meg e-mail címet.";
+$Globals['pp_lang']['parentprint'] = "Kérjük, ezt a mezõt egy szülõ/gondviselõ nyomtassa, majd töltse ki és küldje vissza az alábbi címre";
+$Globals['pp_lang']['verblank'] = "E-mail megerõsítése mezõ üres.";
+$Globals['pp_lang']['novermatch'] = "Az e-mail nem egyezik az e-mail megerõsítése mezõben megadottal.";
+$Globals['pp_lang']['erroradd'] = "Probléma merült fel az Ön felhasználói fiókjának létrehozásával. Kérjük, lépjen kapcsolatba az adminisztrátorral!";
+$Globals['pp_lang']['thanks'] = "Köszönjük, hogy megerõsítette felhasználói fiókját!  Már aktív!";
+$Globals['pp_lang']['thanksreg'] = "Köszönjük, hogy regisztrált! Kérjük, ellenõrizze e-mail postafiókját! Itt információkat talál az aktiválásról.";
+$Globals['pp_lang']['retfront'] = "Visszatérés a fõoldalra";
+$Globals['pp_lang']['noverify'] = "Sajnáljuk, de nem tudjuk hitelesíteni felhasználói fiókját.";
+$Globals['pp_lang']['nonum'] = "Ezt a felhasználói számot nem találtuk az adatbázisban.";
+?>
