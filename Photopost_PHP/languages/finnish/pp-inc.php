@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Suosituimmat kuvat";
+$Globals['pp_lang']['allcats'] = "Kaikki kategoriat";
+$Globals['pp_lang']['recent'] = "Viimeisimmät kuvat";
+$Globals['pp_lang']['random'] = "Satunnaiskuvat";
+$Globals['pp_lang']['by'] = "tekijä";
+$Globals['pp_lang']['category'] = "Kategoria";
+$Globals['pp_lang']['photos'] = "Kuvat";
+$Globals['pp_lang']['comments'] = "Mielipiteet";
+$Globals['pp_lang']['lastcomment'] = "Viimeisin mielipide";
+$Globals['pp_lang']['lastphoto'] = "Viimeisin tallennettu kuva";
+$Globals['pp_lang']['favorites'] = "Suosikkini";
+$Globals['pp_lang']['createcal'] = "Print Calendar";
+$Globals['pp_lang']['printable'] = "printable";
+$Globals['pp_lang']['lastdays'] = "Vuorokauden tallennukset";   
+$Globals['pp_lang']['last7days'] = "7 päivän tallennukset";   
+$Globals['pp_lang']['last14days'] = "14 päivän tallennukset";
+$Globals['pp_lang']['custom'] = "Mukautettu näkymä";
+$Globals['pp_lang']['searchr'] = "Haun tulokset";        
+$Globals['pp_lang']['member'] = "Käyttäjä";
+$Globals['pp_lang']['admin'] = "Pääkäyttäjä";
+$Globals['pp_lang']['home'] = "Pääsivu";
+$Globals['pp_lang']['logout'] = "Kirjaudu ulos";
+$Globals['pp_lang']['mygallery'] = "Oma&nbsp;Galleriani";        
+$Globals['pp_lang']['albumadmin'] = "Albumien&nbsp;hallinta";
+$Globals['pp_lang']['myfavorites'] = "Omat&nbsp;suosikit";        
+$Globals['pp_lang']['login'] = "Kirjaudu";
+$Globals['pp_lang']['register'] = "Rekisteröidy";
+$Globals['pp_lang']['profile'] = "Profiili";
+$Globals['pp_lang']['upload'] = "Tallenna&nbsp;kuvia";
+$Globals['pp_lang']['forward'] = "Välitetään sinulle";
+$Globals['pp_lang']['clickhere'] = "Paina tästä jos et halua odottaa pidempään.<br />(tai jos selaimesi ei automaattisesti siirry eteenpäin)";
+$Globals['pp_lang']['erroruser'] = "Valitsemasi käyttäjätunnus ei ole sopiva. Käyttäjätunnus ei saa sisältää kuin kirjaimia ja numeroita.";
+$Globals['pp_lang']['errorcopy'] = "Tiedoston kopiointi epäonnistui. Toiminto keskeytetty.";
+$Globals['pp_lang']['moved'] = "Kuva siirretty";
+$Globals['pp_lang']['errorperm'] = "Sinulla ei ole oikeutta tähän toimintoon!";
+?>
