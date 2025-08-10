@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Mest Populære Bilder";
+$Globals['pp_lang']['allcats'] = "Alle Kategorier";
+$Globals['pp_lang']['recent'] = "Nyeste Bilder";
+$Globals['pp_lang']['random'] = "Tilfeldige Bilder";
+$Globals['pp_lang']['by'] = "av";
+$Globals['pp_lang']['category'] = "Kategori";
+$Globals['pp_lang']['photos'] = "Bilder";
+$Globals['pp_lang']['comments'] = "Kommentarer";
+$Globals['pp_lang']['lastcomment'] = "Siste Kommentar";
+$Globals['pp_lang']['lastphoto'] = "Siste Bilde Opplasting";
+$Globals['pp_lang']['favorites'] = "Mine Favoritter";   
+$Globals['pp_lang']['createcal'] = "Print Calendar";
+$Globals['pp_lang']['printable'] = "printable";
+$Globals['pp_lang']['lastdays'] = "Siste Dagers Bidrag";   
+$Globals['pp_lang']['last7days'] = "Siste 7 Dagers Bidrag";   
+$Globals['pp_lang']['last14days'] = "Siste 14 Dagers Bidrag";
+$Globals['pp_lang']['custom'] = "Egentilpasset Betraktningsmåte";
+$Globals['pp_lang']['searchr'] = "Søkeresultater";        
+$Globals['pp_lang']['member'] = "Medlem";
+$Globals['pp_lang']['admin'] = "Admin";
+$Globals['pp_lang']['home'] = "Hjem";
+$Globals['pp_lang']['logout'] = "Logg Ut";
+$Globals['pp_lang']['mygallery'] = "Mitt&nbsp;Galleri";        
+$Globals['pp_lang']['albumadmin'] = "Album&nbsp;Admin";
+$Globals['pp_lang']['myfavorites'] = "Mine&nbsp;Favoritter";        
+$Globals['pp_lang']['login'] = "Logg Inn";
+$Globals['pp_lang']['register'] = "Registrer";
+$Globals['pp_lang']['profile'] = "Profil";
+$Globals['pp_lang']['upload'] = "Last Opp&nbsp;Bilder";
+$Globals['pp_lang']['forward'] = "Du blir nå sendt til";
+$Globals['pp_lang']['clickhere'] = "Klikk her om du ikke ønsker å vente lengre<br />(eller om din webleser ikke sender deg videre automatisk)";
+$Globals['pp_lang']['erroruser'] = "Brukernavnet du valgte er ugyldig. Brukernavn kan ikke inneholde annet enn sifre og bokstaver.";
+$Globals['pp_lang']['errorcopy'] = "Filkopiering mislykket. Oppgave avbrutt.";
+$Globals['pp_lang']['moved'] = "Flyttet bilde";
+$Globals['pp_lang']['errorperm'] = "Du har ikke tillatelse til å gjøre dette!";
+?>
