@@ -1,0 +1,56 @@
+body {
+	background:#999966;  /* background color */
+
+	scrollbar-face-color: #FFFFFF; 
+	scrollbar-shadow-color: #CCCCCC;
+	scrollbar-highlight-color:#CCCCCC;
+	scrollbar-3dlight-color:#CCCCCC;
+	scrollbar-darkshadow-color:#FFFFFF; 
+	scrollbar-track-color: #FFFFFF; 
+	scrollbar-arrow-color: #CCCCCC;
+	}
+body,table,td,tr,div,p,pre,h1,h2,h3,h4,ul,li {  /* text font face and color if not link */
+	font-family: Arial, Helvetica, sans-serif; color: #666666;
+	}
+table { /* Defines the color of the tables around the forum text */	
+	border-color: #666666;
+}
+a { /* link format: no underline, bold */
+	font-weight: bold;
+	text-decoration:none;
+}
+a:link, a:visited, a:active { /* menu and email-link color of the name */
+	color: #666666;
+}
+a:hover {
+	color: #FFFFFF;
+}
+.forum:link, .forum:visited, .forum:active { /* forum posts subject color */
+	color: #FFFFFF;
+}
+.forum:hover {
+	color: #666666;
+}
+.submit { /* color of the form buttons */
+	color:#666666; /* Color of the text on the button */
+	border-style:solid;  /* Button border style: none; solid, dotted, dashed, etc*/
+	border-width: 2px; 
+	border-color: #666666;
+	background:#999966; /* background color */
+}
+.highlight { /* ERROR highlight color: Color of the name of the invalid field */
+	color=#FFCC00;  
+}
+.ta-blr {
+	border-bottom-width:1px; border-bottom-style:solid;  
+	border-left-width:1px; border-left-style:solid; 
+	border-right-width:1px; border-right-style:solid;
+	background:#999966;
+}
+.ta-tblr {
+	border-top-width:1px; border-top-style:solid; 
+	border-bottom-width:1px; border-bottom-style:solid;  
+	border-left-width:1px; border-left-style:solid; 
+	border-right-width:1px; border-right-style:solid;
+	background:#999966;
+}
