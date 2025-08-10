@@ -1,0 +1,52 @@
+Sorry for my bad english.
+
+Some hints:
+~~~~~~~~~~~
+
+1. You can add your custom page header (i.e. banner at the top or at the bottom of page, or site menu & copyrights) by changing files header.htm & footer.htm, which placed in include folder.
+
+2. You can change info, modifying file info.htm, which placed in include folder.
+ If you wish place different info's for different languages you can assign different .htm filenames in language files ($infopage variable).
+
+3. You can change header of digest letter by editing mailinfo.htm file.
+
+4. You can easy edit all above files using configuration panel (configure.php).
+
+5. If you wish change default folder where files will be stored, you can edit variable $uploads_folder_name in file conf.php
+ You have to set the relative path without trailing slash
+ (e.g. $uploads_folder_name = "/sattv/uploads";)
+
+6. Highly recommended change default user folder by changing $users_folder_name variable. This improve your security.
+
+5. To add your national language you must do following:
+  1. Translate existing language file (language files stored in include folder) & save it under name NN.php, where NN - the country code.
+  2. Create country flag (image size 25x15) and place it into "images" folder under name NN.gif
+  3. Open conf.php file, find languages section and add your language
+  4. Please, don't forget send us your translation. We include it in the new release of PHP Upload Center.
+
+6. You can give link to upload center files for a required date:
+  http://www.mysite.com/mypage/index.php?showfilesfordate=2002-2-11
+  The date format after equal symbol is: Year-Month-Day
+
+The structure of description file:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All descriptions to files stored in files with .dlcnt extension.
+1st line - the user name who uploaded file
+2nd line - the IP of user
+all other lines - the file description
+
+
+The structure of user account file:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The name of file - is the user name.
+
+1st line: Encrypted user password
+2nd line: Encrypted user session ID, 0 - if user logged out
+3rd line: User E-Mail address
+4th line: Account status: 0 - Administrator, 1 - Power User, 2 - Normal User, 3 - Viewer (view only), 4 - Uploader (upload only)
+5th line: 1 - if account active, 0 - if disabled, other value - activation code
+6 line: Any temporary information (i.e. unconfirmed new user mail)
+7 line: 1 if user wish to receive files digest via e-mail, else 0
+8 line: The unix time when user account created
