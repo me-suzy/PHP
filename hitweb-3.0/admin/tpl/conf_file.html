@@ -1,0 +1,72 @@
+<b>{MESSAGE}<b><p>
+
+
+<form action="conf{EXT_PHP}" method="post">
+<table border="0" cellspacing="0" cellpadding="3">
+
+  <input type="hidden" size="35" name="dbhost" value="{DBHOST}">
+  <input type="hidden" size="35" name="dbname" value="{DBNAME}">
+  <input type="hidden" size="35" name="dbuser" value="{DBUSER}">
+  <input type="hidden" size="35" name="dbpass" value="{DBPASS}">
+  <input type="hidden" size="35" name="base" value="{BASE}">
+
+  <tr>
+    <td>{LIB_REP_CLASS}</td><td><input type="text" size="35" name="rep_class" value="{REP_CLASS}"></td>
+  </tr>
+  <tr>
+    <td>{LIB_REP_LANGADMIN}</td><td><input type="text" size="35" name="rep_lang_admin" value="{REP_LANG_ADMIN}"></td>
+  </tr>
+  <tr>  
+    <td>{LIB_LANG_ADMIN}</td>
+    <td>
+      <select name="lang_admin">
+      <!-- BEGIN DYNAMIC BLOCK: lang -->
+	    <option value="{LANG_ADMIN}" {SELECTED}>{LANG_ADMIN} 
+      <!-- END DYNAMIC BLOCK: lang -->
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>{LIB_EXT_PHP}</td><td><input type="text" size="35" name="ext_php" value="{EXT_PHP}"></td>
+  </tr>
+  <tr>  
+    <td>{LIB_EXT_TPL}</td><td><input type="text" size="35" name="ext_tpl" value="{EXT_TPL}"></td>
+  </tr>
+  <tr>
+    <td>{LIB_REP_TPL}</td>
+	<td>
+	  <select name="rep_tpl">
+	  <!-- BEGIN DYNAMIC BLOCK: skin -->
+	    <option value="{DIR_TPL}" {SELECTEDTPL}>{DIR_TPL} 
+	  <!-- END DYNAMIC BLOCK: skin -->
+      </select>
+	</td>
+  </tr>
+  <tr>  
+    <td>{LIB_USE_MAIL}</td>
+	<td>
+	  <select name="use_mail">
+        <option value="oui" {SELECTED_YES}>oui
+		<option value="non" {SELECTED_NO}>non
+      </select>
+	</td>
+  </tr>
+  <tr>
+    <td>{LIB_FUNC_MAIL}</td><td><input type="text" size="35" name="func_mail" value="{FUNC_MAIL}"></td>
+  </tr>
+  <tr>  
+    <td>{LIB_MAIL_MODERATOR}</td><td><input type="text" size="35" name="mail" value="{MAIL}"></td> 
+  </tr>
+  <tr>  
+    <td>{LIB_ADDRESS_SITE}</td><td><input type="text" size="35" name="site" value="{SITE}"></td>
+  </tr>
+
+  <tr>
+    <input type="hidden" name="action" value="enregistrer">
+    <input type="hidden" name="what" value="{WHAT}">
+    <td colspan="2" align="right"><input type="submit" value="{BT_ENRE}">
+    <input type="reset" value="{BT_RESET}" onClick="history.back()"></td>
+  </tr>
+
+</table>
+</form>
