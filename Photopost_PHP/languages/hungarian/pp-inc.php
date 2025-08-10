@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Legnépszerûbb fotók";
+$Globals['pp_lang']['allcats'] = "Mindegyik kategória";
+$Globals['pp_lang']['recent'] = "Legújabb fotók";
+$Globals['pp_lang']['random'] = "Fotók véletlenszerûen";
+$Globals['pp_lang']['by'] = "a következõtõl";
+$Globals['pp_lang']['category'] = "Kategória";
+$Globals['pp_lang']['photos'] = "Fotók";
+$Globals['pp_lang']['comments'] = "Vélemények";
+$Globals['pp_lang']['lastcomment'] = "Legújabb vélemények";
+$Globals['pp_lang']['lastphoto'] = "Legújabb fotó";
+$Globals['pp_lang']['favorites'] = "Kedvenceim";    
+$Globals['pp_lang']['createcal'] = "Print Calendar";
+$Globals['pp_lang']['printable'] = "printable";
+$Globals['pp_lang']['lastdays'] = "Legutóbbi napokon írt vélemények";   
+$Globals['pp_lang']['last7days'] = "Legutóbbi 7 napon írt vélemények";   
+$Globals['pp_lang']['last14days'] = "Legutóbbi 14 napon írt vélemények";
+$Globals['pp_lang']['custom'] = "Egyéni nézet";
+$Globals['pp_lang']['searchr'] = "Keresési eredmények";        
+$Globals['pp_lang']['member'] = "Tag";
+$Globals['pp_lang']['admin'] = "Adminisztrátor";
+$Globals['pp_lang']['home'] = "Fõoldal";
+$Globals['pp_lang']['logout'] = "Kilépés";
+$Globals['pp_lang']['mygallery'] = "Saját&nbsp;Fotógalériám";        
+$Globals['pp_lang']['albumadmin'] = "Album&nbsp;Adminisztrátor";
+$Globals['pp_lang']['myfavorites'] = "&nbsp;Kedvenceim";        
+$Globals['pp_lang']['login'] = "Belépés";
+$Globals['pp_lang']['register'] = "Regisztráció";
+$Globals['pp_lang']['profile'] = "Beállítások";
+$Globals['pp_lang']['upload'] = "Fotók&nbsp;Feltöltése";
+$Globals['pp_lang']['forward'] = "Most átirányítjuk Önt";
+$Globals['pp_lang']['clickhere'] = "Kattintson ide, ha nem akar tovább várni<br />(vagy ha a böngészõje nem irányítja át automatikusan)";
+$Globals['pp_lang']['erroruser'] = "A választott felhasználónév érvénytelen. A felhasználónév nem állhat másból, mint betûkbõl és számokból.";
+$Globals['pp_lang']['errorcopy'] = "Fájl másolása sikertelen. Folyamat megszakítva.";
+$Globals['pp_lang']['moved'] = "Áthelyezett kép";
+$Globals['pp_lang']['errorperm'] = "Nincs jogosultsága ennek a mûveletnek a végrehajtásához!";
+?>
