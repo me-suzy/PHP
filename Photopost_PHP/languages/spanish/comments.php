@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "Lo sentimos, pero nuestra galer&iacute;a se encuentra cerrada. Por favor intenta m&aacute;s tarde."; 
+$Globals['pp_lang']['nocom'] = "No se permiten comentarios de usuarios.";
+$Globals['pp_lang']['noperm'] = "Lo siento, no tienes permisos para colocar/editar mensajes.<p>Si intentaste editar, puede que no seas el autor del mensaje, o editar mensajes puede<br /> estar deshabilitado para tu grupo de usuarios";
+$Globals['pp_lang']['nopost'] = "No tienes permisos para colocar comentarios en esta categor&iacute;a.";
+$Globals['pp_lang']['enabled'] = "Notificaciones de email habilitadas.";
+$Globals['pp_lang']['malform'] = "Par&aacute;metro err&oacute;neo pasado!";
+$Globals['pp_lang']['enabled'] = "Notificaciones de email deshabilitadas.";
+$Globals['pp_lang']['noedit'] = "No tienes permiso para editar este comentario.";
+$Globals['pp_lang']['addcomment'] = "Agregar un Comentario";
+$Globals['pp_lang']['addyour'] = "Agregue sus comentarios";
+$Globals['pp_lang']['help'] = "ayuda";
+$Globals['pp_lang']['username'] = "Nombre de usuario";
+$Globals['pp_lang']['rateoverall'] = "Califique esta imagen en promedio";
+$Globals['pp_lang']['ratethis'] = "Califique esta imagen";
+$Globals['pp_lang']['excellent'] = "Excelente";
+$Globals['pp_lang']['great'] = "Muy buena";
+$Globals['pp_lang']['good'] = "Buena";
+$Globals['pp_lang']['fair'] = "Aceptable";
+$Globals['pp_lang']['poor'] = "Mala";
+$Globals['pp_lang']['ubb'] = "Leyenda de c&oacute;digo";
+$Globals['pp_lang']['smilies'] = "Leyenda de caritas";
+$Globals['pp_lang']['delete'] = "Borrar mensaje";
+$Globals['pp_lang']['check'] = "S&oacute;lo marca esta opci&oacute;n si quieres borrar tu mensaje";
+$Globals['pp_lang']['every1'] = "S&oacute;lo puedes calificar esta imagen cada ";
+$Globals['pp_lang']['every2'] = "horas(s).";
+$Globals['pp_lang']['nofill'] = "No llenaste el campo de comentarios o de calificaci&oacute;n.";
+$Globals['pp_lang']['dupe'] = "Tienes un mensaje duplicado, entonces no fue agregado.";
+$Globals['pp_lang']['success'] = "Tu mensaje / edici&oacute;n se complet&oacute; con &eacute;xito.";
+$Globals['pp_lang']['invalid'] = "Llamada inv&aacute;lida al programa.";
+$Globals['pp_lang']['submitedit'] = " Editar ";
+$Globals['pp_lang']['submitpost'] = " Colocar Mensaje ";
+?>
