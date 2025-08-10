@@ -1,0 +1,142 @@
+BODY {
+	BACKGROUND: #778899
+}
+FONT            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #d5dce2;}
+		
+TD              {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #d5dce2;}
+		
+BODY            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #d5dce2;}
+		
+P               {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #d5dce2;}
+		
+DIV             {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #d5dce2;}
+		
+INPUT           {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #000000;}
+		
+TEXTAREA        {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #000000;}
+		
+FORM            {FONT-FAMILY: Verdana,Helvetica;
+		 FONT-SIZE: 11px;
+		 COLOR: #d5dce2;}
+		
+HR		{COLOR: #d5dce2;}
+		
+A:link {
+	COLOR: #ffffff;
+	FONT-WEIGHT: bold;
+}
+
+
+
+A:active {
+	COLOR: #ffffff;
+	FONT-WEIGHT: bold;
+}
+
+
+
+A:visited {
+	COLOR: #ffffff;
+	FONT-WEIGHT: bold;
+}
+A.lp:link {
+	COLOR: #404040;
+	FONT-WEIGHT: bold;
+}
+A.lp:active {
+	COLOR: #000000;
+	FONT-WEIGHT: bold;
+}
+A.lp:visited {
+	COLOR: #404040;
+	FONT-WEIGHT: bold;
+}
+A:hover {
+	TEXT-DECORATION: underline
+	FONT-WEIGHT: bold;
+}
+.smaller {
+	FONT-SIZE: 7pt; FONT-FAMILY: verdana, Helvetica;
+}
+.boxTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: #d5dce2; FONT-FAMILY: verdana, Helvetica;
+}
+.box {
+	FONT-SIZE: 9pt; COLOR: #d5dce2; FONT-FAMILY: verdana, Helvetica;
+}
+.copyright {
+	FONT-SIZE: 8px; COLOR: #d5dce2; FONT-FAMILY: verdana, Helvetica;
+}
+.lspaced {
+	FONT-SIZE: 11px; FONT-FAMILY: Arial, Helvetica, Geneva, Swiss, SunSans-Regular; LETTER-SPACING: 2px
+}
+A {
+	TEXT-DECORATION: none
+}
+.bg_medium	{background-color : #8797a5;}
+
+.bg_light 	{background-color : #8da1b2;}
+
+.bg_dark 	{background-color : #4b6072;}
+
+.bg_medium	{background-color : #8797a5;}
+
+.bg_light 	{background-color : #8da1b2;}
+
+.bg_dark 	{background-color : #4b6072;}
+
+.white 		{background-color : #778899;}
+
+.black 		{background-color : #778899;}
+
+.errortext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-size : .9em;
+                 color : red;
+                font-weight : bold;}
+		
+.smalltext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-style : normal;
+		 font-variant : normal;
+		 font-weight : normal;
+		 font-size : .8em;}
+		
+.largetext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-style : normal;
+                 font-variant : normal;
+		 font-weight : normal;
+		 font-size : 1.2em;}
+
+
+
+
+.errortext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-size : .9em;
+                 color : red;
+                font-weight : bold;}
+		
+.smalltext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-style : normal;
+		 font-variant : normal;
+		 font-weight : normal;
+		 font-size : .8em;}
+		
+.largetext 	{font-family : Arial, Helvetica, sans-serif;
+                 font-style : normal;
+                 font-variant : normal;
+		 font-weight : normal;
+		 font-size : 1.2em;}
+
