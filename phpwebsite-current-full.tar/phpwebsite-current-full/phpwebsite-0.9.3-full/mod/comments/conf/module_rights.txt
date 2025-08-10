@@ -1,0 +1,3 @@
+edit::Edit Comments
+remove::Delete Comments
+delete_thread::Delete Thread
