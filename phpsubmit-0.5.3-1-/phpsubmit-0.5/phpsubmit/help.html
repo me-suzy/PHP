@@ -1,0 +1,77 @@
+<!--
+    PHPSubmit - A search engine submission script
+    Copyright (C) 2000 Matt Wilson
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+-->
+
+<html>
+
+<head>
+
+<title>PHPSubmit by Matt Wilson is ready to submit your pages</title>
+
+</head>
+
+<body bgcolor=#ffffff text=#000000>
+
+<div align=center>
+
+<table width=500 cellspacing=2>
+<tr><td width=500 align=center><a href="http://www.mattsscripts.co.uk/phpsubmit/"><img border=0 src=logo2.gif></a></td></tr>
+
+<tr><td></td></tr>
+
+<tr>
+<td width=500>
+<font face=Verdana size=2><p>Welcome to the help page, if you are here then it most likely means that you don't really know what all that stuff on the front page means, well thats what my soul purpose in life is - to tell you.</p>
+
+<font face=Verdana size=2><p>Lets go through each input box individually shall we?</p>
+
+<font face=Verdana size=2><b><u>Domain name to submit</u></b>
+<p>
+This is the first and most important input box, in this box you should put the URL or address of your website without the `http://' in front of it although if you do put this in it will be stripped out. The script will visit this page and then try to index your site with this page as a starting point.</p>
+
+<font face=Verdana size=2><b><u>Number of pages to submit</u></b>
+<p>
+This tells the script how many pages to find on your website before proceeding to the submission stage, I have used a drop down menu for this as putting a too higher number in here and asking the script to submit many pages may/will cause the search engines to ignore your submissions and send an e-mail to you probably banning any submissions in the future.</p>
+
+<font face=Verdana size=2><b><u>Pages to look for</u></b>
+<p>
+In this text box there should already be a regular expression for which files to find, a regular expression is a method of testing strings for certain content and then deciding what to do with it. This particular regular expression tests the extension on the files that the script finds, if this script matches this regular expression then it is added and trawled for more links.</p>
+
+<font face=Verdana size=2><b><u>Skip directories</u></b>
+<p>
+This is another regular expression except this one tests directory names, so by default the script will not recurse into these directories and hence will not return any pages that it finds in these directories.
+</p>
+
+<font face=Verdana size=2><b><u>Remember my search next time</u></b>
+<p>
+This checkbox is used if you want the script to tell your computer to remember the search that you perform, and then when you next come back, you can click `Continue last search' and the script will continue where it left off from last time, searching the same domain and returning the next n pages (where n is the number you asked for) and then submitting these pages to search engines. Be warned though that searches only last one week and after this time they will be forgotten about and you will have to start again.</p>
+
+<a name="keywords"></a><font face=Verdana size=2><b><u>Search engine keywords</u></b>
+<p>
+Keywords are used by many search engines in order to categorise your web pages with the most accuracy, this means that if one of your keywords or phrases was "dancing tiger", for example, when this was searched for on the search engine, your website should be found within the results. It is very easy to submit your keywords, but it is normally not quite so easy to decide on the keywords to use! To enter your keywords, simple seperate each word or phrase with a comma, for example "dancing, tigers, animals" would be three keywords, whilst "dancing tigers, animals" would only be two, namely "dancing tigers" and "animals".
+</p>
+</td>
+
+</tr>
+</table>
+
+</div>
+
+</body>
+
+</title>
