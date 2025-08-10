@@ -1,0 +1,24 @@
+<center>{TITLE_UPDATE_CAT}<p>
+
+<form action="categories{EXT_PHP}" method="post">
+<table border="0" cellspacing="0" cellpadding="3">
+  <tr>
+    <td>{LIB_ID}</td>
+    <td><input type="text" name="categories_id" value="{CATEGORIESID}" READONLY></td>
+  </tr>
+  <tr>
+    <td>{LIB_NAME}</td><td><input type="text" size="50" name="categories_nom" value="{CATEGORIESNOM}"></td>
+  </tr>
+    <input type="hidden" size="50" name="categories_cat_nom" value="{CATEGORIESCATNOM}">
+    <input type="hidden" name="categories_parents_id" value="{CATEGORIES_PARENTS_ID}">
+    <input type="hidden" name="action" value="enre">
+  <tr>
+    <td colspan='2'>
+      <input type="submit" value="{BT_ENRE}"> 
+      <input type="reset" value="{BT_RESET}" onClick="history.back()">
+    </td>
+  </tr>
+</table>
+</form>
+
+</center>
