@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Im&aacute;genes M&aacute;s Populares";
+$Globals['pp_lang']['allcats'] = "Todas las categor&iacute;as";
+$Globals['pp_lang']['recent'] = "Im&aacute;genes M&aacute;s Recientes";
+$Globals['pp_lang']['random'] = "Im&aacute;genes Aleatorias";
+$Globals['pp_lang']['by'] = "por";
+$Globals['pp_lang']['category'] = "Categor&iacute;a";
+$Globals['pp_lang']['photos'] = "Im&aacute;genes";
+$Globals['pp_lang']['comments'] = "Comentarios";
+$Globals['pp_lang']['lastcomment'] = "&Uacute;lt. Comentario";
+$Globals['pp_lang']['lastphoto'] = "&Uacute;lt. Imagen";
+$Globals['pp_lang']['favorites'] = "Mis Favoritos";
+$Globals['pp_lang']['createcal'] = "Imprimir Calendario";
+$Globals['pp_lang']['printable'] = "imprimible";
+$Globals['pp_lang']['lastdays'] = "Mensajes de los &uacute;lt. d&iacute;as.";
+$Globals['pp_lang']['last7days'] = "Mensajes de hace 7 d&iacute;as.";   
+$Globals['pp_lang']['last14days'] = "Mensajes de hace 14 d&iacute;as";
+$Globals['pp_lang']['custom'] = "Vista personalizada";
+$Globals['pp_lang']['searchr'] = "Resultados de B&uacute;squeda";
+$Globals['pp_lang']['member'] = "Miembro";
+$Globals['pp_lang']['admin'] = "Admin";
+$Globals['pp_lang']['home'] = "Inicio";
+$Globals['pp_lang']['logout'] = "Salir";
+$Globals['pp_lang']['mygallery'] = "Mi&nbsp;Galer&iacute;a";
+$Globals['pp_lang']['albumadmin'] = "Administraci&oacute;n&nbsp;de&nbsp;&Aacute;lbum";
+$Globals['pp_lang']['myfavorites'] = "Mis&nbsp;Favoritos";
+$Globals['pp_lang']['login'] = "Identificar";
+$Globals['pp_lang']['register'] = "Registrar";
+$Globals['pp_lang']['profile'] = "Perfil";
+$Globals['pp_lang']['upload'] = "Subir&nbsp;Im&aacute;genes";
+$Globals['pp_lang']['forward'] = "Redireccion&aacute;ndolo a";
+$Globals['pp_lang']['clickhere'] = "Click aqu&iacute; si no quieres esperar m&aacute;s<br />(o si tu navegador no te redirecciona autom&aacute;ticamente)";
+$Globals['pp_lang']['erroruser'] = "El nombre de usuario que escoji&oacute; no es v&aacute;lido. Los nombres de usuario s&oacute;lo pueden contener n&uacute;meros y letras.";
+$Globals['pp_lang']['errorcopy'] = "Copia del archivo fall&oacute;. Operaci&oacute;n cancelada.";
+$Globals['pp_lang']['moved'] = "Imagen movida";
+$Globals['pp_lang']['errorperm'] = "No tienes permiso para esa acci&oacute;n!";
+?>
