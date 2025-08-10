@@ -1,0 +1,161 @@
+<html>
+
+<head>
+<title>REGISTRIEREN</title>
+</head>
+
+<body bgcolor="yellow" text="black" link="blue" vlink="purple" alink="red"><script language="javascript">
+AddTxt = "";
+function f(){
+fett=window.prompt("Geben Sie bitte den Text ein, welcher fett ausgegeben werden soll!","Ihr Text");
+if ((fett == null) && (fett == "")){ AddTxt = "+fett+";
+	AddText("",document.form1.about.value);
+	document.form1.about.focus();}else
+	{document.form1.about.value=document.form1.about.value+("<b>"+fett+"</b>");}
+}
+function a(){
+absatz=document.form1.about.value=document.form1.about.value+("<br>");
+}
+function k(){
+kursiv=window.prompt("Geben Sie bitte den Text ein, welcher kursiv ausgegeben werden soll!","Ihr Text");
+if ((kursiv == null) && (kursiv == "")){ AddTxt = "+kursiv+";
+	AddText("",document.form1.about.value);
+	document.form1.about.focus();}else
+	{document.form1.about.value=document.form1.about.value+("<i>"+kursiv+"</i>");}
+}
+
+function u(){
+un=window.prompt("Geben Sie bitte den Text ein, welcher unterstrichen ausgegeben werden soll!","Ihr Text");
+if ((un == null) && (un == "")){ AddTxt = "+un+";
+	AddText("",document.form1.about.value);
+	document.form1.about.focus();}else
+	{document.form1.about.value=document.form1.about.value+("<u>"+un+"</u>");}
+}
+function b(){
+bild=window.prompt("Geben Sie bitte die Url zum Bild an!","http://");
+if ((bild == null) && (bild == "")){ AddTxt = "+bild+";
+	AddText("",document.form1.about.value);
+	document.form1.about.focus();}else
+	{document.form1.about.value=document.form1.about.value+("<img src="+bild+" border=0>");}
+}
+function l(){
+url=window.prompt("Geben Sie bitte die Url an!","http://www.kunst-stoff.ch.vu");
+linktext=window.prompt("Geben Sie bitte den Linktext an!","KUNST STOFF");
+if ((url == null) && (url == "") && (linktext == null) && (linktext == "")){ AddTxt = "";
+	AddText("",document.form1.about.value);
+	document.form1.about.focus();}else
+	{document.form1.about.value=document.form1.about.value+("<a href="+url+">"+linktext+"</a>");}
+}
+</script>
+<p>&nbsp;</p>  <form name="form1" method="post" action="register.php">
+<table cellpadding="0" cellspacing="0" width="634" align="center">
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">Real 
+                name:</font></p>
+        </td>
+        <td width="501">          
+                <p align="left"><input type="text" name="user" size="52" style="font-family:Tahoma,sans-serif; font-size:11;"></p>
+
+            
+    
+       
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">Nickname:<span style="font-size:8pt;"> </span></font></p>
+        </td>
+        <td width="501">   
+                <p align="left"><input type="text" name="nickname" maxlength="15" size="20" style="font-family:Tahoma,sans-serif; font-size:11;"></p>
+
+           
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">Password:</font></p>
+        </td>
+        <td width="501">          
+                <p align="left"><input type="password" name="passwort" maxlength="15" size="28" style="font-size:11;"></p>
+
+    
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">eMail:</font></p>
+        </td>
+        <td width="501">        
+                <p align="left"><input type="text" name="email" size="28" style="font-size:11;"></p>
+
+        
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">Homepage:</font></p>
+        </td>
+        <td width="501">          
+                <p align="left"><input type="text" name="hp" value="http://" size="52" style="font-family:Tahoma,sans-serif; font-size:11;"></p>
+
+    
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">Age:</font></p>
+        </td>
+        <td width="501">           
+                <p align="left"><input type="text" name="alter" maxlength="2" size="20" style="font-family:Tahoma,sans-serif; font-size:11;"></p>
+
+       
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">            <p align="right"><font face="Tahoma">About 
+                yourself:</font></p>
+        </td>
+        <td width="501">     
+                <p align="left"><textarea name="about" rows="7" cols="57"></textarea></p>
+
+          
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">
+            <p align="center">&nbsp;</p>
+        </td>
+        <td width="501">
+         
+                <p align="center">&nbsp;</p>
+                <table border="3" cellspacing="0" width="421" bordercolordark="white" bordercolorlight="black" align="center">
+                    <tr>
+                        <td width="411">
+                            <p align="center"><b><u><font face="Tahoma">Extras:</font></u></b></p>
+                <p align="center"><INPUT TYPE="button" NAME="fett" VALUE="New line" onClick="javascript:a();" style="font-weight:bold;"> 
+                            <INPUT TYPE="button" NAME="fett" VALUE="Bold" onClick="javascript:f();" style="font-weight:bold;"> <INPUT TYPE="button" NAME="kursiv" VALUE="Italically" onClick="javascript:k();" style="font-style:italic;"> 
+            <INPUT TYPE="button" NAME="unterstrichen" VALUE="Underlined" onClick="javascript:u();" style="text-decoration:underline;"> 
+         <INPUT TYPE="button" NAME="bild" VALUE="Image" onClick="javascript:b();"> 
+            <INPUT TYPE="button" NAME="link" VALUE="Link" onClick="javascript:l();"></p>
+                        </td>
+                    </tr>
+                </table>
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">
+            <p align="center">&nbsp;</p>
+        </td>
+        <td width="501">
+            <p align="left"><br><br><input type="submit" name="send" value="   Send   " style="color:black; text-align:center; background-color:rgb(255,255,204);"> <input type="reset" name="reset" value="   Reset   " style="color:black; background-color:rgb(255,255,204);"><p align="center">&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td width="133" valign="top">
+            <p align="center">&nbsp;</p>
+        </td>
+        <td width="501">
+            <p align="center">&nbsp;</p>
+        </td>
+    </tr>
+</table>
+</form>
+<p>&nbsp;</p>
+</body>
+
+</html>
