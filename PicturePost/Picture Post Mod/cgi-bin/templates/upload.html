@@ -1,0 +1,185 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>%%%SITE_TITLE%%% : Post Your Picture!</TITLE>
+<SCRIPT LANGUAGE="JavaScript" SRC="http://www.imagefolio.com/stage/cgi-bin/templates/cookie.js"><!--
+// -->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript"><!--
+function loadWallet() {
+
+ var cookie=document.cookie
+ if(nameDefined(cookie,"IF_Name")) { 
+IFName=getCookieValue(cookie,"IF_Name")
+IFName=decode(IFName)
+ }else IFName=""
+ document.forms[0].name.value=IFName
+
+ if(nameDefined(cookie,"IF_Email")) { 
+IFEmail=getCookieValue(cookie,"IF_Email")
+IFEmail=decode(IFEmail)
+ }else IFEmail=""
+ document.forms[0].email.value=IFEmail
+}
+
+function saveWallet() {
+IFName=window.document.forms[0].name.value
+IFEmail=window.document.forms[0].email.value
+
+IFName=encode(IFName)
+IFEmail=encode(IFEmail)
+
+ var newCookie = "IF_Name="+IFName+"; expires="
+ newCookie += "Tuesday, 09-Nov-10 23:12:40 GMT"
+ document.cookie=newCookie
+ var newCookie = "IF_Email="+IFEmail+"; expires="
+ newCookie += "Tuesday, 09-Nov-10 23:12:40 GMT"
+ document.cookie=newCookie
+}
+
+function encode(s) {
+t=""
+for(var i=0;i<s.length;++i) {
+ch=s.charAt(i)
+if(ch=="/") t += "//"
+else if(ch==" ") t += "/b"
+else if(ch==",") t += "/."
+else if(ch==";") t += "/:"
+else if(ch=="\n") t += "/n"
+else if(ch=="\r") t += "/r"
+else if(ch=="\t") t += "/t"
+else if(ch=="\b") t += "/b"
+else t += ch
+}
+return t
+}
+function decode(s) {
+// Decode the encoded cookie value
+t=""
+if(s==null) return t
+for(var i=0;i<s.length;++i) {
+var ch=s.charAt(i)
+if(ch=="/") {
+++i
+if(i<s.length){
+ch=s.charAt(i)
+if(ch=="/") t += ch
+else if(ch==".") t += ","
+else if(ch==":") t += ";"
+else if(ch=="n") t += "\n"
+else if(ch=="r") t += "\r"
+else if(ch=="t") t += "\t"
+else if(ch=="b") t += " "
+}
+}else t += ch
+}
+return t
+}
+// --></SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onLoad="loadWallet()">
+<center>
+  <form method="POST" action="%%%UPLOAD_URL%%%" ENCTYPE="multipart/form-data">
+    <table border="0" cellspacing=0 cellpadding=0 bgcolor="#000000">
+      <tr>
+        <td> 
+          <table border="0" cellspacing=1 cellpadding=0>
+            <tr bgcolor="#eeeeee"> 
+              <td align=center nowrap valign=bottom background="%%%IFIMAGES%%%/topback.gif"> 
+                <table border=0 cellspacing=0 cellpadding=0 width="100%">
+                  <tr> 
+                    <td align=center><img src="%%%IFIMAGES%%%/topimage.gif" alt="" border=0 hspace=0 vspace=0></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr bgcolor="#000000">
+              <td> 
+                <table border="0" width="100%" cellspacing=0 cellpadding=4>
+                  <tr>
+                    <td><font face="Arial,Helvetica" size="+1" color="#FFCC00"><b>Post Your Picture!</b></font></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr bgcolor="#eeeeee">
+              <td> 
+                <table border=0 cellspacing=0 cellpadding=6 width="100%">
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>Y O U R&nbsp;&nbsp;&nbsp;N A M E</b></font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type=text name=name size=45 maxlength=100>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>Y O U R&nbsp;&nbsp;&nbsp;E M A I L</b></font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type=text name=email size=45 maxlength=100>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>S E L E C T&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;C A T E G O R Y</b></font></td>
+                  </tr>
+                  <tr>
+                    <td>%%%CATEGORIES%%%</td>
+                  </tr>
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>S E L E C T&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;P I C T U R E</b>&nbsp;&nbsp;&nbsp;(TIFF, JPEG, or GIF)</font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="file" name="FILE1" size=30>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>T Y P E&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;C A P T I O N</b>&nbsp;&nbsp;&nbsp;(displayed beneath image)</font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <textarea name="caption" cols=40 rows=4 maxlength=256 wrap=virtual></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>T Y P E&nbsp;&nbsp;&nbsp;K E Y W O R D S</b>&nbsp;&nbsp;&nbsp;(for searches)</font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type=text name=keywords size=45 maxlength=256>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><font face="Verdana,Arial,Helvetica" size=1><b>M A I L I N G&nbsp;&nbsp;&nbsp;L I S T</b></font></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type=checkbox name=subscribe value=yes checked>
+                      &nbsp;<font face="Verdana,Arial,Helvetica" size=1>Add me to your mailing list</font></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr bgcolor="#eeeeee"> 
+              <td align=center valign=bottom background="%%%IFIMAGES%%%/botback.gif"> 
+                <table border=0 cellspacing=0 cellpadding=0 width="100%">
+                  <tr> 
+                    <td width=1><img src="%%%IFIMAGES%%%/left.gif" alt="" border=0 hspace=0 vspace=0></td>
+                    <td align=center width="100%"><a href="http://www.imagefolio.com" target="_blank"><img src="%%%IFIMAGES%%%/folio.gif" alt="Powered by ImageFolio" border=0 hspace=0 vspace=0></a></td>
+                    <td align=right width=1><img src="%%%IFIMAGES%%%/right.gif" alt="" border=0 hspace=0 vspace=0></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <input type=submit name=save ONCLICK="saveWallet()" value="Post My Picture!">
+  </form>
+</center>
+</BODY>
+</HTML>
