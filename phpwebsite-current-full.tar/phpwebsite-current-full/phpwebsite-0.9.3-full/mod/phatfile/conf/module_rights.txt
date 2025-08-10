@@ -1,0 +1,3 @@
+edit_files::Add/Edit Files
+delete_files::Delete Files
+hideshow_files::Hide/Show Files
