@@ -1,0 +1,952 @@
+                             DOCUMENTATION
+
+       WebAdverts 2.14 by Darryl C. Burgdorf (burgdorf@awsd.com)
+
+                  http://awsd.com/scripts/webadverts/
+
+              ===========================================
+
+WebAdverts is a comprehensive system for maintaining a set of rotating
+banner ads on your site or for setting up a "banner exchange" between
+your site and others.  Banners can be displayed on your pages via SSI
+tags, IFRAME tags, or standard IMG tags.  (Banners may also easily be
+included on CGI-generated pages.)  Multiple "zones" can be established,
+allowing certain banners to appear only on certain pages.  WebAdverts
+keeps track of exposures and click-thrus for each banner, as well as of
+the average total number of exposures per day.  Individual passwords
+allow each of your advertisers to view their own advert stats (overall
+and daily) without viewing anyone else's.  Banners can be "weighted" to
+control how often they are displayed, and can automatically be expired
+from the rotation after a designated number of exposures, click-thrus
+or days.  (Optionally requires SSI.)
+
+WebAdverts is shareware.  If you use it, please register it!  The
+registration fee is only $50 (US).  Payment should be sent via check or
+money order to Darryl C. Burgdorf, Affordable Web Space Design, 3524
+Pacific Street, Omaha NE 68105.
+
+              ===========================================
+
+The files that you need are as follows:
+
+ads.pl:  The small configuration script which should be called via SSI
+  or IMG tags on your HTML pages to display banners.  (You can set up
+  different "zones" for banner display simply by setting up multiple
+  configuration scripts, each with a different definition of the
+  $advertzone variable, as noted below.)
+
+ads_display.pl:  The script which actually handles the banner displays.
+  It is referenced by the configuration script.
+
+ads_admin.pl:  The administrative maintenance script.  With this script,
+  you can add, edit and delete accounts.  It also allows you (and your
+  advertisers) to check on how well your accounts are performing.
+
+              ===========================================
+
+SETTING UP WEBADVERTS:
+
+Setting up the script is quite easy.  You'll first need to set up a
+directory to contain your data files.  Make sure, of course, that it is
+set world-writable ("chmod a+w <dirname>").  You can put the scripts in
+that same directory, if you like, or in another directory; the latter is
+to be prefered, though, for security reasons discussed below.  (On some
+servers, you'll have no choice; it may be that your scripts *have* to be
+in your CGI-BIN directory.)  Make sure that the first lines of your
+configuration script and the admin script point correctly to the
+location of Perl on your system, and be sure that both those scripts are
+set world-executable ("chmod a+x <scriptname>").  The display script
+itself does *not* have to be executable, as it won't be called except
+from another script.
+
+In the display config script (ads.pl, or whatever you've renamed it),
+define the following variables:
+
+$display_path:  The full server path (not the URL) to your display
+  script (ads_display.pl).
+
+$adverts_dir:  The full server directory path (not the URL) to your
+  adverts data directory.  Note that this directory does not need to
+  be -- and in fact should *not* be -- the same directory within which
+  your scripts are contained.  For security purposes, this directory
+  should be password protected or (better yet) inaccessible to Web
+  browsers.
+
+$display_cgi:  The URL (not the path) of your configuration script.  If
+  you're using zones, you'll have more than one config script; each of
+  those scripts should point this variable to itself.
+
+$advertzone:  The advertising zone.  If you're not using zones,
+  simply leave this variable undefined.  If you *are* using them, see
+  the "zoning" section below for a detailed explanation of how to do so.
+
+$ADVUseLocking:  Under most circumstances, this variable should be
+  defined as 1.  Set it to 0 only if, for whatever reason, your server
+  doesn't support the flock() command.  (If this variable is set to 0,
+  a semaphore-based file locking will be used instead of flock(); while
+  it works reasonably well in most situations, it isn't nearly as
+  efficient.)
+
+$ADVUseCookies:  I very nearly didn't make this a configurable option
+  at all.  If you're only calling banners via SSI tags, cookie usage
+  is irrelevant.  If you're using IMG tags, though, this variable will
+  determine whether browser "cookies" or a data file on your server
+  will be used to keep track of which visitor has seen which banner.
+  If you set it to 0, the script will not utilize cookies.  Unless you
+  have a *VERY* compelling reason to do so, though, you should *never*
+  set $ADVUseCookies to 0.  Using cookies is *much* more efficient than
+  constantly updating and reading a file on your server.  Turning off
+  cookie support *will* result in a noticeable increase in the load on
+  your Web server, especially if you're running a busy site.
+
+$CheckForCookie:  If you set this variable to 1, then the script,
+  before displaying a banner and "blindly" setting a cookie, will set
+  a "dummy" cookie in order to be sure that the visitor's browser is
+  actually set to utilize cookies.  For those visitors who can't or
+  won't utilize cookies, the script will "fall back" to storing data
+  in a file on your server.  Performing this check will result in a 
+  slight increase in the work your server is doing, though it still
+  won't be working as hard as if cookies are turned off.  On the 
+  "up" side, though, use of this check will ensure that *all* of your
+  visitors, whether they allow cookies or not, will be able to click
+  on your banners successfully.  (Without this check, the script will
+  simply have to assume that cookies are being set, which means that
+  visitors who can't or won't allow cookies will get error messages
+  when they click on your banners.)
+
+$GraphicTimestamp:  If you set this variable to 1, each IMG tag sent
+  (via IFRAME or SSI tags) to your visitors' browsers will include a
+  "timestamp" at the end of the graphic image's URL.  (In other words,
+  rather than appearing in the IMG tag simply as "banner.gif," it might
+  appear as "banner.gif#968429321" instead.)  This will *not* in any
+  way affect the browsers' ability to display the images; however, it
+  *will* "fool" the browser into thinking that repeated displays of
+  the same banner are actually displays of distinct banners, and thus
+  force the browser *not* to reload the image from cache.  Unless you
+  have advertisers who want to be able to count "pulls" of their 
+  banner graphic for comparison to WebAdverts' reported exposure count,
+  though, you should probably leave this variable undefined, as it will
+  just result in wasted bandwidth.  (Note that WebAdverts' count will
+  likely be slightly higher than the "pull" count, in any event, since
+  WebAdverts counts the number of times it sends an IMG tag to a page,
+  and has no way of "uncounting" people who don't load graphics and/or
+  who use "banner-blocking" software.)
+
+$ADVLogIP:  If you set this variable to 1, WebAdverts will maintain
+  running log files of the IP addresses which have viewed or clicked on
+  each advert.  At any given time, the log files will extend back to
+  "yesterday morning."  (At midnight each morning, new log files are
+  initiated, and the files from two days back are deleted.)  Keeping
+  these log files allows individual account holders to keep an eye on
+  how many different people are viewing their banners, and also allows
+  the administrator to keep an eye out for exchange members or others
+  attempting to "skew" their account stats by repeatedly loading or
+  clicking on banners.
+
+$ADVResolveIPs:  If your server provides you only with raw IP addresses
+  instead of with resolved domain names, you can set the script to
+  resolve IP addresses for you.  This will allow domain names rather
+  than just IP addresses to be seen in the IP log files.  However, if
+  your site is even remotely active, utilizing this capability is *not*
+  recommended, as in the final analysis, it's a rather useless drain on
+  system resources.
+
+$ADVRandomizeList:  Setting this variable to 1 will instruct the script
+  to "randomize" the order of the accounts in your rotation list every
+  12 hours.  This can be handy, especially if you have advertisers with
+  multiple accounts, as it will ensure that banners aren't always seen
+  in the same general sequence.
+  
+$DefaultBanner:  You can, if you choose, define this variable with the
+  name of one of your accounts.  If you do so, that account's banner
+  will be displayed at any time when (for whatever reason) the system
+  isn't able to find an eligible banner via the normal routines.  Note
+  that this assignment is far more useful in banner exchanges than in
+  straight advertising setups.  Note also that if you've set up your
+  accounts correctly, and have at least one account which is *always*
+  eligible for display -- in other words, if you've got at least one
+  account set with a weight of 1, which is *not* dependent upon
+  reciprocal displays to "earn" exposures -- then this variable will
+  never even be referenced.  To be blunt, it exists solely as a "CYA"
+  for administrators who don't bother to set up their exchanges
+  properly.
+
+$IgnoredIPs:  You can enter a list of IP addresses or domain names
+  (or portions thereof) in this variable, separated by spaces.  Any
+  visitor whose IP or domain matches an entry in this list will still
+  be shown banners; however, the views or click-thrus will *not* be
+  recorded by the script.  This allows administrators to prevent their
+  own activity on their Web sites from counting against their
+  advertiser's banner's exposure counts, and also provides an easy way
+  of dealing with exchange members who try to artificially inflate
+  their exposure counts by repeatedly viewing their own pages.
+
+$RequireMember:  If you set this variable to 1, any banner call that
+  does *not* include a "member=" or "ID=" reference to a valid account
+  will *not* be sent a banner.  This will, of course, prevent the use
+  of SSI tags, since they can't include such designations; however, if
+  you've got a problem with non-members trying to draw banners from 
+  your exchange, this might help to stop them.
+
+$Ztext, $Zalt, $Ztarget, $Zwidth, $Zheight, $Zborder:  These variables
+  allow you to set "zone-wide" defaults which will override a specific
+  banner's defined link text, ALT text, link attributes, HEIGHT, WIDTH,
+  and/or BORDER values.  This could be useful if on a particular page
+  you want all banners to have a certain consistent "look" which is
+  unrelated to how they might look on any other pages.  (OK, fine, I
+  frankly don't think this *is* all that useful.  But it was requested,
+  and it was easy to implement.)  Of course, these settings will have
+  absolutely no effect on anything if you're using IMG-based rather
+  than SSI-based banner calls.
+
+$ExchangeName, $ExchangeURL, $ExchangeLogo, $ExchangeLogoWidth,
+  $ExchangeLogoHeight, $ExchangeLogoPosition, $ExchangeBannerWidth,
+  $ExchangeBannerHeight:  See below.  These only need to be defined
+  in the display script if you want an "exchange logo" button or text
+  link included with the banners generated by SSI calls.
+
+In the admin script:
+
+$adverts_dir:  This variable is identical to the $adverts_dir variable
+  in the config script.
+
+$admin_cgi:  The URL (not the path) of the admin script itself.
+
+$nonssi_cgi:  The URL (not the path) of the config script you want
+  referenced by non-SSI (IMG tag) banner calls.  If you are using
+  exclusively SSI-based banner calls, this variable can be left
+  undefined.  If you're running a banner exchange, and have more than
+  one config script (for multiple zones), this variable should point
+  to the one you want referenced by your exchange members who don't
+  specifically select one themselves.
+
+%nonssi_cgis:  If you want to set up certain "zones" and then allow
+  exchange members to be able to define the zones in which their banners
+  will be displayed and the zone from which banners will be displayed on
+  their own pages, then you'll need to set this variable with a series
+  of "sets" (zone name and corresponding non-SSI config script).  For
+  more information, see the section "Using Zones in a Banner Exchange"
+  below.  Note that you still need to define $nonssi_cgi, as well, with
+  the generic config script to be used by those who *aren't* only
+  calling banners from a specific zone.
+
+$UseLocking & $LogIP:  These should be set the same as the similarly-
+  named variables in the config script(s).  (In general, $UseLocking
+  should be set to 1.  And if $LogIP isn't set the same as $ADVLogIP,
+  then either your admin script will allow viewing of IP log files
+  which don't actually exist, or will ignore the fact that such log
+  files *do* exist!)
+
+$AdminDisplaySetup:  If you leave this variable set to 0, the admin
+  display will simply show you all accounts.  If you have a large number
+  of accounts, though, setting this variable to 1 will allow you to
+  select which accounts to view (expired, active, those in a particular
+  zone, those awaiting administrative approval, etc.) each time you
+  load the display.  This can make the admin page much more manageable
+  with large banner exchanges, for example.
+
+$AllowUserEdit:  Setting this variable to 1 will allow banner exchange
+  members or advertisers to create new accounts or to edit (some of)
+  their own account information.  Depending upon the setting of the
+  $RequireAdminApproval variable, new or edited accounts (with the
+  exception of those in which only the password was updated) may be
+  temporarily removed from active rotation.
+
+$RequireAdminApproval:  Setting this variable to 1 will require that
+  the administrator approve any account added or "self-edited" by an
+  exchange member.  Setting it to 0 will allow everything to be part of
+  the live rotation immediately, without admin intervention.  (The
+  latter is *not* recommended, for what should be obvious reasons.)
+
+$LogAdminAccesses:  If this variable is set to 1, a log file will be
+  maintained, showing the IP addresses of those accessing the admin
+  script to view or update account information.  This log file can be
+  viewed directly from the main administrative screen.
+
+$IgnoredIPs:  This variable functions similarly to the $IgnoredIPs
+  list in the ads.pl script.  Anyone whose IP address or domain matches
+  an entry in this list will be denied access to the administrative
+  functions.  They won't be able to view or edit anything.
+
+$UserUploadDir:  If and only if you're allowing users to edit their own
+  account information, you may also allow them the ability to upload
+  banners directly to your server.  If you wish to do so, this variable
+  should be defined with the path (not URL) of the directory in which
+  banners are to be stored.  Note that if you require changes to be
+  approved by the administrator, then any upload of a new banner *will*
+  result in the account being put temporarily on hold.
+
+$UserUploadURL:  The URL of the directory assigned above.
+
+$MaxBannerSize:  The maximum size (in kilobytes) of banners.  If you
+  set this to 20, for example, any attempt by a user to upload a banner
+  graphic larger than 20 kb will be automatically rejected.
+  
+$DefaultDisplayRatio:  If you're allowing users to edit their own data,
+  you'll want to set this variable to the standard display ratio used in
+  your exchange.
+
+$DefaultWeight:  The default weight for banner exchange member banners.
+  Normally, this should be left at 1.
+
+$DefaultBorder:  The default border width for banners displayed in your
+  rotation.  (Each banner can have its own defined border width, of
+  course; this variable simply allows you to avoid having to type the
+  same entry over and over.)  Please note that banners displayed via
+  IFRAME tags will have their borders set to 0, no matter how their
+  individual border widths are defined.  Similarly, if you're running
+  an exchange utilizing IFRAME code, the HTML code provided to members
+  will always have all borders set to 0.  The reason for this is that
+  borders and IFRAME tags just don't get along very well.  You can't
+  put a "click here" border *around* an IFRAME window, and if you make
+  the window larger to show a banner around the banner being displayed,
+  that border will be in the color defined for your site, and not
+  necessarily in the color defined for the site displaying the banner.
+
+$IFRAMEexchange:  If you set this variable to 0, the HTML code provided
+  to exchange members will include a simple IMG tag.  This is fine if
+  everything being shown in your exchange is a simple GIF or JPEG
+  graphic.  If you set this variable to 1, instead of IMG tags, the
+  HTML code will utilize IFRAME tags.  This will allow a bit more
+  flexibility in what your advertisers or members can use as a banner.
+  Note that IFRAME tags are currently supported only by MS Internet
+  Explorer.  Those using other browsers will still be able to see only
+  simple graphic files via IMG tags.  But yes, the script is smart
+  enough not to send anything but a GIF or JPEG if an IMG tag is used,
+  so you can safely include both basic graphics and fancier "banners"
+  in your rotation.  Note also that if you use IFRAME tags, you *must*
+  be sure to define TARGET attributes for all of your accounts' banners
+  (which can easily be done with the $DefaultLinkAttribute variable),
+  as if you don't, the banners' destinations will appear in the same
+  frame in which the banners appeared.  In other words, without a
+  TARGET attribute, your destination pages will appear *within* the
+  small spaces occupied by their banners!  (In order to prevent
+  problems with MSIE browsers, which incorrectly cache CGI-generated
+  images, it is *strongly* recommended that you turn on at least one
+  of the $IFRAMEexchange and $JavaScriptExchange variables!)
+
+$JavaScriptExchange:  If you set this variable to 1, instead of the
+  script including a basic IMG tag in the generated HTML code provided
+  to exchange members, it will include a small bit of JavaScript code
+  which will generate an IMG tag with a unique (random) "page" ID each
+  time the page is loaded or reloaded into a visitor's browser.  This
+  helps prevent cacheing problems, of course, and also makes it easier
+  for exchange members to include banners on multiple pages, as they
+  won't have to edit the code at all.  (Again, in order to prevent
+  problems with MSIE browsers, which incorrectly cache CGI-generated
+  images, it is *strongly* recommended that you turn on at least one
+  of the $IFRAMEexchange and $JavaScriptExchange variables!)
+  
+$DefaultLinkAttibute:  The default "link attribute" (e.g.,
+  "TARGET=_top") to be assigned to banners if called via SSI tags.
+  
+$bodyspec:  Any attributes (BACKGROUND, BGCOLOR, TEXT, etc.) which
+  should be assigned to the <BODY> tag on admin pages.
+
+$fontspec:  Any attributes (FACE, etc.) which should be assigned to
+  the fonts on your admin pages.  These settings are used both in the
+  document as a whole and in individual table cells, since Netscape
+  Navigator isn't smart enough to realize that document-wide settings
+  should be maintained in table cells unless specifically told so in
+  each and every cell....
+
+$MetaFile:  The path to a text file containing any HTML code (META tags,
+  etc.) to be inserted within the <HEAD> section of the pages produced
+  by the script.
+
+$header_file and $footer_file:  The full paths to optional text files
+  containing HTML code to be placed at the top and bottom of admin
+  pages.  This allows you to include certain "standard" information
+  (links to exchange rules, for example) on all of the pages generated
+  by the script.
+
+$SSIRootDir:  Your header and footer files can contain SSI "include"
+  tags.  If they do, you need to specify in $SSIRootDir the path which
+  should be prepended to the "include" definition, in order to define
+  the file's full path and thus allow the script to find it.
+
+$ExchangeName:  The name of your banner exchange.  If supplied, this
+  will be used in the default HTML code supplied to exchange members
+  for use on their own pages.
+
+$ExchangeURL:  The URL of the "home page" for your exchange.  This
+  should be the general information page that you want people to see
+  first.  Like the name above, if supplied, it is used in the default
+  HTML code supplied to exchange members.
+
+$ExchangeLogo, $ExchangeLogoWidth, $ExchangeLogoHeight:  Optional image
+  URL and size designations for a graphic linked back to your exchange,
+  which can automatically be included next to exchange member banner
+  displays.
+
+$ExchangeLogoPosition:  The position the above exchange graphic.  If
+  defined as "left" or "l" (or left undefined) the graphic will appear
+  to the left of the banners, as LinkExchange's "button" graphics used
+  to.  If defined as "bottom" or "b" the graphic will appear beneath
+  the banner, as does the new LinkExchange graphic.  Other valid 
+  definitions for this variable (as you would probably expect) are
+  "top" (or "t") and "right" (or "r").
+
+$ExchangeBannerWidth & $ExchangeBannerHeight:  If you require all
+  exchange members to use a specified banner size, you can define these
+  variables with the designated height and width to ensure that the size
+  attributes are included in the IMG tag in the HTML code supplied to
+  your exchange members.
+
+$admin_name:  Your name (or, at least, that of the exchange's
+  administrator).  It will appear at the bottom of each admin page,
+  linked to your e-mail address, so advertisers or exchange members
+  can easily contact you.
+
+$email_address:  Your e-mail address.  The "@" character in your address
+  must be "escaped" with a backslash (e.g., "scripts\@awsd.com").  
+
+$mailprog:  This variable defines what, if any, mail program is to
+  be utilized by the script.  It can be defined in one of three ways.
+  The prefered definition is the absolute path to the "sendmail"
+  program, at least if you're on a server that *has* it.  (NT servers
+  do *not*.)  Note that this is *not* the same as the "mail" program,
+  and has absolutely nothing to do with Matt Wright's "formmail" or any
+  other CGI script.  If your system doesn't have "sendmail," you can
+  instead define the variable as "SMTP" to instruct WebAdverts to access
+  your server's mail server directly.  Finally, if it's available to
+  you, you can utilize Libnet's "Net::SMTP" Perl module by defining the
+  $mailprog variable as "libnet".  Please note that the use of
+  WebAdverts' e-mail functions is entirely optional; if you don't want
+  to do so, simply leave this variable unassigned.  The script's e-mail
+  capabilities are:  (a) the ability to send "welcome" or "reject"
+  messages to members when the administrator reviews their accounts,
+  (b) e-mail message to the administrator whenever a user joins or
+  updates his stats and thus requires new admin approval, and (c) the
+  ability to e-mail account passwords to exchange members who have
+  forgotten them.
+
+$WEB_SERVER & $SMTP_SERVER:  If you're using a direct SMTP interface,
+  you can define either or both of these variables with the relevant
+  server names.  If you leave them undefined, the script will attempt
+  to determine for itself what the names should be.  If you're using
+  sendmail, of course, these variables are irrelevant.
+
+If you're using Perl 5 rather than Perl 4, *and* are utilizing the
+direct SMTP interface rather than the "sendmail" program, uncomment
+the "use Socket" line in the config file.  (In other words, remove the
+initial hash mark symbol.)  Otherwise, just leave it alone.
+
+If you're using the "Net:SMTP" module, uncomment the "use Net:SMTP"
+line, the "use Socket" line, and also the relevant section of the
+"SendMail" subroutine toward the bottom of the script.
+
+              ===========================================
+
+USING WEBADVERTS:
+
+All account maintenance is handled through the ads_admin.pl script.  To
+access the administrative functions, load "ads_admin.pl?admin".  (The
+QUERY_STRING addition -- "?admin" -- tells the script to let you access
+the admin functions rather than merely the user info display functions.
+If you simply load "ads_admin.pl" without the "?admin" addition, you'll
+only be given the users' option to view a particular account.)  Input
+your administrative password, and you'll be ready to go!
+
+(The first time you access the admin page, you'll be asked to
+assign an administrative password.  On future visits, you'll need to
+type that same password again, or you will be denied access.)
+
+From the administrative page, you can add, edit or delete accounts, or
+change your password.  You can also create "groups" of accounts (not to
+be confused with the "zones" explained below), which will simply allow
+your advertisers to view the stats for all of their banners on a single
+page.
+
+When you add a new account to the list, you will be asked for quite a
+few pieces of information.  Most are optional; how (and how often) the
+banner appears will be determined by what you input.
+
+              -------------------------------------------
+
+Name & E-Mail:  The name and e-mail address of the advertiser or
+  exchange member.  These are included for your reference only.
+
+Start Day:  If you so desire, you can have WebAdverts wait a certain
+  number of days before beginning to display the banner.  If you don't
+  input a value, displays will begin immediately.
+
+Expiration:  You can allow an account to run until it has been displayed
+  a certain number of times, until a certain number of people have
+  "clicked" on it, or until a certain number of days pass.  Once the
+  banner has expired, it will no longer be shown in the rotation;
+  however, you *will* still have access to its statistics from the admin
+  page.  No account information will be deleted by the script without
+  your specific instructions!
+
+Display Ratio:  If you're setting up a "banner exchange" system, you'll
+  probably want to define this variable instead of or in addition to
+  defining a set number of exposures.  This tells the script how often
+  to display a banner based on how often the member displays other
+  banners on his own site.  For example, a display ratio of 2 tells the
+  script to display the advertiser's banner once for each two exposures
+  that someone else gets on his site.  If this variable is set to a
+  non-zero value, the status displays for the account will include an
+  example of the HTML code which should be placed on the advertiser's
+  page to pull banners from the exchange.  And yes, the script *does*
+  check to make sure that a member's banner isn't displayed on his own
+  pages.  (Non-integer values are allowed, by the way, so if you wanted,
+  for example, for exchange members to earn two exposures for each three
+  displays -- a 3:2 ratio -- you could set this variable to 1.5.)
+
+Site URL:  The URL address to which a user will be sent when the banner
+  is "clicked."  THIS IS OPTIONAL!  By leaving this undefined, you can
+  easily create "display only" banners.  The URL does not have to point
+  to an actual Web site, by the way; "mailto" URLs are also valid here.
+
+Banner URL(s):  The URL address or addresses for the banner(s) to be
+  displayed with the advertisement.  You can optionally include more
+  than one banner, putting each URL on a separate line.  If you do so,
+  each time the account is called in rotation, the script will randomly
+  determine which banner to actually display.  Note that the banners
+  do *not* have to reside on your own server.  So long as the URLs are
+  valid, it doesn't make a bit of difference to the script where they
+  are located.  (Of course, if you pull banners directly from exchange
+  members' or advertisers' sites, they are free to change their banners
+  whenever they like, without your knowledge.)  If no banner is defined,
+  the script will assume that the account is for a remote "display
+  only" site.  This allows you to set up exchanges similar to the
+  "Commonwealth Exchange" in which members on various sites all display
+  banners from paying advertisers rather than from each other.
+
+"Weight":  This setting influences how often a banner is displayed.  If
+  you set the weight to "0" the banner won't be displayed at all.  (This
+  can be handy if you set up an account before you've received payment
+  or before your customer's requested start date, for example, or if you
+  want to take something out of the rotation on a temporary basis.)  If
+  you set the weight to "1" the banner will be displayed each time it
+  comes up in the normal rotation sequence.  If you set it to higher
+  numbers, the banner will be displayed less often.  (For example,
+  setting the weight to "2" will cause the banner to be displayed every
+  other time it comes up in the rotation, setting it to "3" will cause
+  it to be displayed every third time, etc.)  You don't necessarily need
+  to use the weight setting at all.  It is primarily intended to allow
+  you to "push" certain advertisers' banners more heavily than others.
+  Note that you must *always* have at least one account available with
+  a weight of 1 (and actually, generally, *most* of your accounts
+  should have a weight of 1).  If you do not, you will find that on
+  some cycles, *no* banner will be available for display, and you'll
+  end up with no banner at all on your page.
+
+"Zone(s)":  The zone or zones (separated by spaces) in which you want
+  the advertisement to be shown.  If you want it to be shown in all
+  zones, or if you aren't using zones, simply leave it undefined.  For
+  more information on zones, see below.  (If you've defined the
+  %nonssi_cgis variable, instead of a simple text box, you'll see
+  two select boxes.  One will allow you to select the zone or zones
+  in which the banner will be displayed, and the other will allow you
+  to select, if appropriate, the zone from which banners will be
+  displayed on the relevant exchange member's pages.
+
+Password:  The password which will allow your client (from the main
+  ads_admin.pl page) to view the stats for his particular account.
+  DO NOT assign specific banners the same password that you use for
+  administrative functions!
+
+Link Attributes:  Any attributes which you want included in the
+  banner's link tag.  Unless you use frames on your site, you probably
+  won't have much use for this, and can safely leave it undefined.  If
+  however, you want a new browser window to open when the banner is
+  clicked, or if you have the banner inside frames and want to be sure
+  that the frames are removed from the destination page, define this
+  variable accordingly (with, for example, TARGET="_top").  (If none of
+  that makes sense to you, you probably don't need to worry about it.)
+
+Banner Width & Height:  The size (in pixels) of the banner to be
+  displayed.  Defining these variables can make page display a bit
+  faster; however, they are not required.  In fact, in certain
+  situations, you might *not* want to define them.  For example, if
+  you simply load the banner from your advertiser's server, it might be
+  changed without your specific knowledge, and the new banner might not
+  be the same size as the old one.  Similarly, if you've defined several
+  banner URLs for the account, they might not all be the same size.
+
+Border:  The setting for the BORDER attribute of the banner's IMG tag.
+  The default setting is 0, which will put no "link" border at all
+  around a banner.  (On the one hand, some studies have indicated that
+  banners with borders tend to get slightly higher click-thru rates.  On
+  the other hand, though, many banners are designed with borders as part
+  of the graphic image, anyway, and many administrators and advertisers
+  simply don't like borders.  So do as you will.)
+
+ALT Text:  The text you want to appear in place of the banner itself,
+  for the benefit of those who can't or won't load the image.
+
+Link Text:  Optional text which will appear either above or below the
+  banner, as you prefer.
+
+"Raw" HTML:  A way to override just about everything above, by actually
+  specifying the particular HTML code that WebAdverts should insert on
+  your pages.  A complete discussion of "raw" mode appears elsewhere
+  in this document.
+
+              -------------------------------------------
+
+You also have the ability from the account add/edit page to reset the
+start date, exposure count and click-thru count.  This can be useful,
+for example, if an account expires and is later renewed.
+
+Finally, you also have the option to print out a simple list of the
+names and e-mail addresses of all your advertisers or exchange members.
+This can be useful, for example, if you desire to send out a "mass
+mailing" to let all your advertisers know about upgrades to your
+system.
+
+To display a banner on a particular page via SSI, simply insert an SSI
+command on the page pointing to the "ads.pl" configuration script.  It
+should look something like the following:
+
+  <P ALIGN=CENTER><!--#exec cgi="ads.pl"--></P>
+
+When the page is parsed by the server, the tag will be replaced with
+the appropriate banner and link.  You will, of course, have to make sure
+that the tag points to the correct location of the script on your
+system.  (If you're unfamiliar with the use of SSI tags, you can find
+more extensive information online in the WebAdverts FAQs file.)
+
+To display a banner without SSI, include a link and image tag similar
+to the following:
+
+  <A HREF="ads.pl?banner=NonSSI;page=01"><IMG SRC="ads.pl?page=01"></A>
+
+You can "fancy it up" however you like; just make sure that both the
+link and the image call point to the correct config file, that the
+"?banner=NonSSI" is tacked on to the end of the link address and that
+both the link and image address include the (same) "page" number.
+
+Note that the "page=" designations should be different on each page (or
+at each location) from which you call a banner.  Even if you're only
+calling a single banner on a single page, you need to include the "page"
+designations, as without them, the script will not function correctly.
+
+              ===========================================
+
+SSI VS. NON-SSI:
+
+As a general rule, if you have the ability, you should *always* use
+an SSI call instead of an IMG tag.  The processing is slightly faster,
+and the resulting banner will be less generic.
+
+The biggest disadvantage of SSI calls, of course, other than the fact
+that they simply can't be used on some servers, is the fact that they
+can't be used "across system boundaries."  If you're going to run a
+"banner exchange" system, you'll *have* to use IMG tags.
+
+Note that *both* SSI and non-SSI calls can be used to display banners
+from the same "pool"; it is perfectly feasible to have pages on your
+own site display banners with SSI tags while remote sites *also* pull
+banners from your rotation using IMG tags.
+
+IMG tag calls *do* offer one additional option, though.  If you wish to
+show a single banner in a particular location, if you're using SSI
+tags, you can only do so by assigning it its own zone.  With IMG tags,
+though, you can specify the advert simply by adding an extra entry
+("setdest=<ID>") to the QUERY_STRING.  For example, if you wanted to
+always show an ad named "rugrats" in a particular spot, you could call
+it as follows:
+
+  <A HREF="ads.pl?banner=NonSSI;setdest=rugrats;page=01">
+  <IMG SRC="ads.pl?setdest=rugrats;page=01"></A>
+
+              ===========================================
+
+RUNNING A BANNER EXCHANGE:
+
+If you're running a banner exchange, you'll want initially to set up
+each member's account as you would an account for a normal advertiser.
+Assign the "display ratio" as appropriate, so that a certain number of
+banner display's on the member's site will generate an exposure of that
+member's banner on someone else's site.
+
+Once you've completed entry of the member information, you'll see on
+the response page an example of the HTML code which should be inserted
+on that member's pages to display banners.  (That same info is visible
+any time the member checks his own stats.)  The HTML code provided will
+allow the script to keep track of which member's site displayed the
+banner, as well as, of course, of what site the user should be sent to
+if the banner is clicked.
+
+If you desire to do so, you can allow members to enter or edit their own
+information.  If you've set the $AllowUserEdit variable to 1, anyone
+will be able to create a new account simply by entering a new name and
+password, or to edit an account, so long as they know the correct
+password.  The edit screens in this case are "stripped down" versions
+of the full administrative edit screen; users can only edit their name,
+e-mail address, site URL, banner URL and password.  When a new account
+is created by a user in this way, it is first put on a "to be approved"
+list on the main admin screen.  Until the administrator approves it (by
+"editing" it, with or without actually making any changes), it will
+*not* appear in the actual rotation, though the new member may begin
+immediately to accumulate credits by displaying banners on his own
+site.
+
+Note that you should always have at least one non-exchange banner in
+your rotation.  What I mean by that is that there should be at least
+one banner which is *not* displayed solely on the basis of a specified
+display ratio.  (You can use the spot like LinkExchange does, to
+advertise the exchange.)  Even if you've specified a "default" banner,
+it's still a good idea to have at least one banner in the exchange
+which is *always* available to be displayed.
+
+              ===========================================
+
+"ZONING" BANNERS:
+
+WebAdverts allows you to set up "zones" for your banners, in order to
+ensure that certain banners are seen only on certain pages.  You do so
+by setting up separate configuration files.
+
+Assume, for example, that you want to treat your main page as one
+"zone," and all your other pages as a second zone, since you plan to
+charge advertisers more to appear on your main page than to appear on
+your other pages.
+
+You could do so by setting up two configuration files, "zone_A.pl"
+and "zone_B.pl."  In the former, you'd define $advertzone as "A"
+($advertzone = "A";), and in the latter, you'd define it as "B."  Your
+main page would then include an SSI tag calling zone_A.pl, while your
+other pages would include SSI tags calling zone_B.pl.
+
+(When using IMG tags, you don't need separate configuration scripts.
+You can simply add "zone=<zone>" to your QUERY_STRING.)
+
+When you enter new accounts, you would define the adverts' zones as
+either "A" or "B," as appropriate.  Those accounts assigned to zone A
+will show up on your main page; those assigned to zone B will appear on
+your other pages.
+
+If you want a particular banner to be able to appear in *either* zone,
+either define its zone as "A B" or leave it undefined.  (Any banner with
+no zone defined will be shown in *all* zones.)
+
+Note that all of your accounts still comprise a single list, and can
+still be maintained with a single admin script.
+
+If you want to be able to show *all* your advertisers on a single page,
+create a config file with the $advertzone variable defined as "ShowAll"
+($advertzone = "ShowAll";).  Any time that config script is called,
+*all* of your current banners (those which have not expired and which
+have a non-0 weight) will be displayed.  (Note that if you've defined
+$RequireMember to 1, you'll need to make sure your "ShowAll" banner
+calls, just like any others, reference a valid account name, even if
+it's only your "default" account!)
+
+              ===========================================
+
+USING ZONES IN A BANNER EXCHANGE:
+
+Zones themselves work the same regardless of whether you're using SSI-
+or IMG-based calls.  However, while with SSI-based calls, the manual
+assignment of zones for banners works fine, if you're running a banner
+exchange, things are just a bit more complicated.  You can't expect your
+members to "pick" zones appropriately at random; you need a way to let
+them know which zones exist and to allow them to select appropriately.
+
+Hence the %nonssi_cgis variable.
+
+If you leave this variable unassigned, your banner exchange will be
+untargeted.  All members will reference the same config script to call
+banners (the script referenced in $nonssi_cgi), and all banners (unless
+you, as the administrator, specifically assign them zones) will be
+eligible for display on any page.
+
+If, on the other hand, you assign a value to this variable, you
+introduce targeting -- which can be used to split banners and pages into
+categories based on topic, age-appropriate content, or whatever else you
+come up with -- into your exchange.
+
+Let's say you've set up four zones, "G" (config script zone_G.pl), "PG"
+(config script zone_PG.pl), "R" (zone_R.pl) and "X" (zone_X.pl).  You'd
+define the %nonssi_cgis variable as follows:
+
+  %nonssi_cgis = (
+    'G','http://foo.com/ads/zone_G.pl',
+    'PG','http://foo.com/ads/zone_PG.pl',
+    'R','http://foo.com/ads/zone_R.pl',
+    'X','http://foo.com/ads/zone_X.pl'
+    );
+
+Now, when you or a member add or edit an account in the exchange,
+you'll be able to select the zone or zones in which the banner can be
+displayed, as well as the zone (unfortunately, only one) from which
+banners will be displayed on the member's page.  When the account data
+is displayed to the member, the appropriate CGI script will be
+referenced in the "cut and paste" HTML code presented.
+
+              ===========================================
+
+INCLUDING BANNERS IN CGI OUTPUT:
+
+Since you can't include SSI tags in CGI output, you'll have to use
+one of two alternative methods if you want banners to appear on your
+dynamically-generated pages.
+
+First, of course, you can simply have your CGI script include in its
+output HTML a link and IMG tag similar to the following:
+
+  <A HREF="ads.pl?advert=NonSSI&page=XX"><IMG SRC="ads.pl?page=XX"></A>
+
+The "XX"s should be replaced with unique "page" numbers, of course, as
+discussed earlier; the simplest way to accomplish this is to have your
+CGI script generate a random number to be inserted.  That way, you can
+ensure that each page created by your script will generate a unique
+banner call.
+
+The second option is to "include" WebAdverts in your other CGI script.
+To do this, simply "require" your ads.pl script at the appropriate point
+in your script.  (The "require" line will serve, essentially, as a
+"print" statement.)  You'll also need to define two extra variables, as
+shown in the example below.  (The $ADVNoPrint variable is an addition
+necessary in this case to suppress the printing of the "content type"
+line; the $ADVQuery null definition will ensure there are no conflicts
+between WebAdverts and any QUERY_STRING info your other script may use.)
+
+              -------------------------------------------
+
+	print "<P>Stuff to appear above the banner.\n";
+	print "<CENTER><P>\n";
+	$ADVNoPrint = 1;
+	$ADVQuery = "";
+	require "/full/path/to/ads.pl";
+	print "</CENTER>\n";
+	print "<P>Stuff to appear below the banner.\n";
+
+              -------------------------------------------
+
+Note again that the call to WebAdverts will effectively act as a
+"print" statement.  You will *not* be able, without alteration of
+the WebAdverts script, to place the banner code in a variable for
+later usage, or otherwise "manipulate" the WebAdverts output.
+
+              ===========================================
+
+USING "RAW MODE" BANNERS:
+
+"Raw" mode allows you to actually specify the particular HTML code that
+WebAdverts should insert on your pages.  If you want to include in the
+rotation a banner from an advertiser who requires certain HTML code or
+banners from a network such as LinkExchange, this is how you do it. 
+Note, though, that if you do so, what you enter in the "raw mode" text
+input box will be copied exactly onto your pages when the banner is
+called.  The ability to include "raw" HTML can be handy, but use it
+carefully.  It would be quite easy to "screw up" your pages if the HTML
+inserted here is incomplete or incorrect.
+
+Generally speaking, if you utilize "raw mode" for your banner entries,
+whatever you input will be copied *exactly* onto your Web pages. 
+WebAdverts will be able to track the number of times the banner was
+displayed, but nothing more.  You won't get click-thru data.  But
+there are a few tricks available to allow you to let WebAdverts modify
+this supposedly unmodifiable text.  Some banner exchanges utilize
+a numbering system to keep track of separate banner calls.  (WebAdverts'
+own "page" designations in IMG tag calls serve as an example of this.)
+If you wish to put such a number in the raw mode entry, simply include
+"<RAND>" where you want a random "page" number inserted.  And if you
+want to be able to track click-thrus as well as exposures, include
+"<URL>" immediately before the destination URL in the HTML entry.  This
+will insert a "pass-thru" reference to your WebAdverts script and enable
+WebAdverts to log the click-thru before sending the user on to the
+banner's real destination.
+
+As an example, let's assume that you want to include banners from an
+outside banner exchange, which happens to utilize WebAdverts, in your
+site's normal advertising banner rotation.  If the code with which you
+were provided by the exchange looked like this:
+
+<A HREF="http://foo.com/ads.pl?member=rugrats;banner=NonSSI;page=01">
+<IMG SRC="http://foo.com/ads.pl?member=rugrats;page=01" WIDTH=400
+HEIGHT=40 ALT="Foo Exchange"></A>
+<BR><SMALL>Foo Exchange</SMALL>
+
+Then inputting the following into the "raw HTML" text input box for the
+account displaying the exchange's banners would allow you to track the
+number of click-thrus, as well as ensure that each time the banner is
+called, a new page number is used and thus a new call is made to the
+remote host server:
+
+<A HREF="<URL>http://foo.com/ads.pl?member=rugrats;banner=NonSSI;
+page=<RAND>">
+<IMG SRC="http://foo.com/ads.pl?member=rugrats;page=<RAND>" WIDTH=400
+HEIGHT=40 ALT="Foo Exchange"></A>
+<BR><SMALL>Foo Exchange</SMALL>
+
+Note the placement of the <RAND> tags and the <URL> tag.  Note also that
+the <URL> tag isn't a guarantee; even if you include it, you may still
+not be able to track click-thrus.  LinkExchange, for example, makes use
+of IFRAME tags; since those are actually just "windows" to their own
+server's display of a banner, there's no way the WebAdverts script can
+modify it and thus track clicks.
+
+              ===========================================
+
+SENDING E-MAIL NOTIFICATIONS:
+
+If you have a file called "welcome.txt" in your data directory,
+you'll have the option each time you add or edit an account of sending
+the contents of that file as a "welcome" e-mail message to the account
+holder.  An example "welcome.txt" file is included in the downloadable
+program package.  The <--UserID-->, <--Password--> and <--HTMLCode-->
+"comment" tags are, of course, replaced by the program with the actual
+information for the particular user being e-mailed.
+
+Similarly, if you have a "reject.txt" file in your data directory,
+you'll be able to send the contents of that file as an e-mail message
+to the account holder of any new account that you choose not to allow
+into the exchange.
+
+If you've defined an e-mail program, your advertisers or exchange
+members will also be able to have their passwords automatically sent to
+them from the main entry screen, in case they've forgotten them.  This
+should cut down the volume of your "help me" mail messages just a bit.
+
+              ===========================================
+
+GENERAL SECURITY NOTE:
+
+The directory containing your data files should be password-protected
+or (better yet) should be located somewhere inaccessible to browsers.
+You probably don't want random passers-by snooping about in your
+advertisers' or exchange members' data.  This is especially important
+if you're running an exchange in which members can update their own
+information, as if someone can read the data files, they can read
+the individual members' passwords, as well.
+
+              ===========================================
+
+REGISTERING WEBADVERTS:
+
+WebAdverts is shareware.  If you use it, please register it!  The
+registration fee is only $50 (US).  Payment should be sent via check or
+money order to Darryl C. Burgdorf, Affordable Web Space Design, 3524
+Pacific Street, Omaha NE 68105.
+
+(If you happen to live in a country other than the United States, you
+can write a check in your local currency for the equivalent of $57.50.
+That will cover the $50 registration fee and the $7.50 service fee which
+my bank charges.  Please do *not* write me a check in US funds drawn on
+a non-US bank; the service charge for those can be anywhere from $10 to
+$25!)
+
+The unregistered version of the script is not crippled in any way.  I'm
+not trying to "coerce" anyone into sending me money.  But I don't think
+it's an unreasonable request.  I believe WebAdverts is a commercial-
+quality product; a *lot* of work has gone into its creation.  If you
+use it, I'd appreciate it if you would be kind enough to send in the
+registration fee.  I'll be that much more likely to be able to continue
+spending time and effort on the scripts in the WebScripts collection,
+and you'll have the satisfaction of knowing you did the right thing.  ;)
+
+              ===========================================
+
+This documentation assumes that you have at least a general familiarity
+with setting up Perl scripts.  If you need more specific assistance,
+check with your system administrators, consult the WebScripts FAQs
+(frequently-asked questions) files <http://awsd.com/scripts/faqs.shtml>,
+or ask on the WebScripts Forum <http://awsd.com/scripts/forum/>.
+
+-- Darryl C. Burgdorf
