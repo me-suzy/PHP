@@ -1,0 +1,29 @@
+ body
+{
+   background: #ffffff;
+   margin-top: 0px;
+   margin-bottom: 0px;
+   margin-left: 0px;
+   border-left: 0px;
+   margin-right: 0px;
+   border-bottom: 0px;
+   font-family: Arial;
+   font-size: 9pt;
+   background: url('./gfx/background.gif');
+}
+ a { text-decoration: none }
+ A:hover { text-decoration:underline; color:red;}
+
+ .MojText {font-family:Tahoma; font-style:normal; font-size:8pt;}
+ .BoxText {font-family:Tahoma; font-style:normal; font-size:8pt; padding-left:5pt;}
+ .SmlText {font-family:Tahoma; font-style:normal; font-size:7pt;}
+ .MojHeadl {font-family:Tahoma, Tahoma,Arial; font-weight:bold; font-size:10pt; padding:2pt;}
+ .SmallT {font-family:Arial; font-size:8pt;}
+ .MojHead {font-family:Arial; font-size:12pt;  font-weight:bold; padding-left : 5pt;}
+  INPUT.text { border : 1pt solid Black; background-color : white; font-family : Tahoma; font-size : 8pt; }
+  TEXTAREA.text { border : 1pt solid Black; background-color : white; font-family : Tahoma; font-size : 8pt; }
+
+  INPUT.news    { border : 1pt solid Black; background-color : #D8EDFF; font-family : Tahoma; font-size : 8pt; }
+  TEXTAREA.news { border : 1pt solid Black; background-color : #D8EDFF; font-family : Tahoma; font-size : 8pt; }
+  SELECT.news { border : 1pt solid Black; background-color : #D8EDFF; font-family : Tahoma; font-size : 8pt; }
+  BUTTON.news { border : 1pt solid Black; background-color : #D8EDFF; font-family : Tahoma; font-size : 8pt; }
