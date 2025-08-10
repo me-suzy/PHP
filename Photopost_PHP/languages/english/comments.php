@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "We're sorry, but our Photo Boards are currently down for maintainence. Please try again later.";
+$Globals['pp_lang']['nocom'] = "User comments not allowed.";
+$Globals['pp_lang']['noperm'] = "Sorry, you don't have permission to post/edit.<p>If you tried to edit, you might not be the post's author or editing may<br /> be disabled for your usergroup.";
+$Globals['pp_lang']['nopost'] = "You don't have permission to post comments for images in this category.";
+$Globals['pp_lang']['enabled'] = "Email notification enabled.";
+$Globals['pp_lang']['malform'] = "Malformed parameter passed!";
+$Globals['pp_lang']['disabled'] = "Email notification disabled.";
+$Globals['pp_lang']['noedit'] = "You do not have permission to edit this comment.";
+$Globals['pp_lang']['addcomment'] = "Add a Comment";
+$Globals['pp_lang']['addyour'] = "Add your comments";
+$Globals['pp_lang']['help'] = "help";
+$Globals['pp_lang']['username'] = "Username";
+$Globals['pp_lang']['rateoverall'] = "Rate this photo overall";
+$Globals['pp_lang']['ratethis'] = "Rate this photo";
+$Globals['pp_lang']['excellent'] = "Excellent";
+$Globals['pp_lang']['great'] = "Great";
+$Globals['pp_lang']['good'] = "Good";
+$Globals['pp_lang']['fair'] = "Fair";
+$Globals['pp_lang']['poor'] = "Poor";
+$Globals['pp_lang']['ubb'] = "UBB Code legend";
+$Globals['pp_lang']['smilies'] = "Smilies legend";
+$Globals['pp_lang']['delete'] = "Delete post";
+$Globals['pp_lang']['check'] = "Only check this box if you want to completely delete this post";
+$Globals['pp_lang']['every1'] = "You can only rate a photo once every ";
+$Globals['pp_lang']['every2'] = "hour(s).";
+$Globals['pp_lang']['nofill'] = "You did not fill in the comments or rating field.";
+$Globals['pp_lang']['dupe'] = "You have a duplicate post, so it was not added.";
+$Globals['pp_lang']['success'] = "Your post or edit was successful.";
+$Globals['pp_lang']['invalid'] = "Invalid call to script.";
+$Globals['pp_lang']['submitedit'] = "Submit Edit";
+$Globals['pp_lang']['submitpost'] = "Submit Post";
+?>
