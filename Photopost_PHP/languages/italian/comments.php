@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "Ci spiace, ma il servizio è temporaneamente sospeso per aggiornamenti. Riprova più tardi.";
+$Globals['pp_lang']['nocom'] = "Non sono ammessi commenti dagli utenti.";
+$Globals['pp_lang']['noperm'] = "Spiacenti, non sei autorizzato a inserire/modificare.<p>Se hai cercato di modificare è possibile tu non sia l'autore, oppure l'opzione di modifica <br /> è disabilitata per il tuo gruppo di appartenenza.";
+$Globals['pp_lang']['nopost'] = "Non sei autorizzato a caricare commenti per questa categoria.";
+$Globals['pp_lang']['enabled'] = "Notifica a mezzo Email abilitata.";
+$Globals['pp_lang']['malform'] = "Trasmesso parametro non corretto!";
+$Globals['pp_lang']['disabled'] = "ENotifica a mezzo Email diabilitata.";
+$Globals['pp_lang']['noedit'] = "Non sei autorizzato a modificare questo commento.";
+$Globals['pp_lang']['addcomment'] = "Aggiungi commento";
+$Globals['pp_lang']['addyour'] = "Aggiunti tuoi commenti";
+$Globals['pp_lang']['help'] = "Aiuto";
+$Globals['pp_lang']['username'] = "Username";
+$Globals['pp_lang']['rateoverall'] = "Valutazione generale della foto";
+$Globals['pp_lang']['ratethis'] = "Esprimi il tuo parere";
+$Globals['pp_lang']['excellent'] = "Magnifica";
+$Globals['pp_lang']['great'] = "Ottima";
+$Globals['pp_lang']['good'] = "Discreta";
+$Globals['pp_lang']['fair'] = "Sufficiente";
+$Globals['pp_lang']['poor'] = "Scarsa";
+$Globals['pp_lang']['ubb'] = "Legenda codici UBB";
+$Globals['pp_lang']['smilies'] = "Legenda Smiles";
+$Globals['pp_lang']['delete'] = "Cancella inserimento";
+$Globals['pp_lang']['check'] = "Seleziona questa casella solo se vuoi annullare l'inserimento";
+$Globals['pp_lang']['every1'] = "Puoi dare la tua valutazione una sola volta ogni";
+$Globals['pp_lang']['every2'] = "ora/e.";
+$Globals['pp_lang']['nofill'] = "Non hai inserito alcun commento o valutazione.";
+$Globals['pp_lang']['dupe'] = "Hai cercato di duplicare lo steso inserimento, quindi non è stato aggiunto.";
+$Globals['pp_lang']['success'] = "Il tuo contributo o modifica è stato caricato.";
+$Globals['pp_lang']['invalid'] = "Chiamata allo script non valida.";
+$Globals['pp_lang']['submitedit'] = "Sottoponi modifica";
+$Globals['pp_lang']['submitpost'] = "Sottoponi contributo";
+?>
