@@ -1,0 +1,121 @@
+<?
+$Globals['pp_lang']['closed'] = "Lo sentimos, pero nuestra galer&iacute;a se encuentra cerrada. Por favor intenta m&aacute;s tarde."; 
+$Globals['pp_lang']['ureset'] = "El password de usuario fue cambiado y enviado por email.";
+$Globals['pp_lang']['preset'] = "Su password ha sido cambiado y enviado a su email.";
+$Globals['pp_lang']['nomatch'] = "No hay resultados. Reviza el URL e intenta de nuevo.";
+$Globals['pp_lang']['memprofile'] = "Perfil de Miembro";
+$Globals['pp_lang']['profilefor'] = "Perfil de";
+$Globals['pp_lang']['datereg'] = "Fecha de Registro";
+$Globals['pp_lang']['posts'] = "Mensajes";
+$Globals['pp_lang']['status'] = "Estado";
+$Globals['pp_lang']['lastphotoup'] = "&Uacute;lt. Imagen Subida";
+$Globals['pp_lang']['lastcommentpo'] = "&Uacute;lt. Comentario";
+$Globals['pp_lang']['bday'] = "Cumple A&ntilde;os";
+$Globals['pp_lang']['seebday'] = "Si seleccionas tu cumple a&ntilde;os, los otros miembros podr&aacute;n ver tu cumple a&ntilde;os en tu perfil.";
+$Globals['pp_lang']['homepage'] = "P&aacute;gina";
+$Globals['pp_lang']['icq'] = "ICQ";
+$Globals['pp_lang']['aim'] = "AIM";
+$Globals['pp_lang']['yahoo'] = "Yahoo";
+$Globals['pp_lang']['location'] = "Ciudad";
+$Globals['pp_lang']['interests'] = "Intereses";
+$Globals['pp_lang']['occupation'] = "Ocupaci&oacute;n";
+$Globals['pp_lang']['aboutme'] = "Acerca de mi";
+$Globals['pp_lang']['checke'] = "Por favor reviza tu email para instrucciones.";
+$Globals['pp_lang']['noaddr'] = "Esa direcci&oacute;n no fue encontrada en nuestros registros.";
+$Globals['pp_lang']['memberpassadmin'] = "Password de Admin";
+$Globals['pp_lang']['forgot'] = "Olvidaste el password?";
+$Globals['pp_lang']['resetform'] = "Formulario de cambiar password";
+$Globals['pp_lang']['youremail'] = "Tu direcci&oacute;n de email";
+$Globals['pp_lang']['submit'] = "Enviar";
+$Globals['pp_lang']['blankpass'] = "El password viejo est&aacute; en blanco.";
+$Globals['pp_lang']['blankpass2'] = "El password nuevo est&aacute; en blanco.";
+$Globals['pp_lang']['confirmblank'] = "El campo para confirmar password est&aacute; en blanco.";
+$Globals['pp_lang']['nomatch'] = "El campo de password nuevo no concuerda con el campo de confirmaci&oacute;n.";
+$Globals['pp_lang']['fourchars'] = "Su password debe ser de almenos 4 caract&eacute;res de largo.";
+$Globals['pp_lang']['oldwrong'] = "Su password viejo no es correcto.";
+$Globals['pp_lang']['passchanged'] = "Password cambiado";
+$Globals['pp_lang']['changeform'] = "Formulario de Cambio de Password";
+$Globals['pp_lang']['oldpass'] = "Password viejo";
+$Globals['pp_lang']['newpass'] = "Password nuevo";
+$Globals['pp_lang']['confirmpass'] = "Confirmar nuevo password";
+$Globals['pp_lang']['changepass'] = "Cambiar password";
+$Globals['pp_lang']['memberprofile'] = "Perfil del usuario ";
+$Globals['pp_lang']['editprofile'] = "Editar perfil para";
+$Globals['pp_lang']['password'] = "Password";
+$Globals['pp_lang']['passagain'] = "Repita de nuevo el password";
+$Globals['pp_lang']['email'] = "Direcci&oacute;n de Email";
+$Globals['pp_lang']['emailagain'] = "Repita de nuevo el email";
+$Globals['pp_lang']['month'] = "Mes";
+$Globals['pp_lang']['emailconf'] = "Confirmaci&oacute;n por Email";
+$Globals['pp_lang']['timezone'] = "GMT<br />Tiempo ajustado actual:";
+$Globals['pp_lang']['savechanges'] = "Guardar Cambios";
+$Globals['pp_lang']['noeditperm'] = "No tienes permiso para editar este perfil.";
+$Globals['pp_lang']['noemailmatch'] = "El campo email debe concordar con el campo de confirmaci&oacute;n de email.";
+$Globals['pp_lang']['profileupdated'] = "Profile updated.";
+$Globals['pp_lang']['profileupdated'] = "Perfi actualizado.";
+$Globals['pp_lang']['nonew'] = "No se permiten nuevos registros de usuarios.";
+$Globals['pp_lang']['intonly'] = "Este programa es usado &uacute;nicamente para el sistema de registro interno de PhotoPost.";
+$Globals['pp_lang']['loggedin'] = "Actualmente te encuentras registrado e identificado! Devu&eacute;lvete a";
+$Globals['pp_lang']['regfor'] = "Register for ";
+$Globals['pp_lang']['regfor'] = "Registrar para ";
+$Globals['pp_lang']['coppainfo'] = "Informaci&oacute;n COPPA";
+$Globals['pp_lang']['over13'] = "Mayor de 13 a&ntilde;os de edad";
+$Globals['pp_lang']['under13'] = "Menor de 13 a&ntilde;os de edad";
+$Globals['pp_lang']['forinfo'] = "Para informaci&oacute;n acerca de como este sitio usa la informaci&oacute;n personal, por favor lee el";
+$Globals['pp_lang']['privacy'] = "Estatuto de Privacidad";
+$Globals['pp_lang']['permform'] = "Formulario de Permiso";
+$Globals['pp_lang']['parentreq'] = "Un padre o acudiente debe enviar por correo o fax una copia firmada";
+$Globals['pp_lang']['permformlower'] = "del formulario";
+$Globals['pp_lang']['toadmin'] = "al administrador de";
+$Globals['pp_lang']['beforeany'] = "antes de que cualquier persona menor de 13 a&ntilde;os pueda completar el registro.";
+$Globals['pp_lang']['forfurther'] = "Para m&aacute;s informaci&oacute;n, puede contactar";
+$Globals['pp_lang']['registerfor'] = "Registrarse para";
+$Globals['pp_lang']['rulespol'] = "Rules & Policies";
+$Globals['pp_lang']['rulespol'] = "Reglas y Pol&iacute;ticas";
+$Globals['pp_lang']['forumrules'] = "Formulario de Reglas";
+$Globals['pp_lang']['coppaform'] = "Todos los usuarios menores de 13 a&ntilde;os deben hacer llegarle a sus padres o acudientes el formulario de permiso para obtener
+membres&iacute;a en este sitio.
+                    Aunque nosotros aceptamos la participaci&oacute;n de miembros menores de 13 a&ntilde;os, requerimos que un padre o acudiente env&iacute;e por fax o correo un permiso firmado
+                    antes de que podamos conceder una membres&iacute;a.<p>
+
+                    Puede comenzar el proceso de registro incluso antes de que recibamos el formulario de permiso, presionando el bot&oacute;n de Aceptar. O puedes
+                    cancelar el registro, presionando el bot&oacute;n de Cancelar.<p>
+
+                    Puedes bajar el formulario de permiso aqui:";
+                    
+$Globals['pp_lang']['formore'] = "Para m&aacute;s informaci&oacute;n acerca del proceso de registro, o este sitio web en general, por favor enviar un emial a";
+$Globals['pp_lang']['agree'] = "Acepto";
+$Globals['pp_lang']['cancel'] = "Cancelar";
+$Globals['pp_lang']['plznote'] = "Por favor Note: Hasta que nosotros recibamos una copia firmada";
+$Globals['pp_lang']['plznote2'] = "de su padre o acudiente no podr&aacute;s subir im&aacute;genes o hacer comentarios en otras im&aacute;genes.";
+$Globals['pp_lang']['reqinfo'] = "Informaci&oacute;n Requerida";
+$Globals['pp_lang']['secreq'] = "(La informaci&oacute;n en esta secci&oacute;n es requerida. Por favor note que los passwords son sensibles a may&uacute;sculas y min&uacute;sculas.)";
+$Globals['pp_lang']['validemail'] = "Por favor entre una direcci&oacute;n de email v&aacute;lida. &Eacute;sta no ser&aacute; visible al p&uacute;blico.";
+$Globals['pp_lang']['visible'] = "La informaci&oacute;n abajo ser&aacute; visible a todos los visitantes del sitio.";
+$Globals['pp_lang']['day'] = "D&iacute;a";
+$Globals['pp_lang']['username'] = "Nombre de Usuario";
+$Globals['pp_lang']['optional'] = "Informaci&oacute;n Opcional";
+$Globals['pp_lang']['year'] = "A&ntilde;o";
+$Globals['pp_lang']['bio'] = "Biograf&iacute;a";
+$Globals['pp_lang']['submitreg'] = "Enviar Formulario de Inscripci&oacute;n";
+$Globals['pp_lang']['userblank'] = "El nombre de usuario est&aacute; en blanco.";
+$Globals['pp_lang']['userexists'] = "El nombre de usuario que escogiste ya se encuentra en nuestra base de datos.  Por favor selecciona otro.";
+$Globals['pp_lang']['emailexists'] = "La direcci&oacute;n de email que entraste ya existe en nuestra base de datos.";
+$Globals['pp_lang']['emailat'] = "The email address you entered is not valid. It must contain an \"@\" symbol.";
+$Globals['pp_lang']['emailat'] = "La direcci&oacute;n de email que entraste no es v&aacute;lida. Debe contener un s&iacute;mbolo de \"@\".";
+$Globals['pp_lang']['emailperiod'] = "La direcci&oacute;n de email entrada no es v&aacute;lida. Debe contener un punto.";
+$Globals['pp_lang']['passblank'] = "El password est&aacute; en blanco.";
+$Globals['pp_lang']['user2char'] = "Su nombre de usuario debe ser de almenos 2 caracteres de largo.";
+$Globals['pp_lang']['passverblank'] = "El campo de verificaci&oacute;n de password est&aacute; en blanco.";
+$Globals['pp_lang']['passnomatch'] = "El password no concuerda con el campo de verificaci&oacute;n.";
+$Globals['pp_lang']['emailblank'] = "El campo de email est&aacute; en blanco.";
+$Globals['pp_lang']['parentprint'] = "Por favor haz que un padre o acudiente firme esta p&aacute;gina, llene los espacios en blanco, y la envie por correo a la siguiente direcci&oacute;n";
+$Globals['pp_lang']['verblank'] = "El campo de verificaci&oacute;n de email est&aacute; vac&iacute;o.";
+$Globals['pp_lang']['novermatch'] = "El campo de email no concuerda con el campo de verificaci&oacute;n de email.";
+$Globals['pp_lang']['erroradd'] = "Estamos experimentando un problema al agregar su cuenta. Por favor contacte al Administrador de Sistema!";
+$Globals['pp_lang']['thanks'] = "Gracias por confirmar su cuenta.  Se encuentra activa en este momento!";
+$Globals['pp_lang']['thanksreg'] = "Gracias por registrarse. Por favor reviza tu email para instrucciones de como activar tu nueva cuenta.";
+$Globals['pp_lang']['retfront'] = "Volver a la p&aacute;gina inicial de";
+$Globals['pp_lang']['noverify'] = "Lo sentimos, pero no hemos podido verificar esta cuenta.";
+$Globals['pp_lang']['nonum'] = "N&uacute;mero de usuario no se encuentra en nuestra base de datos";
+?>
