@@ -1,0 +1,19 @@
+</center>{LISTE_CATEGORIE}<p>
+
+<center>
+  <a href="ajoutcat{EXT_PHP}?categories_parents_id={CATEGORIES_PARENTS_ID}&categories_nom={CATEGORIES_CAT_NOM}">Ajouter une catégorie</a><p>
+ 
+<table border='0' width='100%'>
+<!-- BEGIN DYNAMIC BLOCK: cat -->
+<tr>
+  <td>{CATEGORIES_NOM}</td>
+  <td>
+  <a href="categories{EXT_PHP}?categories_id={CATEGORIES_ID}&categories_parents_id={CATEGORIES_PARENTS_ID}&categories_cat_nom={CATEGORIES_CAT_NOM}&categories_nom={CATEGORIES_NOM_URL}&action=modif">{LINK_UPDATE}</a></td>
+  <td>
+  <a href="categories{EXT_PHP}?categories_id={CATEGORIES_ID}&categories_parents_id={CATEGORIES_PARENTS_ID}&categories_nom={CATEGORIES_CAT_NOM}&action=supp">{LINK_DELETE}</a></td>
+  <td>
+  <a href="categories{EXT_PHP}?categories_parents_id={CATEGORIES_ID}&categories_nom={CATEGORIES_NOM_URL}">{LINK_CATEGORIES}</a></td>
+</tr>
+<!-- END DYNAMIC BLOCK: cat -->
+</table>
+<p>&nbsp;</p>
