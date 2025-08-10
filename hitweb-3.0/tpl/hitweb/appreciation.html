@@ -1,0 +1,30 @@
+<!-- START APPRECIATION -->
+
+<img src="tpl/{REP_TPL}/img/appreciation.gif" border="0" width="476" height="21">      
+          
+<table border="0" width="100%">
+  <tr>
+    <td width="10%">&nbsp;</td>
+    <td valign="top" width="40%"><center><b>Comment trouvez vous ce site ?</b></center><br>
+      <form method="post" action="appreciation{EXT_PHP}">
+        <input name="MAILIST_VOTE" type="radio" value="Un peu" > Un peu <br>
+        <input name="MAILIST_VOTE" type="radio" value="Beaucoup"> Beaucoup <br>
+        <input name="MAILIST_VOTE" type="radio" value="A la folie" checked> A la folie <br>
+        <input name="MAILIST_VOTE" type="radio" value="Pas du tout"> Pas du tout <br>
+        <input type="submit" name="action" value="Voter">
+      </form>
+    </td>
+    <td valign="top" width="50%"><center><b>Resultats total : {VOTE_TOTAL}</b></center><br>
+      <table border="0">
+      <!-- BEGIN DYNAMIC BLOCK: top -->
+        <tr>
+          <td><font class="Texte">{VOTE_TEXT} :</font></td>
+          <td><font class="Texte"><img src="tpl/{REP_TPL}/img/bare.gif" height="10" width="{VOTE_NB}"> {VOTE_NB} % ({VOTE_NB1})</font></td>
+        </tr>
+      <!-- END DYNAMIC BLOCK: top -->
+      </table>
+    </td>
+  </tr>
+</table>
+
+<!-- END APPRECIATION -->
