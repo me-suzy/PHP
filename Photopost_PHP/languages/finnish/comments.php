@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "Olemme pahoillamme, mutta Photo Boards on tällä hetkellä huollettavana eikä kuvia ole saatavilla. Yrittäkää myöhemmin uudelleen.";
+$Globals['pp_lang']['nocom'] = "Käyttäjän mielipiteet eivät ole sallittuja.";
+$Globals['pp_lang']['noperm'] = "Valitettavasti sinulla ei ole oikeutta lähettää/muuttaa.<p>Jos yritit muuttaa, sinä et ole alkuperäisen lähetyksen tekijä tai muutosoikeus on mahdollisesti<br /> poistettu käyttäjäryhmältäsi.";
+$Globals['pp_lang']['nopost'] = "Sinulla ei ole oikeutta lähettää mielipidettäsi tämän kategorian kuviin.";
+$Globals['pp_lang']['enabled'] = "Sähköpostitiedotus aktivoitu.";
+$Globals['pp_lang']['malform'] = "Suoritettu väärä parametri!";
+$Globals['pp_lang']['disabled'] = "Sähköpostitiedotus deaktiovitu.";
+$Globals['pp_lang']['noedit'] = "Sinulla ei ole oikeutta muuttaa tätä mielipidettä.";
+$Globals['pp_lang']['addcomment'] = "Lisää kommentti";
+$Globals['pp_lang']['addyour'] = "Lisää mielipide";
+$Globals['pp_lang']['help'] = "Apua";
+$Globals['pp_lang']['username'] = "Käyttäjätunnus";
+$Globals['pp_lang']['rateoverall'] = "Mielipiteesi kuvasta";
+$Globals['pp_lang']['ratethis'] = "Mielipiteesi";
+$Globals['pp_lang']['excellent'] = "Erinomainen";
+$Globals['pp_lang']['great'] = "Upea";
+$Globals['pp_lang']['good'] = "Hyvä";
+$Globals['pp_lang']['fair'] = "Kohtuullinen";
+$Globals['pp_lang']['poor'] = "Huono";
+$Globals['pp_lang']['ubb'] = "UBB-koodit";
+$Globals['pp_lang']['smilies'] = "Hymiökoodit";
+$Globals['pp_lang']['delete'] = "Poista";
+$Globals['pp_lang']['check'] = "Valitse tämä valinta vain jos haluat poistaa kokonaan";
+$Globals['pp_lang']['every1'] = "Voit lähettää mielipiteesi ainoastaan joka ";
+$Globals['pp_lang']['every2'] = "tunti.";
+$Globals['pp_lang']['nofill'] = "Et valinnut mielipidettäsi tai täyttänyt kommentit kenttää.";
+$Globals['pp_lang']['dupe'] = "Sinulla on ennestään sama tallennus, tätä ei tallennettu.";
+$Globals['pp_lang']['success'] = "Tallennuksesi tai muutoksesi onnistui.";
+$Globals['pp_lang']['invalid'] = "Väärä kutsu scriptiin.";
+$Globals['pp_lang']['submitedit'] = "Muuta";
+$Globals['pp_lang']['submitpost'] = "Tallenna";
+?>
