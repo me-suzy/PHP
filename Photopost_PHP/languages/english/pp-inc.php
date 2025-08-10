@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Most Popular Images";
+$Globals['pp_lang']['allcats'] = "All Categories";
+$Globals['pp_lang']['recent'] = "Most Recent Images";
+$Globals['pp_lang']['random'] = "Random Images";
+$Globals['pp_lang']['by'] = "by";
+$Globals['pp_lang']['category'] = "Category";
+$Globals['pp_lang']['photos'] = "Photos";
+$Globals['pp_lang']['comments'] = "Comments";
+$Globals['pp_lang']['lastcomment'] = "Last Comment";
+$Globals['pp_lang']['lastphoto'] = "Last Photo Upload";
+$Globals['pp_lang']['favorites'] = "My Favorites";
+$Globals['pp_lang']['createcal'] = "Print&nbsp;Calendar";
+$Globals['pp_lang']['printable'] = "printable";
+$Globals['pp_lang']['lastdays'] = "Last Days Post";   
+$Globals['pp_lang']['last7days'] = "Last 7 Days Post";   
+$Globals['pp_lang']['last14days'] = "Last 14 Days Post";
+$Globals['pp_lang']['custom'] = "Custom View";
+$Globals['pp_lang']['searchr'] = "Search Results";        
+$Globals['pp_lang']['member'] = "Member";
+$Globals['pp_lang']['admin'] = "Admin";
+$Globals['pp_lang']['home'] = "Home";
+$Globals['pp_lang']['logout'] = "Logout";
+$Globals['pp_lang']['mygallery'] = "My&nbsp;Gallery";        
+$Globals['pp_lang']['albumadmin'] = "Album&nbsp;Admin";
+$Globals['pp_lang']['myfavorites'] = "My&nbsp;Favorites";        
+$Globals['pp_lang']['login'] = "Login";
+$Globals['pp_lang']['register'] = "Register";
+$Globals['pp_lang']['profile'] = "Profile";
+$Globals['pp_lang']['upload'] = "Upload&nbsp;Photos";
+$Globals['pp_lang']['forward'] = "Now forwarding you to";
+$Globals['pp_lang']['clickhere'] = "Click here if you do not want to wait any longer<br />(or if your browser does not automatically forward you)";
+$Globals['pp_lang']['erroruser'] = "The username you chose is not valid. Usernames may not contain anything but numbers and letters.";
+$Globals['pp_lang']['errorcopy'] = "Copy of the file failed. Operation cancelled.";
+$Globals['pp_lang']['moved'] = "Moved image";
+$Globals['pp_lang']['errorperm'] = "You do not have permission for this action!";
+?>
