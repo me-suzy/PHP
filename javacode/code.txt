@@ -1,0 +1,44 @@
+<applet archive="AnFade.jar" code="AnFade.class" width="472" height="264">
+<param name="credits" value="Applet by Fabio Ciucci (www.anfyteam.com)">
+<param name="res" value="1">
+<param name="image1" value="changepics/1.JPG">
+<param name="link1" value="NO">
+<param name="statusmsg1" value="">
+<param name="image2" value="changepics/2.JPG">
+<param name="link2" value="NO">
+<param name="statusmsg2" value="">
+<param name="image3" value="changepics/3.JPG">
+<param name="link3" value="NO">
+<param name="statusmsg3" value="">
+<param name="image4" value="changepics/4.JPG">
+<param name="link4" value="NO">
+<param name="statusmsg4" value="">
+<param name="image5" value="changepics/5.JPG">
+<param name="link5" value="NO">
+<param name="statusmsg5" value="">
+<param name="image6" value="changepics/6.JPG">
+<param name="link6" value="NO">
+<param name="statusmsg6" value="">
+<param name="image7" value="changepics/7.JPG">
+<param name="link7" value="NO">
+<param name="statusmsg7" value="">
+<param name="image8" value="changepics/8.JPG">
+<param name="link8" value="NO">
+<param name="statusmsg8" value="">
+<param name="image9" value="changepics/9.JPG">
+<param name="link9" value="NO">
+<param name="statusmsg9" value="">
+<param name="speed" value="8">
+<param name="pause" value="1500">
+<param name="progressivefade" value="YES">
+<param name="overimg" value="NO">
+<param name="overimgX" value="0">
+<param name="overimgY" value="0">
+<param name="regcode" value="NO">
+<param name="regnewframe" value="NO">
+<param name="regframename" value="_blank">
+<param name="memdelay" value="1000">
+<param name="priority" value="3">
+<param name="MinSYNC" value="10">
+Sorry, your browser doesn't support Java(tm).
+</applet>
