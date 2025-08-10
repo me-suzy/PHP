@@ -1,0 +1,85 @@
+<!-- START HEADER -->
+
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0//EN' 'http://www.w3.org/TR/REC-html40/strict.dtd'>
+
+<html>
+  <head>
+<!-- Information sur HITWEB -->
+    <meta name="hitweb" content="{VERSION}">
+
+<!-- Information pour les ROBOTS -->
+    <meta name="revisit-after" content="{REVISIT}">
+
+<!-- Information sur les PAGES HTML -->
+    <meta http-equiv="Content-Type" content="{CONTENT_TYPE}">
+    <meta name="Content-language" content="{CONTENT_LANGUAGE}">
+
+<!-- Information sur l'AUTEUR -->
+    <meta name="Author-Corporate" content="{CORPORATE}">
+    <meta name="copyright" content="&copy; 2001 - {CORPORATE}">
+    <meta name="Author" lang="fr" content="{AUTHOR}">
+    <meta name="Reply-to" content="{EMAIL}">
+
+<!-- Information sur le SITE -->
+    <meta name="base" content="{SITE}">
+    <meta name="Identifier-URL" content="{SITE}">
+    <meta name="Date-Creation-yyyymmdd" content="{DATECREATION}">
+    <meta name="Date-Revision-yyyymmdd" content="{DATEREVISION}">
+
+<!-- Mots clés pour les ANGLAIS -->
+    <meta name="title" lang="en" content="{TITRE_UK}">
+    <meta name="Description" lang="en" content="{DESCRIPTION_UK}">
+    <meta name="keywords" lang="en" content="{KEYWORDS_UK}">
+    <meta name="Category" content="{CATEGORY_UK}">
+
+<!-- Mots clés pour les FRANCAIS -->
+    <meta name="title" lang="fr" content="{TITRE_FR}">
+    <meta name="Description" lang="fr" content="{DESCRIPTION_FR}">
+    <meta name="keywords" lang="fr" content="{KEYWORDS_FR}">
+    <meta name="Category" content="{CATEGORY_FR}">
+
+<!-- Feuille de style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <title>{PAGETITLE}</title>
+  </head>
+
+
+<body bgcolor="#F7F0E4" link="#000000" vlink="#000000" alink="#000000">
+
+<center>
+
+<a href="index.php">Hitweb</a> |
+<a href="appreciation{EXT_PHP}">Appréciation</a> |
+<a href="proposite{EXT_PHP}?LIENS_CATEGORIES_ID={LIENS_CATEGORIES_ID}">Proposer un site</a> |
+<a href="lienavalider{EXT_PHP}">Liens à valider</a> |
+<a href="projet{EXT_PHP}">Le projet</a> |
+<a href="rechercher{EXT_PHP}">Rechercher</a> |
+<a href="top50{EXT_PHP}">Top50</a> |
+<a href="forum/">Forum</a> |
+<a href="partenariat{EXT_PHP}">Partenariat</a> |
+<a href="webalizer/">Statistiques</a>
+
+
+<p>
+<form action='rechercher{EXT_PHP}' method='post'>
+  <input type='text' name='mot' size='40' value='{MOT}'>
+  <select name='maxresult'>
+    <option>5
+	<option>10
+	<option>20
+	<option selected>50
+	<option>100
+  </select>
+  <input type="hidden" name="action" value="Rechercher">
+  <input type="submit" value='Recherche'>
+</form>
+</center>
+
+<hr width="50%">
+
+<p>
+{LISTE_CATEGORIE}
+<p>
+
+<!-- END HEADER -->
