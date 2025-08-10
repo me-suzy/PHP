@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "Nous sommes désolés mais les albums photos sont actuellement indisponibles pour cause de maintenance. Veuillez revenir plus tard. Merci.";
+$Globals['pp_lang']['nocom'] = "Les commentaires d'utilisateurs ne sont pas autorisés.";
+$Globals['pp_lang']['noperm'] = "Désolé mais vous n'avez pas la permission de poster ou d'éditer.<p>Si vous avez essayé d'éditer, il se peut que vous n'êtes pas l'auteur du message ou l'édition<br /> ait été désactivé pour votre groupe d'utilisateurs.";
+$Globals['pp_lang']['nopost'] = "Vous n'avez pas la permission de poster des commentaires aux images de cette catégorie.";
+$Globals['pp_lang']['enabled'] = "Notification par email activée.";
+$Globals['pp_lang']['malform'] = "Malformed parameter passed!";
+$Globals['pp_lang']['disabled'] = "Notification par email désactivée";
+$Globals['pp_lang']['noedit'] = "Vous n'avez pas la permission d'éditer ce commentaire.";
+$Globals['pp_lang']['addcomment'] = "Ajouter un commentaire";
+$Globals['pp_lang']['addyour'] = "Ajouter vos commentaires";
+$Globals['pp_lang']['help'] = "Aide";
+$Globals['pp_lang']['username'] = "Nom d'utilisateur";
+$Globals['pp_lang']['rateoverall'] = "Evaluer cette photo";
+$Globals['pp_lang']['ratethis'] = "Evaluer cette photo";
+$Globals['pp_lang']['excellent'] = "Excellent";
+$Globals['pp_lang']['great'] = "Très bien";
+$Globals['pp_lang']['good'] = "Bien";
+$Globals['pp_lang']['fair'] = "Moyen";
+$Globals['pp_lang']['poor'] = "Mauvais";
+$Globals['pp_lang']['ubb'] = "Légende du code UBB";
+$Globals['pp_lang']['smilies'] = "Légende des smilies";
+$Globals['pp_lang']['delete'] = "Supprimer le message";
+$Globals['pp_lang']['check'] = "Cocher uniquement si vous souhaitez complétement supprimer ce message";
+$Globals['pp_lang']['every1'] = "Vous ne pouvez évaluer une photo que toutes les ";
+$Globals['pp_lang']['every2'] = "heure(s).";
+$Globals['pp_lang']['nofill'] = "Vous n'avez pas complété les champs du commentaire ou d'évaluation.";
+$Globals['pp_lang']['dupe'] = "Vous avez un message dupliqué, il n'a donc pas été ajouté.";
+$Globals['pp_lang']['success'] = "Votre message ou modification a été effectué avec succès.";
+$Globals['pp_lang']['invalid'] = "Invalid call to script.";
+$Globals['pp_lang']['submitedit'] = "Effectuer la modification";
+$Globals['pp_lang']['submitpost'] = "Envoyer le message";
+?>
