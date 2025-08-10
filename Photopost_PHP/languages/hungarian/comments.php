@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "Nagyon sajnáljuk, de a Képtár technikai okok miatt átmenetileg zárva tart. Kérjük, próbálkozzon késõbb!";
+$Globals['pp_lang']['nocom'] = "A felhasználók nem írhatnak véleményt.";
+$Globals['pp_lang']['noperm'] = "Sajnáljuk Önnek nincs jogosultsága vélemény írására / szerkesztésére.<p>Ha szerkeszteni próbált, elõfordulhat, hogy nem Ön írta az adott véleményt vagy a szerkesztés<br /> nincs engedélyezve az Ön csoportjában.";
+$Globals['pp_lang']['nopost'] = "Nincs jogosultsága fotók véleményezésére ebben a kategóriában.";
+$Globals['pp_lang']['enabled'] = "Email értesítés engedélyezése.";
+$Globals['pp_lang']['malform'] = "Hibás paraméter elhagyva!";
+$Globals['pp_lang']['disabled'] = "Email értesítés tiltva.";
+$Globals['pp_lang']['noedit'] = "Nincs jogosultsága ennek a véleménynek a szerkesztéséhez.";
+$Globals['pp_lang']['addcomment'] = "Vélemény írása";
+$Globals['pp_lang']['addyour'] = "Írjon véleményt";
+$Globals['pp_lang']['help'] = "segítség";
+$Globals['pp_lang']['username'] = "Felhasználónév";
+$Globals['pp_lang']['rateoverall'] = "Fotó értékelése összességében";
+$Globals['pp_lang']['ratethis'] = "Fotó értékelése";
+$Globals['pp_lang']['excellent'] = "Kiváló";
+$Globals['pp_lang']['great'] = "Nagyon jó";
+$Globals['pp_lang']['good'] = "Jó";
+$Globals['pp_lang']['fair'] = "Elfogadható";
+$Globals['pp_lang']['poor'] = "Gyenge";
+$Globals['pp_lang']['ubb'] = "UBB kód történet";
+$Globals['pp_lang']['smilies'] = "Mosoly történet";
+$Globals['pp_lang']['delete'] = "Vélemény törlése";
+$Globals['pp_lang']['check'] = "Csak akkor jelölje meg ezt a véleményt, ha teljesen törölni akarja!";
+$Globals['pp_lang']['every1'] = "Egy fotót csak egyszer véleményezhet minden ";
+$Globals['pp_lang']['every2'] = "órában.";
+$Globals['pp_lang']['nofill'] = "Nem töltötte ki a vélemény vagy az értékelés mezõt.";
+$Globals['pp_lang']['dupe'] = "Kétszer küldte el ugyanazt a véleményt így automatiusan töröltük.";
+$Globals['pp_lang']['success'] = "Véleménye vagy értékelése sikeresen megérkezett.";
+$Globals['pp_lang']['invalid'] = "Szkript behívása hibás.";
+$Globals['pp_lang']['submitedit'] = "Szerkesztés elküldése";
+$Globals['pp_lang']['submitpost'] = "Vélemény elküldése";
+?>
