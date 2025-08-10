@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <TITLE>Documentation du projet HITWEB.: IMPORTATION</TITLE>
+ <LINK HREF="hitweb-5.html" REL=next>
+ <LINK HREF="hitweb-3.html" REL=previous>
+ <LINK HREF="hitweb.html#toc4" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="hitweb-5.html">Next</A>
+<A HREF="hitweb-3.html">Previous</A>
+<A HREF="hitweb.html#toc4">Contents</A>
+<HR>
+<H2><A NAME="s4">4. IMPORTATION</A></H2>
+
+<H2><A NAME="ss4.1">4.1 Importation à partir de fichier CSV</A>
+</H2>
+
+<P>Pour importer des informations dans la base de données, vous devez créer un fichier par table, 
+en respectant correctement l'ordre des champs des tables. Pour avoir plus d'information sur 
+la structure des tables, vous pouvez regarder le fichier hitweb.sql qui se trouve dans le
+répertoire sql/. <BR>
+<P>Voici le fichier qui permet de faire l'importation des données.<BR>
+<P>
+<PRE>
+http://hitweb.free.fr/hitweb/sql/csv2hitweb.php
+</PRE>
+<P>Il y a deux paramètres à passer le nom du fichier csv, qui doit se trouver dans le respertoire sql/
+et le nom de la table correspondant aux informations que vous voulez importer. <BR>
+<P>
+<PRE>
+http://hitweb.free.fr/hitweb/sql/csv2hitweb.php?file=categories.csv&amp;table=CATEGORIES -->
+</PRE>
+<P>Le résultat est immédiat, et vous avez l'information qui est affiché sous cette forme : <BR>
+<P>
+<PRE>
+DEBUG : Query = INSERT INTO CATEGORIES VALUES('1','Art','0 ')
+
+DEBUG : Query = INSERT INTO CATEGORIES VALUES('2','Auto/Moto','0 ')
+
+DEBUG : Query = INSERT INTO CATEGORIES VALUES('','Beauté/Forme','0 ')
+</PRE>
+<P>
+<H2><A NAME="ss4.2">4.2 Importation à partir du bookmark de Netscape</A>
+</H2>
+
+<P>J'ai travaillé rapidement sur un script qui permet d'importer un fichier 
+bookmark Netscape dans la base de données. <BR>
+Ce script ce trouve dans le répertoire sql/ de l'application hitweb : bk2hitweb.php.
+<P>Il faut avant toute chose mettre le fichier bookmarks.html dans le répertoire
+sql/ sur le serveur ou tourne l'application hitweb. Ensuite il suffit d'appeler
+le script bk2hitweb.php. 
+<P>
+<PRE>
+http://hitweb.free.fr/hitweb/sql/bk2hitweb.php
+</PRE>
+<P>ATTENTION !!! ce script n'est pas terminé, donc il ne faut surtout pas recharger
+la page une fois l'importation terminée, sinon vous relancerez une autre importation
+du fichier bookmark de Netscape. Je changerai cela prochainement.
+<P>
+<HR>
+<A HREF="hitweb-5.html">Next</A>
+<A HREF="hitweb-3.html">Previous</A>
+<A HREF="hitweb.html#toc4">Contents</A>
+</BODY>
+</HTML>
