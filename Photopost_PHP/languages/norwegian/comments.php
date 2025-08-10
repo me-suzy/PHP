@@ -1,0 +1,33 @@
+<?
+$Globals['pp_lang']['closed'] = "Vi beklager, men våre sider er for øyeblikket nede grunnet vedlikehold. Vennligst prøv igjen senere.";
+$Globals['pp_lang']['nocom'] = "Bruker kommentarer ikke tillatt.";
+$Globals['pp_lang']['noperm'] = "Beklager, du har ikke tillatelse til å poste/redigere.<p>Om du forsøkte å redigere, er du kanskje ikke den som postet, eller redigering kan<br /> være deaktivert for din brukergruppe.";
+$Globals['pp_lang']['nopost'] = "Du har ikke tillatelse til å poste kommentarer for bilder i denne kategorien.";
+$Globals['pp_lang']['enabled'] = "Email varsel aktivert.";
+$Globals['pp_lang']['malform'] = "Ugyldig parameter sendt!";
+$Globals['pp_lang']['disabled'] = "Email varsel deaktivert.";
+$Globals['pp_lang']['noedit'] = "Du har ikke tillatelse til å forandre denne kommentaren.";
+$Globals['pp_lang']['addcomment'] = "Legg til en kommentar";
+$Globals['pp_lang']['addyour'] = "Legg til dine kommentarer";
+$Globals['pp_lang']['help'] = "hjelp";
+$Globals['pp_lang']['username'] = "Brukernavn";
+$Globals['pp_lang']['rateoverall'] = "Gi en generell vurdering på dette bildet";
+$Globals['pp_lang']['ratethis'] = "Gi en vurdering på dette bildet";
+$Globals['pp_lang']['excellent'] = "Fantastisk!";
+$Globals['pp_lang']['great'] = "Flott";
+$Globals['pp_lang']['good'] = "Bra";
+$Globals['pp_lang']['fair'] = "Sånn passe";
+$Globals['pp_lang']['poor'] = "Dårlig";
+$Globals['pp_lang']['ubb'] = "UBB Kode forklaring";
+$Globals['pp_lang']['smilies'] = "Smilies forklaring";
+$Globals['pp_lang']['delete'] = "Fjern beskjed";
+$Globals['pp_lang']['check'] = "Merk av her kun om du ønsker å fjerne denne beskjeden helt.";
+$Globals['pp_lang']['every1'] = "Du kan kun stemme på et bilde en gang hver ";
+$Globals['pp_lang']['every2'] = "time(r).";
+$Globals['pp_lang']['nofill'] = "Du fylte ikke ut vurdering eller kommentar feltene.";
+$Globals['pp_lang']['dupe'] = "Du har en dobbelpost, så det ble ikke lagt til.";
+$Globals['pp_lang']['success'] = "Din beskjed eller redigering var vellykket.";
+$Globals['pp_lang']['invalid'] = "Ugyldig kall til skript.";
+$Globals['pp_lang']['submitedit'] = "Rediger";
+$Globals['pp_lang']['submitpost'] = "Send Beskjed";
+?>
