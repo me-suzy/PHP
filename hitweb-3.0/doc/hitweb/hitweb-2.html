@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+ <META NAME="GENERATOR" CONTENT="SGML-Tools 1.0.9">
+ <TITLE>Documentation du projet HITWEB.: INSTALLATION</TITLE>
+ <LINK HREF="hitweb-3.html" REL=next>
+ <LINK HREF="hitweb-1.html" REL=previous>
+ <LINK HREF="hitweb.html#toc2" REL=contents>
+</HEAD>
+<BODY>
+<A HREF="hitweb-3.html">Next</A>
+<A HREF="hitweb-1.html">Previous</A>
+<A HREF="hitweb.html#toc2">Contents</A>
+<HR>
+<H2><A NAME="s2">2. INSTALLATION</A></H2>
+
+<H2><A NAME="ss2.1">2.1 Téléchargement des sources</A>
+</H2>
+
+<P>Les sources de cette application sont disponibles à plusieurs endroits sur le net,
+mais comme ce documents n'est pas fait pour référencer la liste des sites ou vous
+pouvez trouver l'application, je vous indiquerai seulement ceux qui sont officiels.<BR>
+<P>Soit sur hitweb.org : <BR> 
+<A HREF="http://www.hitweb.org/download/">http://www.hitweb.org/download/</A><BR>
+<P>Ou sur sourceforge.net : <BR>
+<A HREF="http://sourceforge.net/projects/hitweb/">http://sourceforge.net/projects/hitweb/</A><BR>
+<P>Je vous conseil fortement de récupérer la dernière version de l'application
+sur l'un de ces deux sites. Car il m'est impossible de mettre à jour facilement
+toutes les références à chaque nouvelle version.<BR>
+<P>Vous pouvez à tout moment récupérer les sources en développement sur le CVS de sourceforge :
+<P>
+<PRE>
+cvs -d:pserver:anonymous@cvs.hitweb.sourceforge.net:/cvsroot/hitweb login 
+
+cvs -z3 -d:pserver:anonymous@cvs.hitweb.sourceforge.net:/cvsroot/hitweb co hitweb
+</PRE>
+<P>
+<H2><A NAME="ss2.2">2.2 Installation</A>
+</H2>
+
+<P>L'installation de HITWEB peut se faire de plusieurs façons, tout dépend de votre
+système d'exploitation. Mais nous allons voir la plus facile dans un premier temps.<BR>
+<P>Il suffit de décompresser l'archive que vous avez télécharger (zip, tgz, etc.) dans
+un repertoire de votre site web.<BR>
+<P>Vous trouverez à la racine de l'application HITWEB, un répertoire SQL ou se trouve
+le fichier hitweb.sql. Ce fichier est un "dump" des tables de l'application.<BR>
+<P>Vous devez obligatoirement avoir une base de données 
+<A HREF="http://www.mysql.com/">Mysql</A>. Pour créer les tables dans votre 
+base de données, vous pouvez utiliser cette ligne de commande ou une application
+comme 
+<A HREF="http://www.phpwizard.net/projects/phpMyAdmin/">phpMyAdmin</A> 
+(qui est utilisée sur 
+<A HREF="http://www.free.fr/">FREE</A>, par exemple).<BR>
+<P>
+<PRE>
+mysql --host={DBHOST} --user={DBUSER} --password={DBPASS} --database={DBNAME} &lt; hitweb.sql
+</PRE>
+<P>Si à la création des tables vous avez une erreur, car il y a avait par exemple
+déjà une table qui portait le même nom que l'une de l'application hitweb, alors il
+faut modifier le fichier sql/hitweb.sql avec un éditeur de texte en modifiant le 
+nom de la table.
+<P>Après avoir créer les tables, vous devez remplacer les variables suivantes, du fichier conf/hitweb.conf
+par vos informations personnels :<BR>
+<P>
+<PRE>
+--host={DBHOST}                 // Le nom du host de mysql
+--user={DBUSER}                 // Votre login
+--password={DBPASS}             // Votre mot de passe
+--database={DBNAME}             // Le nom de la base de données
+</PRE>
+<P>Voici un exemple pour l'hébergeur FREE :
+<P>
+<PRE>
+--host=sql.free.fr              // Le nom du host de mysql
+--user=toto                     // Votre login
+--password=totolamalice         // Votre mot de passe
+--database=toto                 // Nom de la base de données (meme que le login)
+
+Donc :
+
+mysql --host=sql.free.fr --user=toto --password=totolamalice --database=toto &lt; hitweb.sql
+
+Je vous conseil de ne pas mettre en clair votre mot de passe et 
+d'utiliser plutôt la ligne de commande ci-dessous. 
+
+mysql --host=sql.free.fr --user=toto -p --database=toto &lt; hitweb.sql
+
+Votre mot de passe vous sera demandé, mais il ne sera pas affiché.
+</PRE>
+<P>L'installation est terminée, il faut maintenant configurer l'application.
+<H2><A NAME="ss2.3">2.3 Configuration</A>
+</H2>
+
+<P>La configuration de l'application est très simple, car il suffit de modifier
+le fichier hitweb.conf qui se trouve dans le répertoire CONF de l'application.<BR>
+<P>Je vais vous détailler chaque variable :<BR>
+<P>
+<PRE>
+$DBNAME = 'toto';                // Nom de la base de données (chez FREE meme que le login)
+$DBUSER = 'toto';                // Votre login
+$DBPASS = 'totolamalice';        // Votre mot de passe
+$DBHOST = 'sql.free.fr';         // Le host de la base de données (exemple pour FREE)
+$BASE = 'mysql';                 // Type de la base de données
+
+$REP_CLASS = 'class';            // Répertoire ou se trouve les CLASS de l'application
+
+$EXT_PHP = '.php';               // Extension des fichiers PHP (pour free il faut mettre php3)
+$EXT_TPL = '.html';              // Extension des fichiers TEMPLATES
+
+$MAIL = 'webmaster@hitweb.org';  // Votre adresse email
+$SITE = 'hitweb.free.fr/hitweb'; // Le chemin de l'application (exemple pour http://hitweb.free.fr/hitweb/)
+
+$REP_LANG_ADMIN = 'lang';        // Répertoire des fichiers pour l'internationnalisation de l'application
+$LANG_ADMIN = 'french';          // Langue utilisée
+</PRE>
+<P>Vous pouvez soit modifier ces variables directement dans le fichier hitweb.conf ou
+en utilisant la partie administration de l'application en HTTP. <BR>
+<P>
+<P>Pour avoir un exemple concret, je vous donnerai des explications par rapport
+à une installation sur le compte hitweb chez FREE, comme vous avez pu le
+remarquer.<BR>
+<P>
+<PRE>
+http://hitweb.free.fr/hitweb/
+
+Le repertoire d'administration de l'application se trouve donc ici :
+
+http://hitweb.free.fr/hitweb/admin/
+</PRE>
+<P>Vous devez sélectionner dans le menu de gauche "Configuration de la base de données"
+et renseigner les informations de connection à votre base de données.<BR>
+<P>Ensuite vous pouvez modifier les informations concernant l'application hitweb,
+en sélectionnant dans le menu de gauche "Fichier de configuration".
+<P>Voila, la configuration de l'application est terminée et votre annuaire doit être fonctionnel.
+Si l'annuaire ne fonctionne pas correctement, c'est que vous devez avoir une configuration
+spécifique. Lisez la section suivante afin d'avoir plus d'information.
+<H2><A NAME="ss2.4">2.4 Configuration spécifique</A>
+</H2>
+
+<P>Vous aurez certainement des problèmes spécifiques lors de votre installation, mais je vais quand même
+essayer de regrouper dans ce paragraphe les questions qui me sont revenues le plus souvent. Si votre
+problème n'est pas référencé ici, vous pouvez me l'envoyer et j'essayerai de le résoudre.
+<H3>Modification de l'extension des fichiers php (php -> php3).</H3>
+
+<P>Pour modifier les extensions des fichiers .php en .php3, il faut tout d'abord modifier la variable $EXT_PHP 
+dans le fichier hitweb.conf qui se trouve dans le repertoire conf/ de l'application. Ensuite il
+faut renommer tous les fichiers .php en .php3. Je vous conseil de faire cela en ligne de commande pour
+automatiser ce processus. 
+<P>Pour les utilisateur de LINUX :
+<PRE>
+find . -name "*.php" | xargs perl  -pi'.old' -e "s/\.php/.php3/"
+find . -name "*.conf" | xargs perl  -pi'.old' -e "s/\.php/.php3/"
+for i in `find . -name "*.php" | sed -e "s/\(.*\)\.php/\1/" ` ; do mv $i.php $i.php3 ; done
+</PRE>
+<P>
+<P>Pour les utilisateurs de windows, je ne sais pas comment faire pour automatiser ceci. Donc
+si une personne sait comment faire je suis preneur. 
+<H3>Utilisation du mail lors de l'enregistrement d'un site dans l'annuaire.</H3>
+
+<P>Attention cette fonctionnalité est pas défault dans l'application. En fait elle
+est seulement dans la partie utilisateur du site et non lors de l'enregistrement d'un site
+dans la partie administration.<BR>
+<P>Si vous utilisez l'application sur FREE, ou sur un autre hébergeur qui n'accepte pas la fonction
+mail() de php par défault, il faut modifier les sources de l'application.<BR>
+<P>En supprimant l'appel de la fonction mail_newsite() dans le fichier ajoutsite.php
+à la ligne 105.<BR>
+<P>Ou en modifiant la fonction mail(), dans le fichier mail.php.<BR>
+<HR>
+<A HREF="hitweb-3.html">Next</A>
+<A HREF="hitweb-1.html">Previous</A>
+<A HREF="hitweb.html#toc2">Contents</A>
+</BODY>
+</HTML>
