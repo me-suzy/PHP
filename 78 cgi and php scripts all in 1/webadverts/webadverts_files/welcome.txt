@@ -1,0 +1,15 @@
+Welcome to the Exchange!
+
+Your ID is:        <--UserID-->
+Your password is:  <--Password-->
+
+The HTML code below should be placed on your site where you want the
+banners to appear.
+
+<--HTMLCode-->
+
+If you want banners to appear on more than one page, simply use a
+unique "page=" number for each banner call.  This will ensure that new
+banners are loaded (and that new displays are credited to you) on each
+of your pages.  (Note that there are two "page=" designations in the
+call, and that they must match!)
