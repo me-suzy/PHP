@@ -1,0 +1,116 @@
+<?
+$Globals['pp_lang']['closed'] = "Vi beklager, men våre sider er for øyeblikket nede grunnet vedlikehold. Vennligst prøv igjen senere.";
+$Globals['pp_lang']['ureset'] = "Bruker´s passord har blitt resatt og sendt via email.";
+$Globals['pp_lang']['preset'] = "Ditt passord har blitt resatt og sendt til deg via email.";
+$Globals['pp_lang']['nomatch'] = "Fant ikke noe. Sjekk din URL og prøv igjen.";
+$Globals['pp_lang']['memprofile'] = "Medlemsprofil";
+$Globals['pp_lang']['profilefor'] = "Profil for";
+$Globals['pp_lang']['datereg'] = "Dato Registrert";
+$Globals['pp_lang']['posts'] = "Meldinger";
+$Globals['pp_lang']['status'] = "Status";
+$Globals['pp_lang']['lastphotoup'] = "Siste Bilde Lastet Opp";
+$Globals['pp_lang']['lastcommentpo'] = "Siste Kommentar Postet";
+$Globals['pp_lang']['bday'] = "Fødselsdag";
+$Globals['pp_lang']['seebday'] = "Om du velger fødselsdag, vil andre medlemmer kunne se din fødselsdag i din profil.";
+$Globals['pp_lang']['homepage'] = "Hjemmeside";
+$Globals['pp_lang']['icq'] = "ICQ Nummer";
+$Globals['pp_lang']['aim'] = "AIM";
+$Globals['pp_lang']['yahoo'] = "Yahoo";
+$Globals['pp_lang']['location'] = "Sted";
+$Globals['pp_lang']['interests'] = "Interesser";
+$Globals['pp_lang']['occupation'] = "Yrke";
+$Globals['pp_lang']['aboutme'] = "Om Meg";
+$Globals['pp_lang']['checke'] = "Vennligst sjekk din email for nærmere instruksjon.";
+$Globals['pp_lang']['noaddr'] = "Adressen ble ikke funnet i vårt arkiv.";
+$Globals['pp_lang']['memberpassadmin'] = "Medlem Passord Admin";
+$Globals['pp_lang']['forgot'] = "Glemt Passord";
+$Globals['pp_lang']['resetform'] = "Skjema for å Resette Passord";
+$Globals['pp_lang']['youremail'] = "Din Email Adresse";
+$Globals['pp_lang']['submit'] = "Send";
+$Globals['pp_lang']['blankpass'] = "Feltet Gammelt Passord er tomt.";
+$Globals['pp_lang']['blankpass2'] = "Feltet Nytt Passord er tomt.";
+$Globals['pp_lang']['confirmblank'] = "Feltet Bekreft nytt passord er tomt.";
+$Globals['pp_lang']['nomatch'] = "Feltet Nytt Passord passer ikke med feltet Bekreft Passord.";
+$Globals['pp_lang']['fourchars'] = "Ditt passord må være minst 4 karakterer langt.";
+$Globals['pp_lang']['oldwrong'] = "Ditt gamle passord er ikke korrekt.";
+$Globals['pp_lang']['passchanged'] = "Passord forandret";
+$Globals['pp_lang']['changeform'] = "Skjema for Passord Forandring";
+$Globals['pp_lang']['oldpass'] = "Gammelt Passord";
+$Globals['pp_lang']['newpass'] = "Nytt Passord";
+$Globals['pp_lang']['confirmpass'] = "Bekreft Nytt Passord";
+$Globals['pp_lang']['changepass'] = "Forandre Passord";
+$Globals['pp_lang']['memberprofile'] = "Medlemsprofil ";
+$Globals['pp_lang']['editprofile'] = "Rediger Profil for";
+$Globals['pp_lang']['password'] = "Passord";
+$Globals['pp_lang']['passagain'] = "Skriv Passord Igjen";
+$Globals['pp_lang']['email'] = "Email Adresse";
+$Globals['pp_lang']['emailagain'] = "Skriv Email Adresse Igjen";
+$Globals['pp_lang']['month'] = "Måned";
+$Globals['pp_lang']['emailconf'] = "Email Bekreftelse";
+$Globals['pp_lang']['timezone'] = "Tidssone avvik<br />Nåværende tidsvisning:";
+$Globals['pp_lang']['savechanges'] = "Lagre Forandringer";
+$Globals['pp_lang']['noeditperm'] = "Du har ikke tillatelse til å forandre denne profilen.";
+$Globals['pp_lang']['noemailmatch'] = "Email feltet må være det samme som i email bekreftelse feltet.";
+$Globals['pp_lang']['profileupdated'] = "Profile Oppdatert.";
+$Globals['pp_lang']['nonew'] = "Nye bruker registreringer ikke tillatt.";
+$Globals['pp_lang']['intonly'] = "Dette skriptet blir kun brukt for PhotoPost´s interne registreringssystem.";
+$Globals['pp_lang']['loggedin'] = "Du er allerede registrert og innlogget!";
+$Globals['pp_lang']['regfor'] = "Registrer for ";
+$Globals['pp_lang']['coppainfo'] = "COPPA Informasjon";
+$Globals['pp_lang']['over13'] = "Eldre enn 13 år";
+$Globals['pp_lang']['under13'] = "Yngre enn 13 år";
+$Globals['pp_lang']['forinfo'] = "For informasjon om hvordan denne hjemmesiden bruker personlig informasjon, vennligst les";
+$Globals['pp_lang']['privacy'] = "Privatliv Erklæring";
+$Globals['pp_lang']['permform'] = "Godkjenningsskjema";
+$Globals['pp_lang']['parentreq'] = "En foreldre eller foresatt må maile eller faxe et signert";
+$Globals['pp_lang']['permformlower'] = "godkjenningsskjema";
+$Globals['pp_lang']['toadmin'] = "til administratoren ved";
+$Globals['pp_lang']['beforeany'] = "før noen som er yngre enn 13 år kan fullføre registreringsprosessen.";
+$Globals['pp_lang']['forfurther'] = "For nærmere informasjon, kontakt";
+$Globals['pp_lang']['registerfor'] = "Registrer for";
+$Globals['pp_lang']['rulespol'] = "Regler & Retningslinjer";
+$Globals['pp_lang']['forumrules'] = "Forum Regler";
+$Globals['pp_lang']['coppaform'] = "Alle brukere under 13 år må ha tillatelse fra deres foreldre eller foresatte for å få medlemsskap ved denne hjemmesiden.
+                    Selv om vi også ønsker medlemmer under 13 år velkommen, krever vi at en foreldre eller foresatt faxer eller mailer oss en signert tillatelse
+                    før vi kan godkjenne et medlemsskap.<p>
+
+                    Du kan begynne registreringsprosessen før vi mottar en tillatelse ved å klikke Godkjenn knappen.  Eller du
+                    kan avbryte registreringen ved å klikke Avbryt knappen.<p>
+
+                    Du kan hente godkjenningsskjemaet her:";
+                    
+$Globals['pp_lang']['formore'] = "For mer informasjon om registreringsprosessen, eller denne hjemmesiden generelt, vennligst send email til";
+$Globals['pp_lang']['agree'] = "Enig";
+$Globals['pp_lang']['cancel'] = "Avbryt";
+$Globals['pp_lang']['plznote'] = "Vennligst noter deg: Inntil vi har mottatt et signert";
+$Globals['pp_lang']['plznote2'] = "fra dine foreldre eller foresatte, vil du ikke kunne laste opp bilder eller poste kommentarer.";
+$Globals['pp_lang']['reqinfo'] = "Påkrevet Informasjon";
+$Globals['pp_lang']['secreq'] = "(Informasjonen i denne delen er påkrevet. Vær oppmerksom på at passord er case sensitive; Store og små bokstaver kan brukes om hverandre.)";
+$Globals['pp_lang']['validemail'] = "Vennligst bruk en fungerende email adresse. Den vil ikke være synlig for andre brukere.";
+$Globals['pp_lang']['visible'] = "Informasjonen nedenfor vil være synlig for alle besøkere.";
+$Globals['pp_lang']['day'] = "Dag";
+$Globals['pp_lang']['username'] = "Brukernavn";
+$Globals['pp_lang']['optional'] = "Annen Informasjon";
+$Globals['pp_lang']['year'] = "År";
+$Globals['pp_lang']['bio'] = "Biografi";
+$Globals['pp_lang']['submitreg'] = "Send Registreringsskjema";
+$Globals['pp_lang']['userblank'] = "Feltet Brukernavn er tomt.";
+$Globals['pp_lang']['userexists'] = "Brukernavnet du valgte er allerede registrert i vår database.  Vennligst prøv et annet.";
+$Globals['pp_lang']['emailexists'] = "Email adressen du skrev inn er allerede registrert i vår database.";
+$Globals['pp_lang']['emailat'] = "Email adressen du skrev inn er ugyldig. Den må inneholde et \"@\" symbol.";
+$Globals['pp_lang']['emailperiod'] = "Email adressen du skrev inn er ugyldig. Den må inneholde et punktum.";
+$Globals['pp_lang']['passblank'] = "Feltet Passord er tomt.";
+$Globals['pp_lang']['user2char'] = "Ditt brukernavn må være minst 2 karakterer langt.";
+$Globals['pp_lang']['passverblank'] = "Feltet Passord Bekreftelse er tomt.";
+$Globals['pp_lang']['passnomatch'] = "Passordet samsvarer ikke med Passord Bekreftelse feltet.";
+$Globals['pp_lang']['emailblank'] = "Feltet Email er tomt.";
+$Globals['pp_lang']['parentprint'] = "Vennlighst få en foreldre/foresatt til å printe ut denne siden, fylle ut de blanke feltene nedenfor og returnere dette skjemaet til oss på følgende adresse";
+$Globals['pp_lang']['verblank'] = "Feltet Email Bekreftelse er tomt.";
+$Globals['pp_lang']['novermatch'] = "Feltet Email samsvarer ikke med Email Bekreftelse feltet.";
+$Globals['pp_lang']['erroradd'] = "Det oppsto et problem ved registrering av din konto. Vennligst kontakt System Administrator!";
+$Globals['pp_lang']['thanks'] = "Takk for bekreftelsen av din konto.  Den er nå aktivert!";
+$Globals['pp_lang']['thanksreg'] = "Takk for at du registrerte deg. Vennligst sjekk din email for nærmere instruksjon om å aktivere din nye konto.";
+$Globals['pp_lang']['retfront'] = "Gå tilbake til frontsiden av";
+$Globals['pp_lang']['noverify'] = "Beklager, men vi kan ikke godkjenne denne kontoent.";
+$Globals['pp_lang']['nonum'] = "Bruker nummer ikke funnet i vår database.";
+?>
