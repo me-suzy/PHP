@@ -1,0 +1,37 @@
+<?
+$Globals['pp_lang']['popular'] = "Images les plus populaires";
+$Globals['pp_lang']['allcats'] = "Toutes catégories";
+$Globals['pp_lang']['recent'] = "Images les plus récentes";
+$Globals['pp_lang']['random'] = "Images au hasard";
+$Globals['pp_lang']['by'] = "par";
+$Globals['pp_lang']['category'] = "Catégorie";
+$Globals['pp_lang']['photos'] = "Photos";
+$Globals['pp_lang']['comments'] = "Commentaires";
+$Globals['pp_lang']['lastcomment'] = "Dernier commentaire";
+$Globals['pp_lang']['lastphoto'] = "Dernière photo téléchargée";
+$Globals['pp_lang']['favorites'] = "Mes favorites";  
+$Globals['pp_lang']['createcal'] = "Print Calendar";
+$Globals['pp_lang']['printable'] = "printable";      
+$Globals['pp_lang']['lastdays'] = "Messages du dernier jour";   
+$Globals['pp_lang']['last7days'] = "Messages des 7 derniers jours";   
+$Globals['pp_lang']['last14days'] = "Messages des 14 derniers jours";
+$Globals['pp_lang']['custom'] = "Vue personalisée";
+$Globals['pp_lang']['searchr'] = "Résultats de la recherche";        
+$Globals['pp_lang']['member'] = "Membre";
+$Globals['pp_lang']['admin'] = "Administrateur";
+$Globals['pp_lang']['home'] = "Index";
+$Globals['pp_lang']['logout'] = "Déconnexion";
+$Globals['pp_lang']['mygallery'] = "Ma&nbsp;Galerie";        
+$Globals['pp_lang']['albumadmin'] = "Album&nbsp;Admin";
+$Globals['pp_lang']['myfavorites'] = "Mes&nbsp;Favorites";        
+$Globals['pp_lang']['login'] = "Se connecter";
+$Globals['pp_lang']['register'] = "S'inscrire";
+$Globals['pp_lang']['profile'] = "Profil";
+$Globals['pp_lang']['upload'] = "Télécharger&nbsp;les photos";
+$Globals['pp_lang']['forward'] = "Redirection";
+$Globals['pp_lang']['clickhere'] = "Cliquer ici si vous ne souhaitez pas attendre plus longtemps<br />(ou si votre navigateur ne vous redirige pas automatiquement)";
+$Globals['pp_lang']['erroruser'] = "Le nom d'utilisateur que vous avez choisi n'est pas valide. Les noms d'utilisateurs ne peuvent contenir que des chiffres ou des lettres.";
+$Globals['pp_lang']['errorcopy'] = "La copie de cette image a échouée. Opération annulée.";
+$Globals['pp_lang']['moved'] = "Image déplacée";
+$Globals['pp_lang']['errorperm'] = "Vous n'avez pas la permission pour effectuer cette action!";
+?>
