@@ -1,0 +1,17 @@
+:)|^|smile.gif|^|
+:D|^|biggrin.gif|^|
+:mad:|^|mad.gif|^|
+:confused:|^|confused.gif|^|
+:rolleyes:|^|rolleyes.gif|^|
+:wink:|^|wink.gif|^|
+:sigh:|^|sigh.gif|^|
+:eek:|^|eek.gif|^|
+:hammer:|^|hammer.gif|^|
+:wow:|^|wow.gif|^|
+:hrmm:|^|hrmm.gif|^|
+:puke:|^|puke.gif|^|
+:evil:|^|evil.gif|^|
+:evil2:|^|evil2.gif|^|
+:bunny:|^|bunny.gif|^|
+:banana:|^|banana.gif|^|
+:withstupid:|^|withstupid.gif|^|
